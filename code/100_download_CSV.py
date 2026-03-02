@@ -64,6 +64,7 @@ DPV_FILES = {
             'PersonalData_properties', 
             'pd-core',
             'pd-extended',
+            'data-healthcare',
             ),
     },
     # Sheets for Purpose, Processing, and Processing Context/Scale
@@ -96,6 +97,7 @@ DPV_FILES = {
             'Context_properties', 
             'Status', 
             'Status_properties',
+            'Sector_Health_Status',
             ),
     },
     # Sheets for Tech/Org Measures
@@ -179,6 +181,7 @@ DPV_FILES = {
             'tech-status-properties',
             'tech-tools',
             'tech-tools-properties',
+            'tech-healthcare',
             ),
     },
     'ai': {
@@ -328,6 +331,8 @@ DPV_FILES = {
             'GDPR_entities',
             'GDPR_entities_properties',
             'GDPR_principles',
+            'GDPR_purpose_compatibility',
+            'GDPR_proportionality',
             ),
     },
     # Sheets for EU-DGA extension
@@ -354,6 +359,7 @@ DPV_FILES = {
             'aiact-capability',
             'aiact-risk',
             'aiact-risk-levels',
+            'aiact-risk-levels-properties',
             'aiact-data',
             'aiact-roles',
             'aiact-docs',
@@ -363,6 +369,8 @@ DPV_FILES = {
             'aiact-assessment',
             'aiact-compliance',
             'aiact-sector',
+            'aiact-prohibited-systems',
+            'aiact-highrisk-systems',
             ),
     },
     'eu-nis2': {
@@ -381,6 +389,28 @@ DPV_FILES = {
             'EHDS_Purpose',
             'EHDS_Entities',
             'EHDS_Process',
+            'EHDS_Technology',
+            'EHDS_Right',
+            'EHDS_TOM',
+            ),
+    },
+    'de-gdng': {
+        'name': 'de-gdng',
+        'doc_id': '1Zx-_YS5i8LSQpMsmxB7zToWqorUBidCz4UTihZ9_UDc',
+        'sheets': (
+            'GDNG-basic-definitions',
+            'GDNG-actors',
+            'GDNG-actors-properties',
+            'GDNG-query-and-access',
+            'GDNG-linkage',
+            'GDNG-lawfulness',
+            ),
+    },
+    'in-dpdp': {
+        'name': 'in-dpdp',
+        'doc_id': '13dDReThDcIexWI6g_-C0SgJZB8vGIQJdgsz1PnL6nmw',
+        'sheets': (
+            'IN-DPDP-lawfulness',
             ),
     },
     # Standards - ieee_7012

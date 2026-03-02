@@ -19,7 +19,9 @@ _common_annotations = {
     'Modified': vocab_funcs.construct_date_modified,
     'Status': vocab_funcs.construct_status,
     'Contributors': vocab_funcs.construct_contributors,
-    'Resolution': vocab_funcs.construct_resolution, 
+    'Resolution': vocab_funcs.construct_resolution,
+    'ExtraFunction': vocab_funcs.extra_function,
+    'ExtraParams': None, 
 }
 
 SCHEMA['classes'] = {
@@ -46,7 +48,9 @@ SCHEMA['taxonomy'] = {
     'Modified': vocab_funcs.construct_date_modified,
     'Status': vocab_funcs.construct_status,
     'Contributors': vocab_funcs.construct_contributors,
-    'Resolution': vocab_funcs.construct_resolution, 
+    'Resolution': vocab_funcs.construct_resolution,
+    'ExtraFunction': vocab_funcs.extra_function,
+    'ExtraParams': None,  
 }
 SCHEMA['taxonomy-risk'] = SCHEMA['taxonomy'].copy()
 SCHEMA['taxonomy-risk']['ParentTerm'] = None
@@ -168,6 +172,7 @@ SCHEMA['examples'] = {
     'Reference': None,
     'Status': vocab_funcs.construct_status,
     'Date': vocab_funcs.construct_date_created,
+    'Modified': vocab_funcs.construct_date_modified,
     'Contributor': vocab_funcs.construct_contributors,
 }
 
@@ -181,3 +186,20 @@ SCHEMA['ieee-7012-terms'].update({
     'Obligates': vocab_funcs.ieee_7012_term_rule,
     'HumanDescription': vocab_funcs.ieee_7012_human_label,
     })
+
+SCHEMA['gdng-classes'] = SCHEMA['classes'].copy()
+SCHEMA['gdng-classes'].update({
+    'ParentTerms': vocab_funcs.construct_parent,
+    'Label (en)': vocab_funcs.construct_label, # @en
+    'Label (de)': vocab_funcs.construct_label_de, # @de
+    'Definition (en)': vocab_funcs.construct_definition,
+    'Definition (de)': vocab_funcs.construct_definition_de,
+    'Term (ignore)': None,
+    'EHDS (de)': None,
+    'EHDS (en)': None,
+    'Notes': None,
+    })
+# SCHEMA['gdng-properties'] = SCHEMA['properties'].copy()
+
+SCHEMA['taxonomy-aiact'] = SCHEMA['taxonomy'].copy()
+SCHEMA['taxonomy-aiact']['AIActRiskLevel'] = vocab_funcs.contruct_aiact_risk_level

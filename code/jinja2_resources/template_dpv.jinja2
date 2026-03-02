@@ -56,7 +56,7 @@
         "data": [
             {
               "value": "Changelog for v{{DPV_VERSION}}",
-              "href": "#changelog"
+              "href": "../changelog"
             }
         ]
       },
@@ -81,6 +81,12 @@
   <link rel="stylesheet" type="text/css" href="../diagrams/common.css">
 <link rel="shortcut icon" href="../diagrams/favicon-16x16.png" type="image/x-icon" sizes="16x16" />
   <link rel="shortcut icon" href="../diagrams/favicon-32x32.png" type="image/x-icon" sizes="32x32" />
+  <style>
+    .concept-item { font-size: 0.9rem; }
+    .concept-hide { display: none; }
+    .concept-show { display: block; }
+    }
+  </style>
 </head>
 <body>
   {{ contributors_list(data, vocab_name) }}
@@ -104,7 +110,7 @@
      <p>The DPV specification contains several distinct groups of concepts, some of which are provided with a taxonomy of concepts to support practical use-cases. In addition to these, 'extensions' to the DPV are also provided which further extend one or more DPV concepts or enable separation of concepts - such as for distinguishing between different jurisdictions and laws. The figure below shows an overview of the DPV concepts along with its extensions.</p>
      <figure id="overview-2">
        <img src="../diagrams/overview-dpv-2.0.svg">
-       <figcaption>Overview of DPV v2.0 showing core concepts and relationships with their further expansion as taxonomies and extensions</figcaption>
+       <figcaption>Overview showing core concepts and relations in DPV with their further expansion as taxonomies and as extensions</figcaption>
      </figure>
       <p>DPV and its extensions (collectively DPV vocabularies) consists of certain 'core concepts' that are intended to be independent representations of specific information, and are distinct from other core concepts. For example, the [=Purpose=] refers only to the <i>purpose of why personal data is processed</i> and is independent as a concept from the other concepts (e.g. [=PersonalData=] or [=LegalBasis=]). The structuring of DPV is based on providing rich and comprehensive taxonomies that group concepts together based on each core concept, e.g. taxonomy of purposes, taxonomy of legal basis. 'Extensions' are a separate group of concepts that expand the 'core' vocabulary or provide concepts focused on a particular topic e.g. [[PD]] for personal data categories and [[RISK]] for risk management. Extensions allow allow modelling legally relevant but jurisdictionally applicable concepts e.g. [[EU-GDPR]] for concepts from EU's GDPR.</p>
     
@@ -170,7 +176,7 @@
       [[SECTOR-PUBLICSERVICES]] for Public Services Sector.
     </p>
 
-    <p>The [[STANDARDS]] extensions model the core terminologies defined and used within specific forums such as ISO, CEN/CENELEC, NIST, and IEEE so that they can be used with DPV. They also provide additional concepts needed to implement specific standards, such as [[[IEEE-P7012]]] ([[STANDARD-P7012]])</p>
+    <p>The STANDARDS extensions model the core terminologies defined and used within specific forums such as ISO, CEN/CENELEC, NIST, and IEEE so that they can be used with DPV. Currently it provides the extension [[STANDARD-IEEE-7012]] to support the implementation of [[[IEEE-7012]]].</p>
   </section>
 </section>
 
@@ -198,19 +204,19 @@
 
 <section id="vocabulary">
 <h2>Vocabulary Index</h2>
-  <p>Below is an index of the {{ vocab|length }} concepts defined in DPV. Additional documentation with guidance and examples is provided in the specific module pages.</p>
-  <p><small>{%  for concept in vocab.values()|sort(attribute='term') %}
+  <div id="concept-index">
+  {%  for concept in vocab.values()|sort(attribute='term') %}
     {% if concept['_dpvterm'] and not concept['_ignored'] and concept['_type'] in ('class', 'property') %}
-    <dfn>
-      <span id="{{ concept['term'] }}" data-type="concept" {% if concept['module'] %}
-      {% set module=concept['module'][0].split('-')[0] %}
-      data-module="{{ module }}{% endif %}">{{ concept['term'] }}</span></dfn>
+    {% set module=concept['module'][0].split('-')[0] %}
+    <span class="concept-item concept-hide" id="{{ concept['term'] }}" data-type="concept" data-module="{{ module }}">
+      <dfn>{{ concept['term'] }}</dfn>
       <span class="definition">{{ concept['skos:definition'] }}.</span>
-      <span class="additional details">{% if concept['module'] %}
-      {% set module=concept['module'][0].split('-')[0] %}See <a href="modules/{{ module }}#{{ concept['term'] }}">full definition</a> in <a href="modules/{{ module }}">{{module}}</a> module{% endif %}</span>
-      <br/>
+      <span class="additional details">See <a href="modules/{{ module }}#{{ concept['term'] }}">full definition</a> in <a href="modules/{{ module }}">{{module}}</a> module</span>
+    </span>
     {% endif %}
-  {% endfor %}</small></p>
+  {% endfor %}
+  </div>
+  <p id="concept-index-message">As DPV contains a large number of concepts ({{ vocab|length }} in this version), additional documentation with guidance and examples is provided in the <a href="#dpv">specific module pages</a>. <button id="view-concept-index">Click</button> to display the full index.</p>
   {# <section id="dpv-classes">
    {{ index_concepts(vocab, vocab_name, filter="classes", lang=lang) }}
   </section>
@@ -234,7 +240,7 @@
 
   <h3>Funding Acknowledgements for Contributors</h3>
   <p>The contributions of Piero Bonatti and Luigi Sauro to the DPVCG have been funded by the European Union’s Horizon 2020 research and innovation programme under grant agreement N. 731601 (<a href="https://specialprivacy.ercim.eu/">project SPECIAL</a>) until 2019, and under grant agreement N. 883464 (<a href="https://trapeze-project.eu/">project TRAPEZE</a>) from 2020 until 2023.</p>
-  <p>The contributions of Beatriz Esteves, Delaram Golpayegani, and Rana Saniei have received funding through the <a href="https://protect-network.eu/">PROTECT ITN Project</a> from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No 813497, in particular through the development of <a href="https://w3id.org/airo">AI Risk Ontology (AIRO)</a> and <a href="https://w3id.org/vair">Vocabulary of AI Risks (VAIR)</a> which have been integrated in to this extension. Beatriz Esteves is funded by <a href="https://solidlab.be/">SolidLab Vlaanderen</a> (Flemish Government, EWI and RRF project VV023/10), and by the imec.icon project PACSOI (HBC.2023.0752) which was co-financed by imec and VLAIO. Julian Flake received funding from the <a href="https://titan-eosc.eu/">TITAN project</a> funded under European Union’s Horizon Europe Framework Programme grant#101129822 and from the European Union’s Digital Europe Programme grant#101123471 (EDGE-Skills). </p>
+  <p>The contributions of Beatriz Esteves, Delaram Golpayegani, and Rana Saniei have received funding through the <a href="https://protect-network.eu/">PROTECT ITN Project</a> from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No 813497, in particular through the development of <a href="https://w3id.org/airo">AI Risk Ontology (AIRO)</a> and <a href="https://w3id.org/vair">Vocabulary of AI Risks (VAIR)</a> which have been integrated in to this extension. Beatriz Esteves also received funding from the INESData project - Infrastructure to Investigate Data Spaces in Distributed Environments at UPM, (TSI-063100-2022-0001), a project funded under the UNICO I+D CLOUD call by the Ministry for Digital Transformation and the Civil Service, in the framework of the recovery plan PRTR financed by the European Union (NextGenerationEU); and from <a href="https://solidlab.be/">SolidLab Vlaanderen</a> (Flemish Government, EWI and RRF project VV023/10), and by the imec.icon project PACSOI (HBC.2023.0752) which was co-financed by imec and VLAIO. Julian Flake received funding from the <a href="https://titan-eosc.eu/">TITAN project</a> funded under European Union’s Horizon Europe Framework Programme grant#101129822 and from the European Union’s Digital Europe Programme grant#101123471 (EDGE-Skills). </p>
   <p>The contributions of Harshvardhan J. Pandit, Arthit Suriyawongkul, Delaram Golpayegani, and Rob Brennan have been made with the financial support of Science Foundation Ireland under Grant Agreement No. 13/RC/2106_P2 at the ADAPT SFI Research Centre. The contributions of Harshvardhan J. Pandit have been made with the AI Accountability Lab (AIAL) which is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; and the John D. and Catherine T. MacArthur Foundation.</p>
 
 </section>
@@ -363,6 +369,32 @@
 
 <script type="text/javascript" src="../diagrams/common.js" defer></script>
 
+<script>
+  function updateView() {
+    const id = location.hash.slice(1); if (!id) return;
+    // console.log(id);
+    const target = document.getElementById(id); if (!target) return;
+    // console.log(target);
+    // console.log(target.classList);
+    if (!target.classList.contains('concept-item')) return;
+    target.classList.remove('concept-hide');
+    target.classList.add('concepts-show');
+
+    document.getElementById("vocabulary").scrollIntoView({ behaviour: 'smooth'});
+  }
+  window.addEventListener('load', updateView);
+  window.addEventListener('hashchange', updateView);
+
+  document.getElementById('view-concept-index').addEventListener('click', () => {
+    const message = document.getElementById('concept-index-message');
+    const index = document.getElementById('concept-index');
+    index.parentNode.insertBefore(message, index);
+    document.querySelectorAll('.concept-item').forEach(e => {
+      e.classList.remove('concept-hide');
+      e.classList.add('concept-show');
+    })
+  });
+</script>
 
 </body>
 </html>

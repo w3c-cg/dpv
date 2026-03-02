@@ -28,7 +28,7 @@ The [Data Privacy Vocabulary (DPV)](https://w3id.org/dpv) provides an ontology (
 - rights involved and how to exercise them
 - risks applicable and what would be its consequences and impacts
 
-> The versionless base IRI, e.g. `https://w3id.org/dpv`, always points to the latest release which is a versioned IRI, e.g. `https://w3id.org/dpv/2.2` for v2.2.
+> The versionless base IRI, e.g. `https://w3id.org/dpv`, always points to the latest release which is a versioned IRI, e.g. `https://w3id.org/dpv/2.3` for v2.3.
 
 The namespace for DPV terms is `http://w3id.org/dpv#` with suggested prefix `dpv`, and serialisations are provided in RDF/XML, Turtle, JSON-LD, and N3 formats. The default serialisations are defined using RDFS/SKOS semantics, with an [alternate serialisation](https://w3id.org/dpv/dpv-owl) defined using OWL2 semantics.
 
@@ -115,8 +115,8 @@ The NACE Taxonomy serialised in RDFS (previously available at <https://w3id.org/
 ## Guides
 
 - The [Primer](https://w3id.org/dpv/primer) is an introductory document for newcomers to understand the DPV and its concepts. A [2-Page Concise Primer](https://w3id.org/dpv/primer/concise) provides a succinct introduction to the DPV.
-- The [Use-Cases and Requirements](https://w3id.org/dpv/use-cases/) document lists the use-cases and requirements that led to the development of DPV.
-- The [Examples](https://w3id.org/dpv/examples/) page provides an index of examples describing the use of DPV concepts.
+- The [Use-Cases and Requirements](https://w3id.org/dpv/use-cases) document lists the use-cases and requirements that led to the development of DPV.
+- The [Examples](https://w3id.org/dpv/examples) page provides an index of examples describing the use of DPV concepts.
 - The [Guides](https://w3id.org/dpv/guides) page lists guides for use of DPV in specific domains and applications
     - [Using DPV in OWL2](https://w3id.org/dpv/guides/dpv-owl)
     - [Implementing ISO/IEC 27560:2023 Consent Records and Receipts](https://w3id.org/dpv/guides/consent-27560)
@@ -146,7 +146,7 @@ Releases are provided through the GitHub feature at [https://github.com/w3c/dpv/
 
 ### Final Reports
 
-A full list of reports (i.e. formally published by the W3C) produced by the CG is available in [CG-REPORTS](./CG-REPORTS.md). Note that works considered to be in a 'draft' state are not formally published in this manner. Below are reports corresponding to the latest release v2.2.
+A full list of reports (i.e. formally published by the W3C) produced by the CG is available in [CG-REPORTS](./CG-REPORTS.md). Note that works considered to be in a 'draft' state are not formally published in this manner. Below are reports corresponding to the latest release v2.3.
 
 - Primer [w3c/cg-reports link to be added]()
 - DPV [w3c/cg-reports link to be added]()
@@ -212,7 +212,7 @@ A full list of reports (i.e. formally published by the W3C) produced by the CG i
 
 If you're unsure about something, or would like clarifications, or suggestions - please communicate with us or open an issue. We would be happy to help. You can view the [current open issues](https://github.com/w3c/dpv/issues) and the [public mailing list](https://lists.w3.org/Archives/Public/public-dpvcg/).
 
-Membership to the group is open to all interested individuals and organisations. To join the group, you need a valid W3C account – which is free to get and can be [requested here](https://www.w3.org/accounts/request). Usually, the group meets through online meeting calls - see [meetings calendar](https://www.w3.org/groups/cg/dpvcg/calendar) and [minutes](https://w3id.org/dpv/meetings/).
+Membership to the group is open to all interested individuals and organisations. To join the group, you need a valid W3C account – which is free to get and can be [requested here](https://www.w3.org/accounts/request). Usually, the group meets through online meeting calls - see [meetings calendar](https://www.w3.org/groups/cg/dpvcg/calendar) and [minutes](https://w3id.org/dpv/meetings).
 
 ## Funding Acknowledgements
 

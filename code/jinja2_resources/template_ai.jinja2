@@ -93,7 +93,7 @@
         "data": [
             {
               "value": "Changelog for v{{DPV_VERSION}}",
-              "href": "#changelog"
+              "href": "../changelog"
             }
         ]
       },
@@ -223,9 +223,9 @@
 
   <section id="vocab-ai-agent">
     <h2>AI Agents</h2>
-    <p>The concept [=AIAgent=] represent the generic notion of 'AI agents' which are software that represent an entity or act on their behalf.</p>
+    <p>The concept [=AIAgent=] represent the generic notion of 'AI agents' which are software that represent an entity or act on their behalf. To reflect this, [=AIAgent=] is declared as both [=AI=] and {{anchor("tech:SoftwareAgent")}}. Currently, there is no property to directly state AI Agents being used, though the AI-related property [=hasAI=] can be used to associate this concept in a specific context. Additional generic properties such as {{anchor("dpv:hasEntity")}}, {{anchor("tech:hasSoftware")}}, and {{anchor("dpv:isImplementedUsingTechnology")}} may also be relevant to associate AI Agents in specific roles or functions.</p>
     <aside class="note" title="Contributions welcome for enhancement of AI Agent concepts">
-      <p>The DPVCG is interested in the modelling of 'Agents' in the context of AI technologies, including how they interact with systems and other agents, and how they operate through the use of AI technologies. For this, we welcome proposals and participation.</p>
+      <p>The DPVCG is interested in the modelling of 'Agents' in the context of AI technologies, including how they interact with systems and other agents, and how they operate through the use of AI technologies. We are interested in particular in the modelling of Agent behaviours, controls, and risks, and how different real-world deployments of agents can be described using the concepts associated with data protection and privacy. For this, we welcome proposals and participation.</p>
     </aside>
   </section>
 
@@ -241,7 +241,7 @@
     <h2>Model Development Phases</h2>
     <p>[=ModelTraining=] refers to the process through which [=TrainingData=] is transformed to produce a [=TrainedModel=]. [=ModelFineTuning=] represents a further refinement phase where a prior [=TrainedModel=] is further refined using an additional smaller (and usually more targeted) [=TrainingData=] to produce a [=FineTunedModel=]. In these, the concepts for _training_ are defined by extending the generic concept of `Processing` in [[DPV]] to represent the processing of data.</p>
     <p>As part of the development and training of models, data usually undergoes several key steps. These are represented by the concept [=DataOperation=], which involves broadly [=DataCollection=] and [=DataPreparation=], and optionally [=DataAggregation=]. These are also defined by extending relevant processing operations from [[DPV]], for example to represent where they collect, obtain, or transform data.</p>
-    {{ list_hierarchy(modules['development']['classes']) }}
+    {{ list_hierarchy(modules['development']['classes'], mode='taxonomy') }}
   </section>
 
   <section id="vocab-risks">
@@ -292,9 +292,11 @@
     </section>
 
   <section id="vocab-measures">
-    <h2>Risk Measures</h2>
-    <aside class="note" title="Add content for Risk Measures concept - mention ai:Measure as parent concept and that we are looking to expand this in the future based on DPV TOMs taxonomies specifically for AI"></aside>
-    <p>The concept [=Measure=] is a specific measure associated with AI technologies to address risks related to AI technologies. While the [[DPV]] and [[RISK]] extension provide relevance and modelling of measures along with detailed taxonomies, this concept is useful to represent the measures developed and specifically used for AI technologies. The DPVCG welcomes proposals and participation to further expand the taxonomy of measures.</p>
+    <h2>Risk Mitigation Measures</h2>
+    <aside class="note" title="We are looking to expand this in the future based on DPV technical/organisational/legal measures specifically for AI"></aside>
+    <p>The concept {{anchor('dpv:TechnicalOrganisationalMeasure')}} provides a rich taxonomy of concepts that include {{anchor('dpv:TechnicalMeasure')}} that operate at a technical level such as for security, {{anchor('dpv:OrganisationalMeasure')}} for organisational processes such as impact assessments and risk management, and {{ anchor('dpv:LegalMeasure') }} for legally enforceable measures such as contractual agreements. These can also be reused to describe measures in context of AI, including development of AI models and deployment of AI systems. The DPVCG welcomes proposals and participation to further expand the taxonomy of measures.</p>
+    <aside class="note" title="The concept ai:Measure provided in previous drafts has been deprecated and removed in favour of reusing the existing taxonomies from DPV. Additional  measures are welcome as expansions of technical, organisational, and legal taxonomies specific to AI."></aside>
+    {{ list_hierarchy(modules['measures']['classes']) }}
   </section>
 
 </section>
@@ -365,17 +367,6 @@
 
 </section>
 {% endblock ACKNOWLEDGEMENTS %}
-
-<section id="changelog">
-  <h2>Changelog for v{{DPV_VERSION}}</h2>
-  <p><strong>total terms: 211 ; added: 6 ; removed: 3</strong></p>
-  <p>The <a href="../changelog.html">changelog</a> provides more information on concepts that have been added/removed in this version. Below is a summary of the changes.</p>
-  <ul>
-      <li><code>DataLabelsAndLabellingProcessBias</code> and <code>MissingFeaturesAndLabelsBias</code> were shortened for correctness and consistency, and <code>DecomissionStage</code> was renamed to fix the typo.</li>
-      <li>Added <code>ModelTraining</code> to represent models being trained as a processing activity</li>
-      <li>Added <code>TrainingTechnique</code> to represent techniques used for training the model, where existing techniques are declared as types of training.</li>
-  </ul>
-</section>
 
 <script type="text/javascript" src="../diagrams/common.js" defer></script>
 </body>

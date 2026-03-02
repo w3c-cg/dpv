@@ -39,8 +39,10 @@ pyg_formatter = HtmlFormatter(cssclass="source", noclasses=True)
 _PARAMS_JINJA2_HTML = {
     'RDF_VOCABS': RDF_VOCABS,
     'DPV_VERSION': DPV_VERSION,
+    'DPV_PUBLISH_DATE': DPV_PUBLISH_DATE,
     'DPV_PREVIOUS_VERSION': DPV_PREVIOUS_VERSION,
     'DOCUMENT_STATUS': DOCUMENT_STATUS,
+    'NAMESPACES': NAMESPACES,
 }
 
 # == DATA class ==
@@ -231,7 +233,7 @@ class DATA(object):
                 concept['_type'] = 'notcp'
             # Ensure there are no duplicate labels or annotations 
             for prop in (
-                    'skos:prefLabel', 'dct:created', 'dct:modified',):
+                    'dct:created', 'dct:modified',):
                 if prop not in concept: continue
                 if type(concept[prop]) is list and len(concept[prop]) > 1:
                     concept[prop] = concept[prop][0]
@@ -242,7 +244,7 @@ class DATA(object):
                     'skos:prefLabel', 'skos:definition', 'skos:scopeNote'):
                 if prop not in concept: continue # unsupported text
                 values = ensure_list(concept[prop])
-                languages = {'en': []}
+                languages = {'en': [], 'de': []}
                 for prop_value in values:
                     if prop_value.language is None: # default lang is EN
                         languages['en'].append(prop_value)
@@ -419,7 +421,7 @@ def get_children_hierarchy(term):
 
 
 # ==== Organise into hierarchy ====
-def organise_hierarchy(terms:list, top:str=None) -> dict:
+def organise_hierarchy(terms:list, top:str=None, mode:str=None) -> dict:
     """
     Organise the given list of terms into a hierarchy.
     `terms` is a list of terms to be organised into a hierarchy,
@@ -429,6 +431,7 @@ def organise_hierarchy(terms:list, top:str=None) -> dict:
     """
     data = {}
     for term in terms:
+        # DEBUG(f"{term=}")
         data[term] = { 'parents': [], 'children': [] }
     # Some metadata dicts have `prefix` added amongst
     # the list of concepts - remove that.
@@ -439,28 +442,44 @@ def organise_hierarchy(terms:list, top:str=None) -> dict:
     # From each term, populate parents and children lists
     if top is None:
         for key, term in terms.items():
-            if 'skos:broader' in term: # has parents
-                parents = term['skos:broader'] # get parents
-                parents = ensure_list(parents)
-                for parent in parents: # check parents are not present in terms
-                    # if parents are in terms, that means this isn't a top
-                    # concept and shouldn't be returned
-                    if prefix_from_iri(parent) in terms:
-                        break
-                else:
-                    results[key] = term
+            # DEBUG(f"{key=}")
+            if mode == "taxonomy":
+                parents = ensure_list(term['rdf:type'])
             else:
+                parents = []
+            if 'skos:broader' in term: # has parents
+                parents = parents + ensure_list(term['skos:broader']) # get parents
+            # DEBUG(f"{parents=}")
+            for parent in parents: # check parents are not present in terms
+                # if parents are in terms, that means this isn't a top
+                # concept and shouldn't be returned
+                # DEBUG(f"{parent=} {prefix_from_iri(parent)=}")
+                if prefix_from_iri(parent) in terms:
+                    # DEBUG(f"{parent=} in terms")
+                    break
+            else:
+                # DEBUG(f"parent not in terms")
                 results[key] = term
+            # else:
+            #     results[key] = term
+        # DEBUG(f"{top=} {results.keys()=}")
         return {k:results[k] for k in sorted(results.keys(), key=str.casefold)}
     # else: top is not None
     for key, term in terms.items():
+        # DEBUG(f"{key=}")
+        if mode == "taxonomy":
+            parents = ensure_list(term['rdf:type'])
+        else:
+            parents = []
         if 'skos:broader' in term: # has parents
-            parents = term['skos:broader'] # get parents
-            parents = ensure_list(parents)
-            for parent in parents: # only return those items where parent is top
-                if prefix_from_iri(parent) == top:
-                    results[key] = term
-                    break
+            parents = parents + ensure_list(term['skos:broader']) # get parents
+        # DEBUG(f"{parents=}")
+        for parent in parents: # only return those items where parent is top
+            if prefix_from_iri(parent) == top:
+                # DEBUG(f"concept has parent {parent=}")
+                results[key] = term
+                break
+    # DEBUG(f"{top=} {results.keys()=}")
     return {k:results[k] for k in sorted(results.keys(), key=str.casefold)}
 
 
@@ -916,11 +935,12 @@ def _generate():
                 template=vocab_data['template'],
                 filepath=vocab_data["export"], filename=vocab,
                 index=True, vocab=vocab, lang="en")
-            for lang in IMPORT_TRANSLATIONS:
-                _write_template(
-                    template=vocab_data['template'],
-                    filepath=vocab_data["export"], filename=vocab,
-                    index=True, vocab=vocab, lang=lang)
+            if 'languages' in vocab_data:
+                for lang in vocab_data['languages']:
+                    _write_template(
+                        template=vocab_data['template'],
+                        filepath=vocab_data["export"], filename=vocab,
+                        index=True, vocab=vocab, lang=lang)
 
             # === Write Module HTML file ===
             if 'module-template' not in vocab_data:
@@ -933,12 +953,12 @@ def _generate():
                     template=vocab_data['module-template'][module],
                     filepath=f"{vocab_data['export']}/modules", filename=module,
                     index=False, vocab=vocab, lang="en")
-                for lang in IMPORT_TRANSLATIONS:
+            if 'languages' in vocab_data:
+                for lang in vocab_data['languages']:
                     _write_template(
                     template=vocab_data['module-template'][module],
                     filepath=f"{vocab_data['export']}/modules", filename=module,
                     index=False, vocab=vocab, lang=lang)
-
 
 # == Collate Missing Translations ==
 def _get_missing_translations():
@@ -1072,6 +1092,7 @@ def _generate_search_index():
         template = template_env.get_template('template_search_index.jinja2')
         fd.write(template.render(
             **_PARAMS_JINJA2_HTML,
+            namespaces=NAMESPACES,
             data=json.dumps(index), 
             num_classes=len(results_classes), 
             num_properties=len(results_properties)))
@@ -1089,13 +1110,18 @@ if __name__ == '__main__':
     parser.add_argument('-F', '--fastvocab', nargs='+', help="generate specific vocab outputs while skipping legal*, eu*, loc*, search-index")
     parser.add_argument('-V', '--vocab', nargs='+', help="generate specific vocab outputs")
     parser.add_argument('-S', '--skip', nargs='+', help="skip loading specific vocab outputs")
+    parser.add_argument('-N', '--novocab', action='store_true', help="generate non-vocab docs")
     parser.add_argument('-I', '--index', default=False, action='store_true', help="generate search index")
     parser.add_argument('-G', '--guides', action='store_true', help="generate guides")
     parser.add_argument('-M', '--mappings', action='store_true', help="generate mappings")
+    parser.add_argument('--repoindex', action='store_true', help="generate mappings")
     args = parser.parse_args()
 
     INFO('-'*40)
-    if args.vocab:
+    if args.novocab:
+        DATA.vocabs = ['dex']
+        DATA.skip = [vocab for vocab in RDF_VOCABS.keys() if vocab != 'dex']
+    elif args.vocab:
         DATA.vocabs = [s.strip() for s in args.vocab[0].split(',')]
         vocabs = args.vocab
     elif args.fastvocab:
@@ -1105,7 +1131,7 @@ if __name__ == '__main__':
         vocabs = RDF_VOCABS.keys()
         DATA.vocabs = vocabs
 
-    INFO(f'Generating outputs for {vocabs} vocabularies')
+    INFO(f'Generating outputs for {DATA.vocabs} vocabularies')
 
     if args.skip:
         DATA.skip = [s.strip() for s in args.skip[0].split(',')]
@@ -1153,4 +1179,14 @@ if __name__ == '__main__':
             template = template_env.get_template('template_mappings_index.jinja2')
             fd.write(template.render(**_PARAMS_JINJA2_HTML, mappings=MAPPINGS.items()))
         INFO(f"wrote mapping index at {filepath}")
+        INFO('*'*40)
+
+    if args.repoindex:
+        INFO('Generating REPO index.html')
+        template = 'template_repo_index.jinja2'
+        filepath = '../index.html'
+        with open(filepath, 'w') as fd:
+            template = template_env.get_template(template)
+            fd.write(template.render(**_PARAMS_JINJA2_HTML, data=None))
+        INFO(f"wrote repo index at {filepath}")
         INFO('*'*40)

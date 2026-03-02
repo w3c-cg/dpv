@@ -13,7 +13,7 @@
     latestVersion: "https://w3id.org/dpv/guides/consent-27560",
     canonicalUri: "https://w3id.org/dpv/guides/consent-27560",
     edDraftURI: "https://dev.dpvcg.org/guides/consent-27560",
-    publishDate: "2024-08-01",
+    publishDate: "2026-02-15",
     // isPreview: true,
     subjectPrefix: "[DPV-27560]",
     doJsonLd: true,
@@ -42,7 +42,7 @@
         "data": [
             {
               "value": "Implementing ISO/IEC TS 27560:2023 Consent Records and Receipts for GDPR and DGA (2024)",
-              "href": "https://arxiv.org/abs/2405.04528"
+              "href": "https://doi.org/10.1007/978-3-031-68024-3_12"
             },
             {
               "value": "Data Privacy Vocabulary (DPV) -- Version 2.0 (2024)",
@@ -320,9 +320,13 @@
     "href": "https://w3id.org/dpv/legal/eu/rights",
     "title": "EU Fundamental Rights concepts for DPV"
   },
-  "STANDARD-P7012": {
-    "href": "https://w3id.org/dpv/standards/p7012",
-    "title": "Extension for IEEE P7012"
+  "STANDARDS": {
+    "href": "https://w3id.org/dpv/standards",
+    "title": "Standards-supporting Extensions for DPV"
+  },
+  "STANDARD-IEEE-7012": {
+    "href": "https://w3id.org/dpv/standards/ieee/7012",
+    "title": "Extension for IEEE 7012"
   },
   "DPV-OWL": {
     "href": "https://w3id.org/dpv/dpv-owl",
@@ -528,8 +532,8 @@
     "href": "https://www.iso.org/iso-8601-date-and-time-format.html",
     "title": "ISO 8601 Date and time format"
   },
-  "IEEE-P7012": {
-    "title": "IEEE Draft Standard for Machine Readable Personal Privacy Terms",
+  "IEEE-7012": {
+    "title": "IEEE 7012-2025: Standard for Machine Readable Personal Privacy Terms",
     "href": "https://standards.ieee.org/ieee/7012/7192/"
   },
   "HealthDCAT-AP": {
@@ -539,6 +543,22 @@
   "EHDS": {
     "title": "Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL on the European Health Data Space",
     "href": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52022PC0197"
+  },
+  "EUVOC-AI-Taxonomy": {
+    "title": "AI Taxonomy - EU Vocabularies",
+    "href": "https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://data.europa.eu/8s8/ai-taxonomy"
+  },
+  "AIRO": {
+    "title": "AIRO (AI Risk Ontology)",
+    "href": "https://w3id.org/airo"
+  },
+  "VAIR": {
+    "title": "VAIR (Vocabulary of AI Risks)",
+    "href": "https://w3id.org/vair"
+  },
+  "GDNG": {
+      "title": "Gesetz zur Nutzung von Gesundheitsdaten zu gemeinwohlorientierten Forschungszwecken und zur datenbasierten Weiterentwicklung des Gesundheitswesens (Gesundheitsdatennutzungsgesetz – GDNG)",
+      "href": "https://www.recht.bund.de/eli/bund/bgbl-1/2024/102"
   }
 }}
   </script>
@@ -563,13 +583,9 @@
     <section id="abstract">
         <p>The <a href="https://www.iso.org/standard/80392.html">ISO/IEC TS 27560:2023 Privacy technologies — Consent record information structure</a> provides guidance for the creation and maintenance of records regarding consent as machine-readable information. It also provides guidance on the use of this information to exchange such records between entities in the form of 'receipts'. This document provides a guide for the implementation of machine-readable consent records and receipts as defined in ISO/IEC TS 27560:2023 by using the <a href="https://w3id.org/dpv">Data Privacy Vocabulary (DPV)</a>. Additionally, this document also provides guidance on using ISO/IEC TS 27560:2023 for meeting <a href="https://eur-lex.europa.eu/eli/reg/2016/679/art_7/oj">EU GDPR</a> requirements regarding consent.</p>
     </section>
-        <div id="version-message" class="notoc" style="color: red; background-color: lightyellow;">
-  <p><strong>DRAFT RELEASE</strong> This is draft release intended for review.</p>
-  <aside class="issue" data-number="301"></aside>
-</div>
-<div id="dpv-document-family" class="notoc">
-  <p><strong>DPV Specifications:</strong> The [[DPV]] is the core specification within the DPV family, with the following extensions: Personal Data [[PD]], Locations [[LOC]], Risk Management [[RISK]], Technology [[TECH]] and [[AI]], [[JUSTIFICATIONS]], [[SECTOR]] specific extensions, and [[LEGAL]] extensions modelling specific jurisdictions and regulations. A [[PRIMER]] introduces the concepts and modelling of DPV specifications, and [[GUIDES]] describe application of DPV for specific applications and use-cases. The <a href="https://w3id.org/dpv/2.3-dev/search">Search Index</a> page provides a searchable hierarchy of all concepts. The <a href="https://www.w3.org/community/dpvcg/">Data Privacy Vocabularies and Controls Community Group (DPVCG)</a> develops and manages these specifications through <a href="https://github.com/w3c/dpv/releases">GitHub</a>. For meetings, see the <a href="https://www.w3.org/groups/cg/dpvcg/calendar">DPVCG calendar</a>.</p>
-  <p>To cite and understand the structure of DPV, the article "<a href="https://doi.org/10.1007/978-3-031-77847-6_10">Data Privacy Vocabulary (DPV) - Version 2.0</a>" (2024) describes the current state of DPV and extensions from version 2.0 onwards (open access version <a href="https://doi.org/10.48550/arXiv.2404.13426"><u>here</u></a>). The earlier article "<a href="https://link.springer.com/chapter/10.1007%2F978-3-030-33246-4_44"><u>Creating A Vocabulary for Data Privacy</u></a>" (2019) describes how the DPV was developed (open access versions <a href="http://hdl.handle.net/2262/91581"><u>here</u></a>, <a href="http://doras.dcu.ie/23801/"><u>here</u></a>, and <a href="https://aic.ai.wu.ac.at/~polleres/publications/pand-etal-2019ODBASE.pdf"><u>here</u></a>).
+        <div id="dpv-document-family" class="notoc">
+  <p><strong>DPV Specifications:</strong> The [[DPV]] is the core specification that is extended by specific extensions. A [[PRIMER]] introduces the concepts and modelling of DPV specifications, and [[GUIDES]] describe application of DPV for specific applications and use-cases. The <a href="https://w3id.org/dpv/2.3/search">Search Index</a> page provides a searchable hierarchy of all concepts. The <a href="https://www.w3.org/community/dpvcg/">Data Privacy Vocabularies and Controls Community Group (DPVCG)</a> develops and manages these specifications through <a href="https://github.com/w3c/dpv/releases">GitHub</a>. For meetings, see the <a href="https://www.w3.org/groups/cg/dpvcg/calendar">DPVCG calendar</a>.</p>
+  <p>The peer-reviewed article "<a href="https://doi.org/10.1007/978-3-031-77847-6_10">Data Privacy Vocabulary (DPV) - Version 2.0</a>" (2024) describes the current state of DPV and extensions from version 2.0 onwards, with an <a href="https://link.springer.com/chapter/10.1007%2F978-3-030-33246-4_44">earlier article</a> (2019) covering how the DPV was developed (open access versions <a href="http://hdl.handle.net/2262/91581"><u>here</u></a>, <a href="http://doras.dcu.ie/23801/"><u>here</u></a>, and <a href="https://aic.ai.wu.ac.at/~polleres/publications/pand-etal-2019ODBASE.pdf"><u>here</u></a>).
   <p><strong>Contributing:</strong> The DPVCG welcomes participation to improve the DPV and associated resources, including expansion or refinement of concepts, requesting information and applications, and addressing open issues. <a href="https://github.com/w3c/dpv/wiki/Contribution-Guide">See contributing guide</a> for further information.</p>
 </div>
 <section id="sotd">
@@ -629,7 +645,7 @@
       <p>Once a consent has been given by the individual, they may also have the ability to regulate its use by withdrawing it at a later time. Such termination of consent results in the halting of its associated processing activities. Other causes of termination can be the expiry of duration for which the consent would be considered valid, termination by the Controller, or the consent being declared invalid by an authority such as the court.</p>
       <p>Based on these, a lifecycle can be charted regarding the various states that 'consent' can be stated to be in, which is essential to understand which states can be considered 'valid' for the processing of personal data. In the diagram below, consent states begin with a notice being shown to inform the individual and request their consent. Following this, the individual may make the decision to give or grant their consent, or to refuse it. If consent has been given, it can be re-confirmed or re-affirmed to assert its validity, or it can be terminated for several reasons such as its withdrawal by the individual. In all these, only when consent continues to be in a 'given' state can it be used to justify processing.</p>
       <figure>
-          <img src="../2.3-dev/diagrams/consent-lifecycle.svg">
+          <img src="../2.3/diagrams/consent-lifecycle.svg">
           <figcaption>Lifecycle of Consent, or 'states' associated with consent</figcaption>
       </figure>
 
@@ -715,7 +731,7 @@
         <li><strong>Events:</strong> information about <i>consent events</i> e.g. consent given, consent withdrawn.</li>
     </ol>
     <figure>
-        <img src="../2.3-dev/diagrams/dpv-27560-summary.png">
+        <img src="../2.3/diagrams/dpv-27560-summary.png">
         <figcaption>Summary of fields in ISO/IEC TS 27560:2023. The field names have been modified for alignment with DPV concepts. Field names in bold are mandatory.</figcaption>
     </figure>
     <p>Each section contains fields which describe the information that must be represented along with the form (e.g. timestamp format) and its necessity (e.g. required or optional). Certain fields are expressed as references to other fields (e.g. 'Controller' in 'Processing' section is a reference to an instance or record in 'Parties' section).</p>
@@ -3812,20 +3828,20 @@ provided to the service provider as proof of consent.</p>
 
 <section id="technical-considerations" >
     <h3>Technical Considerations in Managing Records and Receipts</h3>
-    <p>We can use the [[[vocab-dcat-3]]], a W3C standard, to represent the records as datasets and receipts as a catalogue of records. By doing so, the metadata fields provided by DCAT can be readily used to represent information that supports in maintenance and exchange of consent records and receipts, including using existing infrastructure to manage them. DCAT is a widely used standard that supports implementing (open) data portals and has tooling for discovery and management of information. The EU has developed the [[[DCAT-AP]]] [[DCAT-AP]] which extends DCAT to support the <a href="https://data.europa.eu/">EU Open Data Portals</a>. </p>
-    <p>Through these records and receipts can be readily communicated as interoperable datasets between relevant entities - for example controller to data subject, or between controllers and third parties. This is a crucial technical enabler for the principle of increasing data value through utilisation within the Data Governance Act and Data Spaces. In particular, the use of DCAT(-AP) also supports the addition of further policies and measures to support the implementation of data intermediaries which will be required to maintain consent records under the obligations of the DGA.</p>
+    <p>The 27560 fields and specifications are a representation of the detailed information required to document and demonstrate valid consent, including for regulations such as the GDPR. However, this does not necessiate storing each and every record with the full extent of the information within the record. Technical implementations can implement the storage, retrieval, and document-generation processes in a way that suits their use-cases and provides efficiency and optimisation. For example, if parts of a record are common for all or a large portion of users, then this can be stored separately and linked to the record. The only necessity is that the full record, i.e. conforming with this specification, can be produced as needed.</p>
+    <p>Other practical technical requirements may also dictate how the consent records are stored, and consequently require a different implementation of the specific schema or model suggested in this specification. For example, when there are mutliple records associated with a data subject, then how to assess the latest state of consent? Adopters therefore should take into considerations such factors and structure their implementations accordingly, e.g. by identifying whether additional metadata is needed to represent the latest state, or to implement the records in a way that allows efficient querying of latest state based on event timestamps.</p>
+    <p>Below are some suggested ways on how [[[vocab-dcat-3]]], a W3C standard, can be helpful in these discussions to represent the records as datasets and receipts as a catalogue of records. By doing so, the metadata fields provided by DCAT can be readily used to represent information that supports in maintenance and exchange of consent records and receipts, including using existing infrastructure to manage them. DCAT is a widely used standard that supports implementing (open) data portals and has tooling for discovery and management of information. Additionally, the EU has developed the [[[DCAT-AP]]] [[DCAT-AP]] which extends DCAT to support the <a href="https://data.europa.eu/">EU Open Data Portals</a>, which would be of interest to EU stakeholders. A <a href="https://doi.org/10.3390/info13050244">similar effort</a> for use of DCAT and DCAT-AP has shown the usefulness of this work for Records of Processing Activities (GDPR Article 30). The interoperable communication of records between relevant entities - for example controller to data subject, or between controllers and third parties is a crucial technical enabler for the principle of increasing data value through utilisation within the Data Governance Act and Data Spaces. In particular, the use of DCAT(-AP) also supports the addition of further policies and measures to support the implementation of other regulatory obligations, such as notifications under GDPR and NIS2, or the documentation needed under Data Act and AI Act.</p>
+    <p>The use of DCAT for expressing consent records was discussed in <a href="https://github.com/w3c/dpv/issues/114">Issue#114</a> regarding expressing the latest state of consent (adopters may be interested in discussed approaches). To implement consent records with DCAT, we must first express the consent record as a `dcat:Resource`, and then multiple records can be collated in a `dcat:Catalog`. This allows for grouping relevant records together under a collective concept, which can simplify the implementation by only requiring specification of data subject, purposes, etc. within the catalog concept, and only recording the events and consent states within the record concept. Another possibility is the use of `dcat:DatasetSeries` which has associated properties `dcat:first` and `dcat:last` to represent which (consent) records are first and last. Using the 'last' property as an indicator for 'latest' state is thus possible.</p>
+    <p>In addition to these considerations, technical implementations may also have cases where they implement an "append-only" record i.e. systems where records are added, but cannot be modified, and future updates can only be appended. If all data must necessarily reside in this state, then each record can indicate its previous record using the property `dcat:isVersionOf`, with the latest record not being a previous version of any other record.</p>
 </section>
 
 
-</section>
-
-<section id="future-work" class="appendix">
-  <h2>Future Work</h2>
-  <aside class="issue" data-number="114"></aside>
 </section>
 
 <section id="changelog">
   <h2>Changelog and Errata</h2>
+  <p><strong>08 February 2026</strong><br/>
+    Added additional details to Technical Implementation section, with a link to github issue for discussion, and the use of DCAT for identifying latest state.</p>
   <p><strong>15 August 2024</strong></p>
   <ul>
     <li>Changed <code>InvolvementControl</code> (which doesn't exist) to <code>ConsentControl</code> (which is what was added in DPV 2.0). This change affects ISO 27560:2023, EU GDPR, and DPV comparison table, Processing Fields table, Consent Change & Withdrawal section, Example 19: Example specifying change and withdrawal of consent, Example 39: Example of a Consent Record with only the required fields, Example 40: Example of a Consent Record with both required and optional fields, Example 46: Example of a Consent Receipt with information from required fields in a consent record.</li>
@@ -3841,7 +3857,7 @@ provided to the service provider as proof of consent.</p>
   <h2>Funding Acknowledgements</h2>
 
   <h3>Funding Sponsors</h3>
-  <p>The DPVCG was established as part of the <a href="https://specialprivacy.ercim.eu/">SPECIAL H2020 Project</a>, which received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No. 731601 from 2017 to 2019.</p>
+  <p>The DPVCG was established as part of the <a href="https://specialprivacy.ercim.eu/">SPECIAL H2020 Project</a>, which received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No. 731601 from 2017 to 2019. Continued developments have been funded under: <a href="https://recitals-project.eu/">RECITALS Project</a> funded under the EU's Horizon program with grant agreement No. 101168490.</p>
 <p>Harshvardhan J. Pandit was funded to work on DPV from 2020 to 2022 by the <a href="https://research.ie/">Irish Research Council's</a> Government of Ireland Postdoctoral Fellowship Grant#GOIPD/2020/790.</p>
 <p>The <a href="https://www.adaptcentre.ie/">ADAPT SFI Centre</a> for Digital Media Technology is funded by Science Foundation Ireland through the SFI Research Centres Programme and is co-funded under the European Regional Development Fund (ERDF) through Grant#13/RC/2106 (2018 to 2020) and Grant#13/RC/2106_P2 (2021 onwards).</p>
 

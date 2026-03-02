@@ -72,6 +72,14 @@
     <p>The Data Privacy Vocabulary (DPV) and its extensions provide concepts intended for <i>general</i> use-cases which have a wide applicability. The SECTOR extensions provide concepts <i>specific to a sector</i> to support the use of DPV within that sector. At the moment, these extensions only provide <i>Purposes</i> which extend the DPV's Purpose taxonomy. The DPVCG plans to provide additional sector specific concepts in the future - such as <i>Data categories</i>, <i>Technical and Organisational Measures</i>, <i>Risks and Impacts</i>, and <i>Technologies</i> - and <a href="https://www.w3.org/groups/cg/dpvcg/">welcomes contributions and participation</a> for these.</p>
   </section>
 
+  {% if 'data' in modules %}
+  <section id="vocab-data">
+    <h2>Data</h2>
+    <p>The Data taxonomy provides concepts for representing data, including personal and non-personal data, as well as other data types. Where relevant, these concepts extend the data concepts defined in [[DPV]] and the categories of personal data defined within the [[PD]] extension. The relation <code>dpv:hasData</code> is useful to associate the data concept with a specific context or concept.</p>
+    {{ list_hierarchy(modules['data']['classes']) }}
+  </section>
+  {% endif %}
+
   <section id="vocab-purposes">
     <h2>Purposes</h2>
     <p>The Purpose taxonomy provides concepts for representing purposes for processing data or using technologies within the context of the specific sector. Where relevant, these concepts extend the purpose concepts defined in the (main or core) <a href="../../dpv/">DPV specification</a>. The relation <code>dpv:hasPurpose</code> is useful to associate the purpose with a specific context or concept.</p>
@@ -83,6 +91,22 @@
     <h2>Entities</h2>
     <p>The Entities taxonomy provides concepts for representing entities (organisations, individuals, roles) involved in the processing of data or using technologies within the context of the specific sector. Where relevant, these concepts extend the purpose concepts defined in the (main or core) <a href="../../dpv/">DPV specification</a>. The relation <code>dpv:hasEntity</code> is the generic property to associate entities with a specific context or concept. Additional role-specific properties may be further provided in the future for convenience.</p>
     {{ list_hierarchy(modules['entities']['classes']) }}
+  </section>
+  {% endif %}
+
+  {% if 'technology' in modules %}
+  <section id="vocab-technology">
+    <h2>Technologies</h2>
+    <p>The Technology taxonomy provides concepts for representing technologies, including software and hardware, as well as other technologies. Where relevant, these concepts extend the data concepts defined in [[DPV]] and the technologies defined within the [[TECH]] extension. The relation <code>dpv:isImplementedUsingTechnology</code> is useful to indicate that something is implemented using some technology.</p>
+    {{ list_hierarchy(modules['technology']['classes']) }}
+  </section>
+  {% endif %}
+
+  {% if 'status' in modules %}
+  <section id="vocab-status">
+    <h2>Status</h2>
+    <p>The following statuses are defined in addition to those in the (main or core) <a href="../../dpv/">DPV specification</a>. The relation <code>dpv:hasStatus</code> is the generic property to associate statuses with a specific context or concept. Additional role-specific properties may be further provided in the future for convenience.</p>
+    {{ list_hierarchy(modules['status']['classes'], mode='taxonomy') }}
   </section>
   {% endif %}
 
@@ -130,12 +154,6 @@
 </section>
 {% endblock ACKNOWLEDGEMENTS %}
 <section class="appendix" id="issue-summary"></section>
-
-<section id="changelog">
-  <h2>Changelog for v{{DPV_VERSION}}</h2>
-  <p><strong>total extensions: 6 ; added: 0 ; removed: 0 ;</strong></p>
-  <p>The <a href="../changelog.html">changelog</a> provides more information on concepts that have been added/removed in this version.</p>
-</section>
 
 <script type="text/javascript" src="../../diagrams/common.js" defer></script>
 </body>

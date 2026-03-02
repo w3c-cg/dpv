@@ -20,9 +20,9 @@ INFO = logging.info
 # == data ==
 
 # DPV Version
-DPV_VERSION = "2.3-dev"
-DPV_PREVIOUS_VERSION = "2.2"
-DPV_PUBLISH_DATE = "2026-01-01"
+DPV_VERSION = "2.4-dev"
+DPV_PREVIOUS_VERSION = "2.3"
+DPV_PUBLISH_DATE = "2026-07-31"
 # Document status: should be one of CG-DRAFT or CG-FINAL
 DOCUMENT_STATUS = "CG-DRAFT"
 
@@ -407,7 +407,16 @@ CSVFILES = {
         },
         'entities': {
             'taxonomy': f'{IMPORT_CSV_PATH}/Entities_Healthcare.csv',
-        }
+        },
+        'status': {
+            'taxonomy': f'{IMPORT_CSV_PATH}/Sector_Health_Status.csv',
+        },
+        'data': {
+            'taxonomy': f'{IMPORT_CSV_PATH}/data-healthcare.csv',
+        },
+        'technology': {
+            'taxonomy': f'{IMPORT_CSV_PATH}/tech-healthcare.csv',
+        },
     },
     'sector-infra': {
         'purposes': {
@@ -699,6 +708,12 @@ CSVFILES = {
         'principles': {
             'taxonomy': f'{IMPORT_CSV_PATH}/GDPR_principles.csv',
         },
+        'purpose_compatibility': {
+            'taxonomy': f'{IMPORT_CSV_PATH}/GDPR_purpose_compatibility.csv',
+        },
+        'proportionality': {
+            'taxonomy': f'{IMPORT_CSV_PATH}/GDPR_proportionality.csv',
+        }
     },
     'eu-dga': {
         'legal_basis': {
@@ -739,6 +754,7 @@ CSVFILES = {
         },
         'risk_levels': {
             'taxonomy': f'{IMPORT_CSV_PATH}/aiact-risk-levels.csv',
+            'properties': f'{IMPORT_CSV_PATH}/aiact-risk-levels-properties.csv',
         },
         'data': {
             'taxonomy': f'{IMPORT_CSV_PATH}/aiact-data.csv',
@@ -765,6 +781,12 @@ CSVFILES = {
         'sector': {
             'taxonomy': f'{IMPORT_CSV_PATH}/aiact-sector.csv',
         },
+        'prohibited-systems': {
+            'taxonomy-aiact': f'{IMPORT_CSV_PATH}/aiact-prohibited-systems.csv',
+        },
+        'highrisk-systems': {
+            'taxonomy-aiact': f'{IMPORT_CSV_PATH}/aiact-highrisk-systems.csv',
+        },
     },
     'eu-nis2': {
         'notice': {
@@ -787,6 +809,15 @@ CSVFILES = {
         'process': {
             'taxonomy': f'{IMPORT_CSV_PATH}/EHDS_Process.csv',
         },
+        'technology': {
+            'taxonomy': f'{IMPORT_CSV_PATH}/EHDS_Technology.csv',
+        },
+        'rights': {
+            'taxonomy': f'{IMPORT_CSV_PATH}/EHDS_Right.csv',
+        },
+        'TOM': {
+            'taxonomy': f'{IMPORT_CSV_PATH}/EHDS_TOM.csv',
+        },
     },
     'eu-rights': {
         'fundamental': {
@@ -796,8 +827,30 @@ CSVFILES = {
             'taxonomy-risk': f'{IMPORT_CSV_PATH}/EUFundamentalRights_Impacts.csv',
         },
     },
+    'de-gdng': {
+        'basic-definitions': {
+            'gdng-classes': f'{IMPORT_CSV_PATH}/GDNG-basic-definitions.csv',
+        },
+        'actors': {
+            'gdng-classes': f'{IMPORT_CSV_PATH}/GDNG-actors.csv',
+            'properties': f'{IMPORT_CSV_PATH}/GDNG-actors-properties.csv',
+        },
+        'query-and-access': {
+            'gdng-classes': f'{IMPORT_CSV_PATH}/GDNG-query-and-access.csv',
+        },
+        'linkage': {
+            'gdng-classes': f'{IMPORT_CSV_PATH}/GDNG-linkage.csv',
+        },
+        'lawfulness': {
+            'gdng-classes': f'{IMPORT_CSV_PATH}/GDNG-lawfulness.csv',
+        },
+    },
+    'in-dpdp': {
+        'lawfulness': {
+            'taxonomy': f'{IMPORT_CSV_PATH}/IN-DPDP-lawfulness.csv',
+        },
+    },
 }
-
 
 # === translations ===
 IMPORT_TRANSLATIONS = {
@@ -1130,13 +1183,16 @@ RDF_VOCABS = {
         'modules': {
             'purposes': f'{IMPORT_PATH}/sector/health/modules/purposes.ttl',
             'entities': f'{IMPORT_PATH}/sector/health/modules/entities.ttl',
+            'status': f'{IMPORT_PATH}/sector/health/modules/status.ttl',
+            'technology': f'{IMPORT_PATH}/sector/health/modules/technology.ttl',
+            'data': f'{IMPORT_PATH}/sector/health/modules/data.ttl',
         },
         'metadata': {
             "dct:title": "Health Sector Concepts",
             "dct:description": "Extension to the Data Privacy Vocabulary (DPV) providing concepts for the health sector",
             "dct:created": "2024-12-01",
             "dct:modified": DPV_PUBLISH_DATE,
-            "dct:creator": "Harshvardhan J. Pandit",
+            "dct:creator": "Harshvardhan J. Pandit, Beatriz Esteves, Julian Flake",
             "schema:version": DPV_VERSION,
             "profile:isProfileOf": "dpv",
             "bibo:status": "draft",
@@ -2072,13 +2128,15 @@ RDF_VOCABS = {
             'legal_basis-rights_mapping': f'{IMPORT_PATH}/legal/eu/gdpr/modules/legal_basis_rights_mapping.ttl',
             'entities': f'{IMPORT_PATH}/legal/eu/gdpr/modules/entities.ttl',
             'principles': f'{IMPORT_PATH}/legal/eu/gdpr/modules/principles.ttl',
+            'purpose_compatibility': f'{IMPORT_PATH}/legal/eu/gdpr/modules/purpose_compatibility.ttl',
+            'proportionality': f'{IMPORT_PATH}/legal/eu/gdpr/modules/proportionality.ttl',
         },
         'metadata': {
             "dct:title": "EU General Data Protection Regulation (GDPR)",
             "dct:description": "Extension to the Data Privacy Vocabulary (DPV) providing concepts for representing information associated with EU GDPR",
             "dct:created": "2019-06-18",
             "dct:modified": DPV_PUBLISH_DATE,
-            "dct:creator": "Harshvardhan J. Pandit, Georg P. Krog, Paul Ryan, Beatriz Esteves",
+            "dct:creator": "Harshvardhan J. Pandit, Georg P. Krog, Paul Ryan, Beatriz Esteves, Efstratios Koulierakis",
             "schema:version": DPV_VERSION,
             "profile:isProfileOf": "dpv",
             "bibo:status": "published",
@@ -2126,6 +2184,8 @@ RDF_VOCABS = {
             'assessment': f'{IMPORT_PATH}/legal/eu/aiact/modules/assessment.ttl',
             'compliance': f'{IMPORT_PATH}/legal/eu/aiact/modules/compliance.ttl',
             'sector': f'{IMPORT_PATH}/legal/eu/aiact/modules/sector.ttl',
+            'prohibited-systems': f'{IMPORT_PATH}/legal/eu/aiact/modules/prohibited-systems.ttl',
+            'highrisk-systems': f'{IMPORT_PATH}/legal/eu/aiact/modules/highrisk-systems.ttl',
         },
         'metadata': {
             "dct:title": "EU Artificial Intelligence Act (AI Act)",
@@ -2166,6 +2226,9 @@ RDF_VOCABS = {
             'purposes': f'{IMPORT_PATH}/legal/eu/ehds/modules/purposes.ttl',
             'entities': f'{IMPORT_PATH}/legal/eu/ehds/modules/entities.ttl',
             'process': f'{IMPORT_PATH}/legal/eu/ehds/modules/process.ttl',
+            'technology': f'{IMPORT_PATH}/legal/eu/ehds/modules/technology.ttl',
+            'rights': f'{IMPORT_PATH}/legal/eu/ehds/modules/rights.ttl',
+            'TOM': f'{IMPORT_PATH}/legal/eu/ehds/modules/TOM.ttl',
         },
         'metadata': {
             "dct:title": "EU European Health Data Spaces (EHDS)",
@@ -2195,6 +2258,49 @@ RDF_VOCABS = {
             "schema:version": DPV_VERSION,
             "profile:isProfileOf": "dpv",
             "bibo:status": "published",
+        },
+    },
+    'de-gdng': {
+        'vocab': f'{IMPORT_PATH}/legal/de/gdng/de-gdng.ttl',
+        'template': 'template_de_gdng.jinja2',
+        'export': f'{EXPORT_PATH}/legal/de/gdng',
+        'languages': [ "de" ],
+        'modules': {
+            'basic-definitions': f'{IMPORT_PATH}/legal/de/gdng/modules/basic-definitions.ttl',
+            'actors': f'{IMPORT_PATH}/legal/de/gdng/modules/actors.ttl',
+            'query-and-access': f'{IMPORT_PATH}/legal/de/gdng/modules/query-and-access.ttl',
+            'linkage': f'{IMPORT_PATH}/legal/de/gdng/modules/linkage.ttl',
+            'lawfulness': f'{IMPORT_PATH}/legal/de/gdng/modules/lawfulness.ttl',
+        },
+        'metadata': {
+            "dct:title": "Legal Concepts for German Gesundheitsdatennutzungsgesetz (DE)",
+            "dct:description": "Extension to the Data Privacy Vocabulary (DPV) providing concepts for representing legal information for a German regulation",
+            "dct:created": "2026-01-21",
+            "dct:modified": DPV_PUBLISH_DATE,
+            "dct:creator": "Julian Flake, Christian Draeger",
+            "schema:version": DPV_VERSION,
+            "profile:isProfileOf": "dpv",
+            'iri': 'https://w3id.org/dpv/legal/de/gdng',
+            "bibo:status": "draft",
+        },
+    },
+    'in-dpdp': {
+        'vocab': f'{IMPORT_PATH}/legal/in/dpdp/in-dpdp.ttl',
+        'template': 'template_legal_in_dpdp.jinja2',
+        'export': f'{EXPORT_PATH}/legal/in/dpdp',
+        'modules': {
+            'lawfulness': f'{IMPORT_PATH}/legal/in/dpdp/modules/lawfulness.ttl',
+        },
+        'metadata': {
+            "dct:title": "Legal Concepts for India's Digital Personal Data Protection Act 2023 (IN-DPDP)",
+            "dct:description": "Extension to the Data Privacy Vocabulary (DPV) providing concepts for representing legal information for India's DPDP (2023)",
+            "dct:created": "2026-02-22",
+            "dct:modified": DPV_PUBLISH_DATE,
+            "dct:creator": "Ajay Jadhav, Georg P. Krog, Harshvardhan J. Pandit",
+            "schema:version": DPV_VERSION,
+            "profile:isProfileOf": "dpv",
+            'iri': 'https://w3id.org/dpv/legal/in/dpdp',
+            "bibo:status": "draft",
         },
     },
 }
@@ -2462,7 +2568,15 @@ RDF_STRUCTURE = {
     'dex': {
         'main': f'{EXPORT_RDF_PATH}/examples',
         'modules': f'{EXPORT_RDF_PATH}/examples/modules',
-    }
+    },
+    'de-gdng': {
+        'main': f'{EXPORT_RDF_PATH}/legal/de/gdng', 
+        'modules': f'{EXPORT_RDF_PATH}/legal/de/gdng/modules', 
+    },
+    'in-dpdp': {
+        'main': f'{EXPORT_RDF_PATH}/legal/in/dpdp', 
+        'modules': f'{EXPORT_RDF_PATH}/legal/in/dpdp/modules', 
+    },
 }
 
 # Collated concepts
@@ -2690,6 +2804,13 @@ MAPPINGS = {
         'output': '../mappings/gist/index.html',
         'rdf': '../mappings/gist/dpv-gist.ttl',
         'title': 'Mapping from DPV to GIST',
+    },
+    'iso': {
+        'template': 'template_mappings_iso.jinja2',
+        'iri': 'https://w3id.org/dpv/mappings/iso',
+        'output': '../mappings/iso/index.html',
+        'rdf': '../mappings/iso/dpv-iso.ttl',
+        'title': 'Mapping from DPV to ISO',
     },
     'odrl': {
         'template': 'template_mappings_odrl.jinja2',

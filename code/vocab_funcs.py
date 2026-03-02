@@ -25,22 +25,33 @@ def construct_property(item, data, namespace, header):
     return triples
 
 
-def construct_label(item, data, namespace, header):
+def construct_label(item, data, namespace, header, lang='en'):
     triples = []
     term, namespace = _get_term_from_prefix_notation(data['Term'], namespace)
     if ':' in data['Term'] and namespace.startswith('https://w3id.org/dpv'):
         return triples
-    triples.append((namespace[term], SKOS.prefLabel, Literal(item, lang='en')))
+    triples.append((namespace[term], SKOS.prefLabel, Literal(item, lang=lang)))
     return triples
 
-def construct_definition(item, data, namespace, header):
+
+# TODO merge with construct_definition, define language in schema definition
+def construct_label_de(item, data, namespace, header):
+    return construct_label(item, data, namespace, header, lang='de')
+
+
+def construct_definition(item, data, namespace, header, lang='en'):
     triples = []
     term, namespace = _get_term_from_prefix_notation(data['Term'], namespace)
     annotation = SKOS.definition
     if data['Term'] != term: # e.g. dpv:Concept and Concept
         annotation = SKOS.scopeNote
-    triples.append((namespace[term], annotation, Literal(item, lang='en')))
+    triples.append((namespace[term], annotation, Literal(item, lang=lang)))
     return triples
+
+
+# TODO merge with construct_definition, define language in schema definition
+def construct_definition_de(item, data, namespace, header):
+    return construct_definition(item, data, namespace, header, lang='de')
 
 
 def construct_sameas(item, data, namespace, header):
@@ -595,3 +606,36 @@ def construct_risk_level(term, data, namespace, header):
     term = namespace[f'{term}Risk']
     triples.append((namespace[data['Term']], DPV.hasRiskLevel, term))
     return triples
+
+
+def contruct_aiact_risk_level(term, data, namespace, header):
+    triples = []
+    risklevel = namespace[term]
+    term = namespace[data['Term']]
+    triples.append((term, namespace['hasRiskLevel'], risklevel))
+    return triples
+
+
+### Experimental function for creating triples from spreadsheet
+def extra_function(term, data, namespace, header):
+    DEBUG(f"{term=}")
+    if term not in globals():
+        return []
+    function = globals()[term]
+    DEBUG(f"{function=}")
+    DEBUG(f"{data['ExtraParams']=}")
+    return function(term, data, namespace, header)
+
+
+def add_triple_subject(term, data, namespace, header):
+    triples = []
+    term = namespace[term]
+    p, o = data['ExtraParams'].replace('(','').replace(')', '').split(',')
+    p = _term_with_namespace(p, None)
+    if ':' in o:
+        o = _term_with_namespace(o, None)
+    triples.append((term, p, o))
+    return triples
+
+
+
