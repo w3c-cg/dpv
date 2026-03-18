@@ -1,0 +1,102 @@
+16:15:34 <RRSAgent> RRSAgent has joined #dpvcg
+16:15:44 <HarshPandit> Scribe: HarshPandit
+16:15:47 <HarshPandit> repo: w3c/dpv
+16:15:55 <HarshPandit> Meeting: DPVCG Meeting Call
+16:15:57 <HarshPandit> Chair: HarshPandit
+16:16:51 <HarshPandit> Present: HarshPandit, FabianLinde, BeyzaYaman, BeatrizEsteves, JulianFlake, RuhiAnandFinn, ChristianDraeger, FatimaHameed, IainHenderson, MuhsinHameed, MarlinKisia, Stratis, AjayJadhav, GabrielaKurteva, MarkLizar, StratisKoulierakis, DelaramGolpayegani
+16:17:47 <HarshPandit> Regrets: GeorgKrog
+16:17:14 <HarshPandit> Date: 04 MAR 2026
+16:17:28 <HarshPandit> Agenda: https://www.w3.org/events/meetings/ce42ad87-3040-4f82-a341-7cb7c699a1a4/20260304T133000/
+16:17:47 <HarshPandit> \ Agenda: https://www.w3.org/events/meetings/ce42ad87-3040-4f82-a341-7cb7c699a1a4/20260304T133000/ 
+16:17:37 <HarshPandit> \ Meeting minutes: https://w3id.org/dpv/meetings
+16:17:47 <HarshPandit> \ Persistent ID for current minutes: https://w3id.org/dpv/meetings/meeting-2026-03-04
+16:17:47 <HarshPandit> \ Previous minutes: https://w3id.org/dpv/meetings/meeting-2026-02-25
+16:17:47 <HarshPandit> Topic: Admin
+16:17:47 <HarshPandit> Subtopic: DPV v2.3 release
+16:17:47 <HarshPandit> \ https://github.com/w3c/dpv/milestone/9
+16:17:47 <HarshPandit> \ see announcement https://lists.w3.org/Archives/Public/public-dpvcg/2026Feb/0009.html
+16:17:47 <HarshPandit> \ congrats to all
+16:17:47 <HarshPandit> HarshPandit: We're enjoying with pizza in Dublin, as is tradition
+16:17:47 <HarshPandit> HarshPandit: development has now switched to v2.4-dev with planned release in July, which means the internal draft is planned to be provided in June to give sufficient time for feedback and review. v2.4 will be a large release, with potentially many extensions switching from draft to stable
+16:17:47 <HarshPandit> Topic: v2.4
+16:17:47 <HarshPandit> work program https://github.com/w3c/dpv/milestone/10
+16:17:47 <HarshPandit> \ please indicate directly on issues your interest, meetings happen only with participants who have expressed interest in being involved
+16:17:47 <HarshPandit> \ please leave thumbs-up or comments in the issues you would like to work on for 2.4, this will help us to prioritise and to arrange ad-hoc meetings with those who showed interest 
+16:17:47 <HarshPandit> HarshPandit: to explain structure of milestones -- `2.4` contains all content from 2.3 + things proposed that in scope; `admin` milestone for administrative tasks, `proposed-work` for work that is in scope but still being discussed in terms of what should be done, `scope discussion` for work that needs discussion on whether it is in scope
+16:17:47 <HarshPandit> BeatrizEsteves: this is okay to organise things
+16:17:47 <HarshPandit> Subtopic: India's DPDP
+20:10:04 <ghurlbot> https://github.com/w3c/dpv/issues/438 -> Issue 438 [NEW] 16:17:47 <HarshPandit> \ meetings to be organised between Ajay, Georg, Harsh, Art, Beatriz
+16:17:47 <HarshPandit> BeatrizEsteves: +1, very much interested in the consent manager concept, as well as exploring the different legal grounds
+16:17:47 <HarshPandit> \ Meeting organised WED 15:30 CET between Ajay, Beatriz, Harsh
+16:17:47 <HarshPandit> ACTION: Harsh to create invitation for DPDP with participants
+16:17:47 <HarshPandit> Subtopic: EHDS/GDNG/Health
+20:10:04 <ghurlbot> https://github.com/w3c/dpv/issues/238 -> Issue 238 Update EHDS extension with practical concepts (by coolharsh55)
+20:10:04 <ghurlbot> https://github.com/w3c/dpv/issues/299 -> Issue 299 Model Purpose Compatibility statuses for EHDS (by coolharsh55)
+16:17:47 <HarshPandit> \ participants in updating EHDS extension
+16:17:47 <HarshPandit> BeatrizEsteves: +1
+16:17:47 <HarshPandit> JulianFlake: +1
+16:17:47 <HarshPandit> ChristianDraeger: +1
+16:17:47 <HarshPandit> JulianFlake: We are meeting for GDNG on Monday, and we want to schedule a milestone for GDNG for v2.4
+16:17:47 <HarshPandit> BeatrizEsteves: we are looking with Gabriela and Marlin on a mapping between EHDS and DPV's coverage to see gaps, and also looking at policies for secondary use. We hope to get to a good state by the time 2.4 is due.
+16:17:47 <HarshPandit> HarshPandit: We should do a session to have clarity on what is a class, instance, taxonomy, etc. 
+16:17:47 <HarshPandit> BeatrizEsteves: We didn't look at this specifically in DPV, don't see any immediate problems about this but we should look at the parents e.g. SECTOR-HEALTH has a hierarchy which is good but the EHDS concept is not aligned with this. So we should have this hieararchy for 2.4
+16:17:47 <HarshPandit> ChristianDraeger: Yes, we should have this session and discussion
+16:17:47 <HarshPandit> BeatrizEsteves: This issue of classes vs instances would be more prominent in OWL,  shouldn't that severe an issue with SKOS and RDF
+16:17:47 <HarshPandit> JulianFlake: Yes, agree, we should have this session. Having two hierarchies called parent term and parent type can create issues with interpretation.
+16:17:47 <HarshPandit> ACTION: Harsh to organise discussion on semantics between: Harsh, Beatriz, Christian, Julian, Gabriela
+20:10:04 <ghurlbot> https://github.com/w3c/dpv/issues/453 -> Issue 453 Update SECTOR-HEALTH to provide hierarchy for health laws (EU-EHDS, DE-GDNG) (by coolharsh55)
+16:17:47 <HarshPandit> BeatrizEsteves: Currently, SECTOR-HEALTH's state means EHDS is quite flat, so we should improve things here
+16:17:47 <HarshPandit> ACTION: Harsh to organise discussion on hierarchy between extensions SECTOR-HEALTH and EHDS/GDNG to ensure there is a good coverage of health concepts for the specific legal extensions with participants: Beatriz, Harsh, Julian, Christian, Gabriela, Marlin
+20:10:04 <ghurlbot> https://github.com/w3c/dpv/issues/89 -> Issue 89 Multi-lingual labels and descriptions for concepts (by coolharsh55)
+16:17:47 <HarshPandit> HarshPandit: multi-lingual labels - Julian has done this for GDNG, this should be polished and formally integrated to help other languages and extensions
+20:10:04 <ghurlbot> https://github.com/w3c/dpv/issues/201 -> Issue 201 Support HealthDCAT-AP for EHDS (by coolharsh55)
+16:17:47 <HarshPandit> Subtopic: HealthDCAT-AP
+16:17:47 <HarshPandit> BeatrizEsteves: +1
+16:17:47 <HarshPandit> JulianFlake: +1 (proxy for MathiasLobe)
+16:17:47 <HarshPandit> StratisKoulierakis: +1
+16:17:47 <HarshPandit> BeatrizEsteves: last week there was not much discussion except for expression of interest; we know HealthDCAT-AP are using the `hasPurpose`property ; there are papers in the issue from NXDG workshop last year
+16:17:47 <HarshPandit> BeatrizEsteves: We did not discuss specifically what we want to get out of it, maybe some kind of guide on how to use DPV terms in HealthDCAT-AP catalogues
+16:17:47 <HarshPandit> BeatrizEsteves: Also from the workshop, the main person driving the HealthDCAT-AP spec was presenting the paper, its now out of their hands and is being managed by some other department. So not sure how much can be asked to be changed. Or if just publishing a guide (DPVCG) would be enough.
+16:17:47 <HarshPandit> ChristianDraeger: Mathias was also interested, but he is on holidays at the moment
+16:17:47 <HarshPandit> HarshPandit: our goal is to improve examples, ask to use our taxonomy, give a guide on healthdcat-ap + DPV
+16:17:47 <HarshPandit> ACTION: Beatriz to look at HealthDCAT-AP and reaching out to specific members to drive this conversation forward
+16:17:47 <HarshPandit> Subtopic: AI model openness
+20:10:04 <ghurlbot> https://github.com/w3c/dpv/issues/315 -> Issue 315 [NEW]: AI model open-ness (by bact)
+16:17:47 <HarshPandit>  HarshPandit: <recap issue>
+16:17:47 <HarshPandit>  HarshPandit: Q: Do we put this in AI extension? (presumably yes)
+16:17:47 <HarshPandit>  HarshPandit: Q: Do we model these as statuses since this can change over time? E.g. release more information makes the model open, rather than a subclass which implies this is fixed
+16:17:47 <HarshPandit> DelaramGolpayegani: Yes, makes sense, separate concepts help track; will have a look at the concept. AI extension is suitable.
+16:17:47 <HarshPandit> DelaramGolpayegani: Also whether a separate GenAI extension is needed for specific concepts on GenAI if these increase in size and scope
+16:17:47 <HarshPandit> MarkLizar: We should also look at providence (provenance?) of the data involved in the model, e.g. did the data come from scraping
+16:17:47 <HarshPandit> ACTION: Harsh/Art to finalise proposal on github and recommend to group
+16:17:47 <HarshPandit> Subtopic: AI Documentation
+20:10:04 <ghurlbot> https://github.com/w3c/dpv/issues/94 -> Issue 94 Represent Datasheets and Model Cards with DPV (by coolharsh55)
+16:17:47 <HarshPandit> FabianLinde: Analysing the AI Act for documentation requirements (currently at around 280) and then looking at approaches like Data Sheets, Model Cards, ISO 42001, to see if you already have these documentation then how much of the AI Act you already have the information for. Also looking at DPV and MLDCAT-AP and what are gaps, and then how to fill in the gaps through proposed concepts.
+16:17:47 <HarshPandit> BeatrizEsteves: does this include looking at policies on how AI should be used?
+16:17:47 <HarshPandit> FabianLinde: Yes, you have to document acceptable use policies, which is an item you have to tick the box for to complete the documentation
+16:17:47 <HarshPandit> DelaramGolpayegani: I think Dave also have a Masters student who is looking at this with the plan to propose concepts into DPV
+16:17:47 <HarshPandit> BeatrizEsteves: BTW being discussed right now on ODRL CG: https://github.com/w3c/odrl/issues/147
+16:17:47 <HarshPandit> HarshPandit: Please share our work on this e.g. https://dev.dpvcg.org/2.4-dev/ai/#ModelTraining where we already put AI training as a processing operation
+16:17:47 <HarshPandit> DelaramGolpayegani: Also the work done on AIUP (co-authored with Beatriz) https://ceur-ws.org/Vol-3759/paper17.pdf to share with them
+16:17:47 <HarshPandit> DelaramGolpayegani: Looking at the AI Act, the scope is relevant, for AIUP we only looked at Provider and Deployer. E.g. for procurement. 
+16:17:47 <HarshPandit> HarshPandit: Agree, for ODRL suggest only keeping Training as Action and then having a separate profile that goes into depth for specific use-cases / perspectives
+16:17:47 <HarshPandit> DelaramGolpayegani: Can the action be defined in DPV?
+16:17:47 <HarshPandit> BeatrizEsteves: Yes, we can tell them use the DPV profile (as and when created), but there will be people who want to use only/pure ODRL. So when they have the action there that allows them using the ODRL purpose and the DPV taxonomy. So ODRL want this action in the (main) ODRL vocab.
+16:17:47 <HarshPandit> Subtopic: MLDCAT-AP
+20:10:04 <ghurlbot> https://github.com/w3c/dpv/issues/388 -> Issue 388 Alignment with MLDCAT-AP (by coolharsh55)
+16:17:47 <HarshPandit> HarshPandit: MLDCAT-AP sync point, relevance to DPAs, so we have a timeline that we need to work around as this work has specific audience and we should aim to submit this to them as our outputs
+16:17:47 <HarshPandit> DelaramGolpayegani: Dave's student is also looking at MLDCAT-AP. There is no compliance or mapping between this and the AI Act.
+16:17:47 <HarshPandit> Subtopic: Improving DPV documentation
+20:10:04 <ghurlbot> https://github.com/w3c/dpv/issues/12 -> Issue 12 Use-Cases and Examples showing how vocab can be used (by coolharsh55)
+16:17:47 <HarshPandit> \ Ensuring examples in docs https://github.com/w3c/dpv/pull/358
+16:17:47 <HarshPandit> HarshPandit: Art has proposed an automatic system for checking whether each concept has a direct or indirect example which will help improve the documentation.
+16:17:47 <HarshPandit> ACTION: Harsh to work with Art to implement examples in docs
+16:17:47 <HarshPandit> Topic: AOB
+20:10:04 <ghurlbot> https://github.com/w3c/dpv/issues/451 -> Issue 451 Vocabulary gap for AI writing transparency: mapping TWFF process logs to DPV/eu-aiact terms (by Omoshirokunai)
+16:17:47 <HarshPandit> \ Muhsin and Fatima attending after invitation by Delaram, creators of a file format specification for AI, want to present in the AOB section
+16:17:47 <HarshPandit> MuhsinHameed: (wuth Fatima) we looked at the AI Act and AI-generated content for writing. We have a process log in JSON. Now we are looking at DPV mapping that we can use. We look at whether content was partially or fully generated by AI, and then whether it was edited by a human. We didn't see anything in DPV for this. 
+16:17:47 <HarshPandit> HarshPandit: To clarify, this means you are looking for concepts to represent content generated by AI (fully or partially) and then content edited by human (after generation by AI)?
+16:17:47 <HarshPandit> MuhsinHameed: Yes, that is correct
+16:17:47 <HarshPandit> HarshPandit: suggest to create an extension with these two requirements for concepts and then we can discuss it there and identify concepts to recommend here
+16:17:47 <HarshPandit> Topic: Next Meeting
+16:17:47 <HarshPandit> \ The next meeting will be on MAR-11 Wednesday 13:30WET/14:30CET
