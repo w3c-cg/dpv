@@ -1,0 +1,147 @@
+meeting: Meeting 25 MAR 2026
+date: 25 MAR 2026
+chair: harsh
+scribe: *
+
+present: BeatrizEsteves, PaulRyan, JulianFlake, ArthitSuriyawongkul, AjayJadhav, FabianLinde, FatimaHameed,  GabrielaKurteva, GeorgKrog, MarlinKisia, MuhsinHameed, RuhiAnandFinn, TyttiRintamaki, HarshPandit, DelaramGolpayegani, BeyzaYama, VictoriaWiegand
+regrets: Estratios Koulierakis
+
+Persistent ID for current minutes: https://w3id.org/dpv/meetings/meeting-2026-03-25
+Meeting minutes: https://w3id.org/dpv/meetings
+Previous minutes: https://w3id.org/dpv/meetings/meeting-2026-03-11
+
+intro - Victoria -- doing a PhD at TCD in the HARNESS project, working on AI disclosures in research
+
+
+
+Topic: Admin
+
+- managing examples https://github.com/w3c/dpv/pull/358
+- managing requirements, use-cases
+- guide for DPV contributors on semantics
+- guide for creating legal concepts from law for DPV
+
+Harsh to post page on wiki with work items and members, will share on mailing list
+
+Topic: DPV 2.4
+
+- proposed work program https://github.com/w3c/dpv/milestone/10
+
+Subtopic: fix IRIs (breaking change)
+https://github.com/w3c/dpv/issues/460 (confirm sunset + new concept)
+
+in 2.4 we mark as sunset and then in 2.5 we make the change with new concept
+Beatriz: +1
+Julian: +1
+Harsh: +1
+
+\ accepted
+
+Subtopic: DPV-ODRL
+https://github.com/w3c/dpv/pull/459 (PR merged)
+
+Beatriz: people can check the guidance document and the mapping document in the dev link https://dev.dpvcg.org/guides/dpv-odrl.html
+Beatriz: need to think about how to automate this in the future e.g. how can all dpv:Data concept be represented in as odrl:Asset concepts -- haven't added this as a RDF yet. Other mappings in the document are in RDF.  Hopefully we can also have this as a result of the next result. We can also show this to ODRL CG and see if there are any feedback or comments.
+
+Beatriz: create a GH issue to automate the definition of DPV Data/Processing/Entity concepts as ODRL Asset/Action/Party concepts
+
+Subtopic: ODRL workshop
+https://w3c.github.io/odrl/W3C-ODRL-Workshop-2026/ -- DPVCG to participate?
+
+Harsh: don't know the dates yet, but DPVCG should present our work 
+Beatriz: It was mentioned that it would be co-located with the GAIA-X event in May in Athens. But since W3C policy is to announce 2 months in advance, it means the CFP should be declared this week. If it happens in Athens, I can go and present.
+
+Subtopic: new legal concepts for KR, TW, VN AI
+law https://github.com/w3c/dpv/issues/428 (to accept?)
+- Art: No updates
+
+\ agreed to add these laws
+
+\ Next step: to create concept for AI Law and AI authorities as a proposal for discussion in next meeting
+
+Subtopic: India's DPDP 
+https://github.com/w3c/dpv/issues/438 (updates?)
+
+Ajay: We are (hopefully) meeting next week where we will prioritise Articles to work on, and then start the work
+
+Subtopic: EHDS
+https://github.com/w3c/dpv/issues/238 (updates?)
+
+Beatriz: we will have a proposal but we are still working on it, no updates
+
+Subtopic: DE-GDNG 
+https://github.com/w3c/dpv/issues/452 (updates?)
+JulianFlake: we are doing a write up of lessons learned
+  
+Subtopic: AI Use Transparency 
+https://github.com/w3c/dpv/issues/451
+
+Harsh: clarity on the request -- concept representing AI outputs used as is, used with modification, or not used -- as a human activity/decision/review
+
+Muhsin: We were contacted by uni. regarding AI use disclosures by students. So this could be a use-case for DPV in terms of the solution that we want to come up with. The case study is more about how the students used AI Specially in writing related cases.
+
+Harsh: we also have the human involvement concepts but I don't think they represent the same stuff
+
+Muhsin: Haven't looked at Human Involvement concepts
+
+Harsh: okay so on github we can discuss where human involvement concepts fit and what is the need for the new concept
+    
+Victoria: related to PhD work, have the link to the github issue, will look/discuss there
+
+Subtopic: AI model openness
+\ https://github.com/w3c/dpv/issues/315 (updates?)
+
+ArthitSuriyawongkul: we can go with this as a Status, but then then this could also be an Assessment. 
+
+Art: do we have examples for modelling like this?
+Harsh: Data Quality assessments and statuses -- existing and proposed are similar to this as we assess and then represent the outcome as a status
+Art: okay, makes sense
+Harsh: On the github issue we write the definitions and how this works, and then we make the proposal
+
+Harsh: want to change spreadsheet naming
+
+Subtopic: AI Documentation
+(e.g. Datasheets and Model Cards) https://github.com/w3c/dpv/issues/94 (confirm concepts for documentation formats?)
+
+Beatriz: I'm reviewing a paper for an ESWC workshop on this, might have interesting stuff there (https://openreview.net/pdf?id=xuyA7rNEpQ)
+
+Subtopic: AI Documentation proposal
+from Fabian: AI Act https://github.com/w3c/dpv/issues/463, AI Quality Assessments https://github.com/w3c/dpv/issues/465, and other concepts being discuss https://github.com/w3c/dpv/issues/464
+
+Delaram: did you look at DQV?
+Harsh: Yes, we have two approaches: we add these concepts to DPV. Or we can create an AI version of the DQV https://www.w3.org/TR/vocab-dqv/ to represent this as a standardised model
+Delaram: We looked at this, and DQV can be used for AI but it doesn't mention this explicitly
+Harsh: we emailed the editor who said to just use it anyway but the concepts specifically say "data" and don't mention "AI" or any other uses 
+
+Subtopic: fix outdated version footer in 2.2 
+https://github.com/w3c/dpv/issues/462 
+
+Topic: AOB
+
+\ Dave Lewis: ECMA-424 CycloneDX Bill of materials specification https://ecma-international.org/publications-and-standards/standards/ecma-424/ could be relevant for Risk concepts
+\ DPIA modelling updates (Tytti, Harsh): https://github.com/w3c/dpv/issues/183
+\ FRIA modelling updates (Tytti, Harsh): https://github.com/w3c/dpv/issues/230
+\ GDPR and NIS2 mappings being done by Ruhi
+\ Georg presented DPV at https://www.un.org/global-dialogue-ai-governance/en -\ was a high level first meeting event and we had 2mins within which mentioined DPV; this is a mandate the UN has for AI governance
+\ DPV mentioned in MLDCAT-AP issue on alignments https://github.com/SEMICeu/MLDCAT-AP/issues/30 
+\ NXDG workshop 2026 Beatriz, Harsh, Ruhi https://nxdg-workshop.github.io/2026/
+\ Omnibus discussions Georg
+
+Signatu Privacy Signal Manager related to Article 88b
+
+\ set preferences e.g. automated refusal only or you can choose purpose-compatible automation
+\ it uses DPV purposes as options for what consent should be managed for
+\ there is a history / log that also notes what trackers were bypassed or not
+\ there is an export option for ISO 27560 consent record in JSON / JSON-LD format
+\ there is an option to report it to data protection authority e.g. Google bypassed without any consent given
+\ implemented all GDPR authorities, you can download the complaint, and you can describe what the issue is about
+\ implications arising from FashionID where any resource that enters into your browser is within your 'privacy sphere' and the default position in the law as per the ePrivacy Directive is that everything is foribbden to be loaded unless there is a reason
+
+Harsh: <explanation of Article 88b and what's missing>
+
+Georg: In DPV, whenever a script or pixel image is loaded before consent is given, and that resource is not excempt, how do you represent this for ePD? To the end-user to understand what is happening e.g. script was loaded prior to consent. And on the controller's side how do you express it.
+
+Harsh: this is for ePD or the GDPR?
+
+Georg: Primarily ePD, but also as secondary uses for GDPR. 
+

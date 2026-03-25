@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Meeting 25 MAR 2026 &ndash; 25 MAR 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>Meeting 25 MAR 2026</h1>
+<h2>25 MAR 2026</h2>
+
+<nav id=links>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AjayJadhav, ArthitSuriyawongkul, BeatrizEsteves, BeyzaYama, DelaramGolpayegani, FabianLinde, FatimaHameed, GabrielaKurteva, GeorgKrog, HarshPandit, JulianFlake, MarlinKisia, MuhsinHameed, PaulRyan, RuhiAnandFinn, TyttiRintamaki, VictoriaWiegand</dd>
+<dt>Regrets</dt><dd>Estratios Koulierakis</dd>
+<dt>Chair</dt><dd>harsh</dd>
+<dt>Scribe</dt><dd>*</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#t01">Admin</a></li>
+<li><a href="#t02">DPV 2.4</a>
+<ol>
+<li><a href="#t03">fix IRIs (breaking change)</a></li>
+<li><a href="#t04">DPV-ODRL</a></li>
+<li><a href="#t05">ODRL workshop</a></li>
+<li><a href="#t06">new legal concepts for KR, TW, VN AI</a></li>
+<li><a href="#t07">India's DPDP</a></li>
+<li><a href="#t08">EHDS</a></li>
+<li><a href="#t09">DE-GDNG</a></li>
+<li><a href="#t10">AI Use Transparency</a></li>
+<li><a href="#t11">AI model openness</a></li>
+<li><a href="#t12">AI Documentation</a></li>
+<li><a href="#t13">AI Documentation proposal</a></li>
+<li><a href="#t14">fix outdated version footer in 2.2</a></li>
+</ol>
+</li>
+<li><a href="#t15">AOB</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=x007 class=summary>Persistent ID for current minutes: <a href="https://w3id.org/dpv/meetings/meeting-2026-03-25">https://<wbr>w3id.org/<wbr>dpv/<wbr>meetings/<wbr>meeting-2026-03-25</a></p>
+<p id=x008 class=summary>Meeting minutes: <a href="https://w3id.org/dpv/meetings">https://<wbr>w3id.org/<wbr>dpv/<wbr>meetings</a></p>
+<p id=x009 class=summary>Previous minutes: <a href="https://w3id.org/dpv/meetings/meeting-2026-03-11">https://<wbr>w3id.org/<wbr>dpv/<wbr>meetings/<wbr>meeting-2026-03-11</a></p>
+<p id=x010 class=summary>intro - Victoria -- doing a PhD at TCD in the HARNESS project, working on AI disclosures in research</p>
+</section>
+
+<section>
+<h3 id=t01>Admin</h3>
+<p id=x012 class=summary>- managing examples <a href="https://github.com/w3c/dpv/pull/358">w3c/<wbr>dpv#358</a></p>
+<p id=x013 class=summary>- managing requirements, use-cases</p>
+<p id=x014 class=summary>- guide for DPV contributors on semantics</p>
+<p id=x015 class=summary>- guide for creating legal concepts from law for DPV</p>
+<p id=x016 class=summary>Harsh to post page on wiki with work items and members, will share on mailing list</p>
+</section>
+
+<section>
+<h3 id=t02>DPV 2.4</h3>
+<p id=x018 class=summary>- proposed work program <a href="https://github.com/w3c/dpv/milestone/10">https://<wbr>github.com/<wbr>w3c/<wbr>dpv/<wbr>milestone/<wbr>10</a></p>
+<h4 id=t03>fix IRIs (breaking change)</h4>
+<p id=x020 class=summary><a href="https://github.com/w3c/dpv/issues/460">w3c/<wbr>dpv#460</a> (confirm sunset + new concept)</p>
+<p id=x021 class=summary>in 2.4 we mark as sunset and then in 2.5 we make the change with new concept</p>
+<p id=x022 class="phone s01"><cite>Beatriz:</cite> +1</p>
+<p id=x023 class="phone s02"><cite>Julian:</cite> +1</p>
+<p id=x024 class="phone s03"><cite>Harsh:</cite> +1</p>
+<p id=x025 class=summary> accepted</p>
+<h4 id=t04>DPV-ODRL</h4>
+<p id=x027 class="phone s03"><cite>Harsh:</cite> <a href="https://github.com/w3c/dpv/pull/459">w3c/<wbr>dpv#459</a> (PR merged)</p>
+<p id=x028 class="phone s01"><cite>Beatriz:</cite> people can check the guidance document and the mapping document in the dev link <a href="https://dev.dpvcg.org/guides/dpv-odrl.html">https://<wbr>dev.dpvcg.org/<wbr>guides/<wbr>dpv-odrl.html</a></p>
+<p id=x029 class="phone s01"><cite>Beatriz:</cite> need to think about how to automate this in the future e.g. how can all dpv:Data concept be represented in as odrl:Asset concepts -- haven't added this as a RDF yet. Other mappings in the document are in RDF.  Hopefully we can also have this as a result of the next result. We can also show this to ODRL CG and see if there are any feedback or comments.</p>
+<p id=x030 class="phone s01"><cite>Beatriz:</cite> create a GH issue to automate the definition of DPV Data/Processing/Entity concepts as ODRL Asset/Action/Party concepts</p>
+<h4 id=t05>ODRL workshop</h4>
+<p id=x032 class="phone s01"><cite>Beatriz:</cite> <a href="https://w3c.github.io/odrl/W3C-ODRL-Workshop-2026/">https://<wbr>w3c.github.io/<wbr>odrl/<wbr>W3C-ODRL-Workshop-2026/</a> -- DPVCG to participate?</p>
+<p id=x033 class="phone s03"><cite>Harsh:</cite> don't know the dates yet, but DPVCG should present our work </p>
+<p id=x034 class="phone s01"><cite>Beatriz:</cite> It was mentioned that it would be co-located with the GAIA-X event in May in Athens. But since W3C policy is to announce 2 months in advance, it means the CFP should be declared this week. If it happens in Athens, I can go and present.</p>
+<h4 id=t06>new legal concepts for KR, TW, VN AI</h4>
+<p id=x037 class="phone s01"><cite>Beatriz:</cite> law <a href="https://github.com/w3c/dpv/issues/428">w3c/<wbr>dpv#428</a> (to accept?)<br>
+<span id=x038>… - Art: No updates</span></p>
+<p id=x039 class=summary> agreed to add these laws</p>
+<p id=x040 class=summary> Next step: to create concept for AI Law and AI authorities as a proposal for discussion in next meeting</p>
+<h4 id=t07>India's DPDP</h4>
+<p id=x042 class="phone s01"><cite>Beatriz:</cite> <a href="https://github.com/w3c/dpv/issues/438">w3c/<wbr>dpv#438</a> (updates?)</p>
+<p id=x043 class="phone s04"><cite>Ajay:</cite> We are (hopefully) meeting next week where we will prioritise Articles to work on, and then start the work</p>
+<h4 id=t08>EHDS</h4>
+<p id=x045 class="phone s04"><cite>Ajay:</cite> <a href="https://github.com/w3c/dpv/issues/238">w3c/<wbr>dpv#238</a> (updates?)</p>
+<p id=x046 class="phone s01"><cite>Beatriz:</cite> we will have a proposal but we are still working on it, no updates</p>
+<h4 id=t09>DE-GDNG</h4>
+<p id=x048 class="phone s01"><cite>Beatriz:</cite> <a href="https://github.com/w3c/dpv/issues/452">w3c/<wbr>dpv#452</a> (updates?)</p>
+<p id=x049 class="phone s05"><cite>JulianFlake:</cite> we are doing a write up of lessons learned</p>
+<h4 id=t10>AI Use Transparency</h4>
+<p id=x052 class="phone s05"><cite>JulianFlake:</cite> <a href="https://github.com/w3c/dpv/issues/451">w3c/<wbr>dpv#451</a></p>
+<p id=x053 class="phone s03"><cite>Harsh:</cite> clarity on the request -- concept representing AI outputs used as is, used with modification, or not used -- as a human activity/decision/review</p>
+<p id=x054 class="phone s06"><cite>Muhsin:</cite> We were contacted by uni. regarding AI use disclosures by students. So this could be a use-case for DPV in terms of the solution that we want to come up with. The case study is more about how the students used AI Specially in writing related cases.</p>
+<p id=x055 class="phone s03"><cite>Harsh:</cite> we also have the human involvement concepts but I don't think they represent the same stuff</p>
+<p id=x056 class="phone s06"><cite>Muhsin:</cite> Haven't looked at Human Involvement concepts</p>
+<p id=x057 class="phone s03"><cite>Harsh:</cite> okay so on github we can discuss where human involvement concepts fit and what is the need for the new concept</p>
+<p id=x059 class="phone s07"><cite>Victoria:</cite> related to PhD work, have the link to the github issue, will look/discuss there</p>
+<h4 id=t11>AI model openness</h4>
+<p id=x061 class=summary> <a href="https://github.com/w3c/dpv/issues/315">w3c/<wbr>dpv#315</a> (updates?)</p>
+<p id=x062 class="phone s08"><cite>ArthitSuriyawongkul:</cite> we can go with this as a Status, but then then this could also be an Assessment. </p>
+<p id=x063 class="phone s09"><cite>Art:</cite> do we have examples for modelling like this?</p>
+<p id=x064 class="phone s03"><cite>Harsh:</cite> Data Quality assessments and statuses -- existing and proposed are similar to this as we assess and then represent the outcome as a status</p>
+<p id=x065 class="phone s09"><cite>Art:</cite> okay, makes sense</p>
+<p id=x066 class="phone s03"><cite>Harsh:</cite> On the github issue we write the definitions and how this works, and then we make the proposal</p>
+<p id=x067 class="phone s03"><cite>Harsh:</cite> want to change spreadsheet naming</p>
+<h4 id=t12>AI Documentation</h4>
+<p id=x069 class="phone s03"><cite>Harsh:</cite> (e.g. Datasheets and Model Cards) <a href="https://github.com/w3c/dpv/issues/94">w3c/<wbr>dpv#94</a> (confirm concepts for documentation formats?)</p>
+<p id=x070 class="phone s01"><cite>Beatriz:</cite> I'm reviewing a paper for an ESWC workshop on this, might have interesting stuff there (<a href="https://openreview.net/pdf?id=xuyA7rNEpQ">https://<wbr>openreview.net/<wbr>pdf?id=xuyA7rNEpQ</a>)</p>
+<h4 id=t13>AI Documentation proposal</h4>
+<p id=x072 class="phone s01"><cite>Beatriz:</cite> from Fabian: AI Act <a href="https://github.com/w3c/dpv/issues/463,">https://<wbr>github.com/<wbr>w3c/<wbr>dpv/<wbr>issues/<wbr>463,</a> AI Quality Assessments <a href="https://github.com/w3c/dpv/issues/465,">https://<wbr>github.com/<wbr>w3c/<wbr>dpv/<wbr>issues/<wbr>465,</a> and other concepts being discuss <a href="https://github.com/w3c/dpv/issues/464">w3c/<wbr>dpv#464</a></p>
+<p id=x073 class="phone s10"><cite>Delaram:</cite> did you look at DQV?</p>
+<p id=x074 class="phone s03"><cite>Harsh:</cite> Yes, we have two approaches: we add these concepts to DPV. Or we can create an AI version of the DQV <a href="https://www.w3.org/TR/vocab-dqv/">https://<wbr>www.w3.org/<wbr>TR/<wbr>vocab-dqv/</a> to represent this as a standardised model</p>
+<p id=x075 class="phone s10"><cite>Delaram:</cite> We looked at this, and DQV can be used for AI but it doesn't mention this explicitly</p>
+<p id=x076 class="phone s03"><cite>Harsh:</cite> we emailed the editor who said to just use it anyway but the concepts specifically say &quot;data&quot; and don't mention &quot;AI&quot; or any other uses </p>
+<h4 id=t14>fix outdated version footer in 2.2</h4>
+<p id=x078 class="phone s03"><cite>Harsh:</cite> <a href="https://github.com/w3c/dpv/issues/462">w3c/<wbr>dpv#462</a></p>
+</section>
+
+<section>
+<h3 id=t15>AOB</h3>
+<p id=x080 class=summary> Dave Lewis: ECMA-424 CycloneDX Bill of materials specification <a href="https://ecma-international.org/publications-and-standards/standards/ecma-424/">https://<wbr>ecma-international.org/<wbr>publications-and-standards/<wbr>standards/<wbr>ecma-424/</a> could be relevant for Risk concepts</p>
+<p id=x081 class=summary> DPIA modelling updates (Tytti, Harsh): <a href="https://github.com/w3c/dpv/issues/183">w3c/<wbr>dpv#183</a></p>
+<p id=x082 class=summary> FRIA modelling updates (Tytti, Harsh): <a href="https://github.com/w3c/dpv/issues/230">w3c/<wbr>dpv#230</a></p>
+<p id=x083 class=summary> GDPR and NIS2 mappings being done by Ruhi</p>
+<p id=x084 class=summary> Georg presented DPV at <a href="https://www.un.org/global-dialogue-ai-governance/en">https://<wbr>www.un.org/<wbr>global-dialogue-ai-governance/<wbr>en</a> -\ was a high level first meeting event and we had 2mins within which mentioined DPV; this is a mandate the UN has for AI governance</p>
+<p id=x085 class=summary> DPV mentioned in MLDCAT-AP issue on alignments <a href="https://github.com/SEMICeu/MLDCAT-AP/issues/30">SEMICeu/<wbr>MLDCAT-AP#30</a> </p>
+<p id=x086 class=summary> NXDG workshop 2026 Beatriz, Harsh, Ruhi <a href="https://nxdg-workshop.github.io/2026/">https://<wbr>nxdg-workshop.github.io/<wbr>2026/</a></p>
+<p id=x087 class=summary> Omnibus discussions Georg</p>
+<p id=x088 class="phone s03"><cite>Harsh:</cite> Signatu Privacy Signal Manager related to Article 88b</p>
+<p id=x089 class=summary> set preferences e.g. automated refusal only or you can choose purpose-compatible automation</p>
+<p id=x090 class=summary> it uses DPV purposes as options for what consent should be managed for</p>
+<p id=x091 class=summary> there is a history / log that also notes what trackers were bypassed or not</p>
+<p id=x092 class=summary> there is an export option for ISO 27560 consent record in JSON / JSON-LD format</p>
+<p id=x093 class=summary> there is an option to report it to data protection authority e.g. Google bypassed without any consent given</p>
+<p id=x094 class=summary> implemented all GDPR authorities, you can download the complaint, and you can describe what the issue is about</p>
+<p id=x095 class=summary> implications arising from FashionID where any resource that enters into your browser is within your 'privacy sphere' and the default position in the law as per the ePrivacy Directive is that everything is foribbden to be loaded unless there is a reason</p>
+<p id=x096 class="phone s03"><cite>Harsh:</cite> &lt;explanation of Article 88b and what's missing&gt;</p>
+<p id=x097 class="phone s11"><cite>Georg:</cite> In DPV, whenever a script or pixel image is loaded before consent is given, and that resource is not excempt, how do you represent this for ePD? To the end-user to understand what is happening e.g. script was loaded prior to consent. And on the controller's side how do you express it.</p>
+<p id=x098 class="phone s03"><cite>Harsh:</cite> this is for ePD or the GDPR?</p>
+<p id=x099 class="phone s11"><cite>Georg:</cite> Primarily ePD, but also as secondary uses for GDPR. </p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 217 (Fri Apr  7 17:23:01 2023 UTC).</address>
+
+</body>
+</html>
