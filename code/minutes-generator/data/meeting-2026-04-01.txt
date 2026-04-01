@@ -1,0 +1,128 @@
+meeting: Meeting 25 MAR 2026
+date: 25 MAR 2026
+chair: beatriz
+scribe: *
+
+present: HarshPandit, RuhiAnandFinn, PaulRyan, MarlinKisia, BeatrizEsteves, GeorgKrog, BeyzaYaman, GabrielaKurteva, MuhsinHameed, Kalyan & Ankita (AYANWORKS), AjayJadhav, ChristianDraeger, JulianFlake, ArthitSuriyawongkul
+regrets: DelaramGolpayegani, FabianLinde, SalDAgostino, EstratiosKoulierakis
+
+Persistent ID for current minutes: https://w3id.org/dpv/meetings/meeting-2026-04-01
+Meeting minutes: https://w3id.org/dpv/meetings
+Previous minutes: https://w3id.org/dpv/meetings/meeting-2026-03-25
+
+\ congrats to Dr. Paul on completing the PhD
+
+Topic: Admin
+
+Subtopic: Agenda going to spam?
+
+\ agenda went to Spam for Beatriz and Marlin (using uni. Microsoft account)
+
+Subtopic: Repo Migration to w3c-cg
+
+\ migration to repo to w3c-cg/dpv on github https://github.com/w3c/dpv/issues/466
+
+harshPandit: we have to inform w3c admin if we object otherwise on Friday they migrate the current github/w3c organisation to github/w3c-cg
+
+beatrizEsteves: this is a new organisation, which means a new url etc. But everything gets redirected automatically like issues and any current urls we use or others may be using
+
+\ no objections
+
+ACTION: Check migration on April 03 and email public mailing list announcing the change
+
+\ guide for DPV contributors on semantics - see https://github.com/w3c/dpv/issues/467 ongoing discussion
+
+HarshPandit: <explanation>
+    
+JulianFlake: to raise another question -- whether one is modelling a hierarhcy of classes or a taxonomy; is there a possibility for a mixed model where there are a hierarchy of classes but with a few instances? What we put in the spreadsheet is generated in RDF, but not rendered as expected in the HTML (need to recheck). This was fixed by using the taxonomy and then adding instances, but what we want is mostly classes and some instances
+HarshPandit: its possible to do this via the code, yes
+JulianFlake: thanks, will recheck
+
+Topic: DPV 2.4
+
+\ proposed work program https://github.com/w3c/dpv/milestone/10
+
+Subtopic: India's DPDP
+\ https://github.com/w3c/dpv/issues/438 (organise meeting)
+
+beatriz: okay to continue after next week's DPVCG meeting? 15:30 CEST
+AjayJadhav: +1
+HarshPandit: +1
+BeatrizEsteves: +1
+GeorgKrog: +1
+KalyanKulkarni: +1
+AjayJadhav: In the meantime, to look at https://www.dpdpa.com/ which is a private website for the DPDPA
+AjayJadhav: Also have colleagues on the call - Ankita and Kalyan who will also be joining next week
+
+Subtopic: EHDS 
+\ https://github.com/w3c/dpv/issues/238 (updates?)
+
+BeatrizEsteves: With Gabriela and Marlin we are mapping new concepts to propose for addition to EHDS and SECTOR-HEALTH
+
+Subtopic: DE-GDNG
+\ https://github.com/w3c/dpv/issues/452 (updates?)
+
+JulianFlake: no updates
+
+Subtopic: AI Use Transparency
+\ https://github.com/w3c/dpv/issues/451 (updates)
+
+\ updated discussion on the issue regarding these concepts reflecting what has been done i.e. what happened as a log rather than as a measure for what should happen
+
+GeorgKrog: what is the use case for this?
+MuhsinHameed: academic writing, in previous meetings Art mentioned something about supply chain but we did not look into that. we are also looking at use case related to AI use transparency in documentation and compliance reports
+
+Subtopic: AI model openness
+\ https://github.com/w3c/dpv/issues/315 (updates?)
+
+\ no updates, Art is also not here
+
+Subtopic: AI Documentation
+\ (e.g. Datasheets and Model Cards) https://github.com/w3c/dpv/issues/94 (confirm concepts for documentation formats?)
+
+HarshPandit: the current issue item is to add concepts for `ai:Datasheet` and `ai:ModelCard` as documentation
+
+Art: Croissant updated their schema recently in January https://docs.mlcommons.org/croissant/docs/croissant-spec-1.1.html , so good time to also look into that. HuggingFace tried to use and also models from OpenML and Kaggle.
+
+HarshPandit: We did talk to them about DPV and modelling legal aspects, and there's an open issue about this 
+Art: https://github.com/mlcommons/croissant/issues/808
+
+Beatriz: So should they be using DPV or should we have a mapping from our schema to their work? Not sure.
+
+Harsh: Preference to not do any mapping at the moment as I don't know what is their roadmap for law/policy
+
+Art: Their focus is on dataset metadata, which is used in libraries/frameworks, and the goal is reproducibility. They are active in NeurIPS community, so dataset that is submitted to the conference has to be provided in this format for example.
+
+Subtopic: AI Documentation proposal
+\ from Fabian AI Act https://github.com/w3c/dpv/issues/463, AI Quality Assessments https://github.com/w3c/dpv/issues/465, and other concepts being discuss https://github.com/w3c/dpv/issues/464 (updates)
+
+Harsh: quality assessment concepts
+Harsh: missing concepts in DQV, and also specialisations for data and AI
+Beyza: DQV has Dimension concept which is then used to create e.g. Suitability
+Harsh: but we want a specific IRI saying Suitability and DQV shows these as examples but they don't give an IRI for this https://www.w3.org/TR/vocab-dqv/#dqv:Dimension
+Beyza: Maybe something to ask Riccardo (editor of DQV)
+Beatriz: I was going to suggest adding a mapping from DPV to DQV but if the concepts are not there then not sure what to do
+Beyza: There are some mappings on the DQV page in Appendix C. Also Jeremy (Debatista) had IRIs for these concepts for his Luzzu work which could be useful here
+
+Subtopic: (mailing list thread)
+\ DPV TOM extension with more PETs https://lists.w3.org/Archives/Public/public-dpvcg/2026Mar/0009.html 
+
+Beatriz: This was an email on the mailing list for adding measures to the TOMs taxonomy regarding PETs. I'm following up on that, and we will have a meeting on that next week. 
+
+Topic: AOB
+
+Sal: Commercial usecase related to biometrics. Company in Turkey called OnesTechnology based in Ankara; who work with biometrics and have stuff like smart cards and smart badges etc. which have biometrics. We are creating notices for these using DPV and IEEE 7012. Was looking at DPV's coverage of biometrics for these. Will share that shortly.
+
+Beyza: What's the name of the company?
+
+Sal: Ones based in Ankara. Also looking at GDPR, AI Act implications, and transparency work. RealSense from Intel, and then IDMachines which is our company. This is "frontware" which is in front of people. 
+
+Beatriz: Thanks. Please share e.g. on mailing list. This will help track use/adoption of DPV.
+
+\ chat contents
+\ Ajay Jadhav: https://www.dpdpa.com/
+\ Arthit Suriyawongkul: https://github.com/mlcommons/croissant/issues/808 
+\ Arthit Suriyawongkul: https://docs.mlcommons.org/croissant/docs/croissant-rai-spec.html 
+\ https://docs.mlcommons.org/croissant/docs/croissant-spec-1.1.html
+\ Sal D'Agostino: to what extent does this track to or follow ISO 42001?
+\ Ajay Jadhav: I just sent a meeting invite for next week's DPDP extension meeting.. 
