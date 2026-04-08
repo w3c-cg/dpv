@@ -1,0 +1,94 @@
+meeting: Meeting 25 MAR 2026
+date: 25 MAR 2026
+chair: harsh
+scribe: *
+
+present: HarshPandit, IainHenderson, MarlinKisia, PaulRyan, BeatrizEsteves, ArthitSuriyawongkul, GabrielaKurteva, EstratiosKoulierakis, AjayJadhav, Elena, MuhsinHameed
+
+regrets: GeorgKrog, JulianFlake, JulioHernandez
+    
+Persistent ID for current minutes: https://w3id.org/dpv/meetings/meeting-2026-04-08
+Meeting minutes: https://w3id.org/dpv/meetings
+Previous minutes: https://w3id.org/dpv/meetings/meeting-2026-04-01
+
+Topic: Admin
+
+Subtopic: migration to repo to w3c-cg/dpv on github
+\ https://github.com/w3c/dpv/issues/466 -- hasn't happen yet, checking with w3c
+
+Topic: DPV 2.4
+
+Subtopic: proposed work program
+\ https://github.com/w3c/dpv/milestone/10
+
+Subtopic: India's DPDP
+\ https://github.com/w3c/dpv/issues/438 (meeting later today)
+
+Subtopic: EHDS
+\ https://github.com/w3c/dpv/issues/238 (updates?)
+
+no updates
+
+Subtopic: DE-GDNG
+\ https://github.com/w3c/dpv/issues/452 (updates?)
+
+no updates
+
+Subtopic: AI Use Transparency
+\ https://github.com/w3c/dpv/issues/451 (updates?)
+
+\ update on github issue -- another contributor has also expressed support; please review and express support / decision on github, we will take this up again next week as concepts to be added
+
+Subtopic: AI model openness
+\ https://github.com/w3c/dpv/issues/315 -- no update
+
+Subtopic: AI Documentation (e.g. Datasheets and Model Cards)
+\ https://github.com/w3c/dpv/issues/94 (confirm concepts for documentation formats)
+
+\ yes add these concepts in AI extension
+
+Subtopic: AI Documentation proposal from Fabian: AI Act
+\ https://github.com/w3c/dpv/issues/463, AI Quality Assessments
+\ https://github.com/w3c/dpv/issues/465, and other concepts being discuss
+\ https://github.com/w3c/dpv/issues/464 (updates)
+
+Subtopic: to be updated on the issue, to be reviewed by Delaram for pending concepts
+
+Subtopic: (mailing list thread) DPV TOM extension with more PETs https://lists.w3.org/Archives/Public/public-dpvcg/2026Mar/0009.html 
+
+Subtopic: continuation of the thread on the mailing list ;
+Beatriz: we already had a meeting this week, they are looking to use DPV and ODRL together. We had initial thoughts on how to make that happen, and we will have follow-up meetings for concrete proposals, but nothing just yet.
+
+Topic: New issues / updated issues
+
+Subtopic: native language labels in spreadsheets
+\ https://github.com/w3c/dpv/issues/469 (new issue)
+
+Subtopic: modelling AISI concepts for jurisdictions
+\ https://github.com/w3c/dpv/issues/428 (update to issues)
+
+Harsh: what is AISI in Korean law? What is it supposed to do?
+Art: I think its Art.32, it seems that when there is a security concern, then the AI Provider has to report it to the ministry of ICT, and they mention AISI as a 'supporting' body. So in this sense, its not an authority, but a support body https://www.law.go.kr/%EC%98%81%EB%AC%B8%EB%B2%95%EB%A0%B9/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EB%B0%9C%EC%A0%84%EA%B3%BC%EC%8B%A0%EB%A2%B0%EA%B8%B0%EB%B0%98%EC%A1%B0%EC%84%B1%EB%93%B1%EC%97%90%EA%B4%80%ED%95%9C%EA%B8%B0%EB%B3%B8%EB%B2%95/(20676,20250121 
+
+Art: Question on URL encoding. Should we use the URL with native scripts (Unicode) or one that encoded as ASCII (Punycode / https://www.w3.org/International/articles/idn-and-iri/)? 
+Harsh: Use the Unicode. If we use ASCII one, it will lost its meaning that can be useful for people who can read the native scripts. RDF should handle the Internationalized IRI fine. Let the serialization manage the final URL.
+Art: Agree.
+
+Topic: AOB
+
+PR from Art to remove stale CSVs
+\ https://github.com/w3c/dpv/pull/470 
+
+Muhsin: link to minutes does not resolve
+Harsh: <issue with w3id/github cg resolution>
+    
+Topic: DPDP meeting
+\ discussion of DPDP in the same room after DPVCG meeting agenda
+
+Beatriz: consent manager
+Ajay: consent management, consent holder (citizen who is giving consent) can switch from one consent manager to another, consent receipt should be portable i.e. move from one manager to another, citizens are free to use any consent manager
+Ajay: the second thing is that consent records and receipts should be interoperable; which is the law; but the law does not prescribe a specific standard -- just that it has to be compatible; so it relies on the implementations. Goal is to have a standard for interoperable consent records and receipts.
+Harsh: we have work on ISO 27560 which helps with this; and we are also involved in the revision of this standard; and we have a DPV implementation guide for consent records -- so we need to create a guide for the requirements of DPDP
+Art: Don't have a specific focus but want to learn the process as I want to do similar things for the Thai data protection law; specifically those parts that concern cross-border data transfer
+Harsh: what does your organisation do for DPDP (to Ajay)
+Ajay: we are not an official consent manager as approved by the govt, but we build consent management solutions for our clients
