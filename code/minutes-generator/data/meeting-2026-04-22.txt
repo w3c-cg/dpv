@@ -1,0 +1,66 @@
+meeting: Meeting 22 APR 2026
+date: 22 APR 2026
+chair: harsh
+scribe: *
+
+Present: JulianFlake, DelaramGolpayegani, FabianLinde, FatimaHameed, FreekDijkstra, GabrielaKurteva, RuhiAnandFinn, SalDAgostino, StratisKoulierakis, TyttiRintamaki, Art, JulioHernandez, Muhsin
+Regrets: HarshPandit, MarlinKisia, BeyzaYaman
+
+Persistent ID for current minutes: https://w3id.org/dpv/meetings/meeting-2026-04-22
+Meeting minutes: https://w3id.org/dpv/meetings
+Previous minutes: https://w3id.org/dpv/meetings/meeting-2026-04-08
+
+Freek: meeting notes from last week give a 404 
+
+Topic: Admin
+
+\ migration to repo to w3c-cg/dpv on github https://github.com/w3c/dpv/issues/466 -- w3c informed that this is underway but don't have a concrete date
+
+Topic: DPV 2.4
+\ proposed work program https://github.com/w3c/dpv/milestone/10
+Subtopic: EHDS
+\ https://github.com/w3c/dpv/issues/238
+BeatrizEsteves: Marlin, Gabriela and I have been working on a new set of proposed terms for the EHDS and DGA extension. The proposal will be ready for review soon. We want to schedule a meeting towards the end of May to review proposed concepts with interested people
+MatthiasLoebe: +1
+ChristianDraeger: +1
+JulianFlake: +1
+StratisKoulierakis: +1
+JulianFlake: interested in looking at the concepts as soon as possible to see how to align with the work on the DE-GDNG extension
+BeatrizEsteves: we will share the new concepts as soon as possible so that they can be reviewed before the meeting at the end of May; the meeting will then be to solve any outstanding issues not solved on the spreadsheet
+
+Subtopic: DE-GDNG
+\ https://github.com/w3c/dpv/issues/452
+JulianFlake: We had a meeting on Monday and discussed an amendment to the law; there is only a leaked version, so the official draft is not available yet
+JulianFlake: for the 2.4 release, the main goal will then be a better alignment with the EHDS extension and adding examples of usage for the existing GDNG concepts
+
+Subtopic: India's DPDP
+\ https://github.com/w3c/dpv/issues/438
+\ no updates
+
+Subtopic: AI Quality Assessments
+\ https://github.com/w3c/dpv/issues/465 (updates from TCD group) Resolve on github
+DelaramGolpayegani: discussion around using DQV for AI quality and how to extend it to include requirements from AI Act and related standards
+DelaramGolpayegani: still to discuss is how to integrate the new concepts into DPVCG’s outcomes as these concepts reuse and extend DQV and not necessarily DPV. 
+
+Subtopic: AI Use Transparency
+\ https://github.com/w3c/dpv/issues/451 (identify concrete concepts for proposal, ask for reviewers -> Harsh?)
+Muhsin: updated GH issue with an example for Harsh to review
+
+Subtopic: AI model openness
+\ https://github.com/w3c/dpv/issues/315 (provide concrete final concepts -> Art/Harsh?)
+Art: There will be 2 parts of work 1) Concepts for AI model openness (a status of a model) 2) Concepts for AI model openness evaluation (information required to make conclusion about the status in (1) -- some of this may related to data/AI quality)
+Art: Next week we will give an update on whether the concepts can already be reviewed
+Art: We did further work on mappings between MOF components and DPV. The terms are added here https://docs.google.com/spreadsheets/d/1WkSYTzOD1ufptGKvbCuFaXcqYolO9hiGiIIKPV3QV04/edit?usp=drivesdk. The work is still on progress, will give updates again next week
+
+Subtopic: AI Documentation
+\ (e.g. Datasheets and Model Cards) https://github.com/w3c/dpv/issues/94 (provide concrete concepts -> Harsh/Fabian?)
+\ AI Documentation proposal from Fabian: AI Act https://github.com/w3c/dpv/issues/463(provide concrete concepts -> Fabian/Harsh?)
+\ AI Documentation concepts from Fabian https://github.com/w3c/dpv/issues/464 (create proposal for concepts -> Fabian/Harsh/Delaram?)
+FabianLinde: no updates on any of the AI documentation topics
+
+Topic: New Issues
+\ bugs in eu-rights https://github.com/w3c/dpv/issues/471 and https://github.com/w3c/dpv/issues/472
+Art: the issue is on the spreadsheets/RDF used to create the HTML documentation. I will look into it and provide an update next week.
+
+Topic: AOB
+\ nil
