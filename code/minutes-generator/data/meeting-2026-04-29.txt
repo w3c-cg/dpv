@@ -1,0 +1,104 @@
+meeting: Meeting 29 APR 2026
+date: 29 APR 2026
+chair: chair
+scribe: *
+
+Persistent ID for current minutes: https://w3id.org/dpv/meetings/meeting-2026-04-29
+Meeting minutes: https://w3id.org/dpv/meetings
+Previous minutes: https://w3id.org/dpv/meetings/meeting-2026-04-21
+
+Present: Harsh, Art, Fabian, Ruhi, Beyza, Tytti, Julian, Paul, Delaram, Fatima, Julio, Muhsin, Estratios, SalDAgostino
+
+Regrets: Beatriz, Gabriela, Marlin, Georg
+
+Topic: Admin
+
+HarshPandit: w3c told me repo move will happen when it will happen
+
+Art: Issues with github migration for other repos (not w3c) where issues and PRs disappeared. (see https://www.githubstatus.com/incidents/x69zbgdyfzg0 and https://github.blog/news-insights/company-news/an-update-on-github-availability/ ) Saw some projects move away from github for this. EU projects use Codeberg, service based in Germany. Some orgs use gitlab, ADAPT also has it.
+HarshPandit: I've asked about it but I was told no guarentees the repo or links will work for 2-3 years which is not good for public.
+HarshPandit: maybe we keep a backup somewhere, for the moment we 
+
+Topic: DPV 2.4
+\ proposed work program https://github.com/w3c/dpv/milestone/10
+
+Subtopic: EHDS
+\ https://github.com/w3c/dpv/issues/238
+\ no one present for updates
+JulianFlake: we agreed to meet end of May
+
+Subtopic: DE-GDNG
+\ https://github.com/w3c/dpv/issues/452
+\ no updates
+
+Subtopic: DPV-ODRL
+Julian: [share SDS paper with Julian] relevant for GDNG people as the motivate was to express legal basis inside data use policies
+
+Subtopic: India's DPDP
+\ https://github.com/w3c/dpv/issues/438
+\ no updates
+
+Subtopic: AI Quality Assessments
+\ https://github.com/w3c/dpv/issues/465 (updates from TCD group)
+Delaram: looked into AI quality standard, which is published, but there is a revision in progress (currently at DIS). These two standards have been updated and the previous ones are withdrawn. So there is an issue with the definitions and for some of them we would have to go back to the withdrawn standards or should we go back to DIS.
+\ Meeting on FRI 10:00 in TCD
+
+Topic: Resolve on github
+
+Subtopic: AI Use Transparency
+\ https://github.com/w3c/dpv/issues/451 (identify concrete concepts for proposal, ask for reviewers -> Harsh?)
+
+Fatima: We had an update in comment on github
+\ https://github.com/w3c/dpv/issues/451#issuecomment-4167978082), waiting for response
+Muhsin: we have more details on the concept list in that comment but waiting on reply to proceed
+
+ACTION: Harsh to review after the call
+
+Subtopic: AI model openness
+\ https://github.com/w3c/dpv/issues/315 (provide concrete final concepts -> Art/Harsh?)
+
+ACTION: Harsh and Art to do the status concepts
+
+Art: we said we will have two sets of concepts: 1) status of what it is and then 2) the assessment of the status
+
+ACTION: On Friday, Harsh to also look at this after the AIQV concepts
+
+Subtopic: AI Documentation (e.g. Datasheets and Model Cards)
+\ https://github.com/w3c/dpv/issues/94 (provide concrete concepts -> Harsh/Fabian?)
+
+Subtopic: AI Documentation proposal from Fabian: AI Act
+\ https://github.com/w3c/dpv/issues/463 (provide concrete concepts -> Fabian/Harsh?)
+
+Subtopic: AI Documentation concepts from Fabian
+\ https://github.com/w3c/dpv/issues/464 (create proposal for concepts -> Fabian/Harsh/Delaram?)
+
+Fabian and Harsh are meeting on THU to create concrete documentation for agreed concepts and discuss how to resolve uncertain proposed concepts
+
+Subtopic: Wrong path for eu-rights:A35-Healthcare
+\ https://github.com/w3c/dpv/issues/471
+
+Art: this is a problem in the spreadsheet and it is propogating from there to everywhere else
+
+ACTION: Harsh to fix the path in the spreadsheet and generate corrected RDF/HTML
+
+Subtopic: Typos re. "E U"
+\ https://github.com/w3c/dpv/issues/472
+
+ACTION: Harsh to fix the typo in the spreadsheet and generate corrected RDF/HTML
+
+Topic: New Issues
+
+Subtopic: [EXAMPLE] Assessing eligibility and enrolment for social welfare benefits
+\ https://github.com/w3c/dpv/issues/473
+
+Art: how to link the turtle file in the HTML
+
+ACTION: Harsh to put instructions in the wiki for how to work with examples
+
+Topic: AOB
+
+HarshPandit: new DPIA template from EDPB and there should be a template for FRIA at the end of June with a public consultation 
+
+Ruhi: NIS2 and GDPR Mapping
+
+ACTION: Harsh to review this on Friday
