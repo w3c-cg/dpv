@@ -1,0 +1,75 @@
+meeting: Meeting 13 MAY 2026
+date: 13 MAY 2026
+chair: harsh
+scribe: *
+
+present: HarshPandit, TyttiRintamaki, BeyzaYaman, IainHenderson, PaulRyan, JulianFlake, FatimaHameed, SalDAgostino, RuhiAnandFinn
+
+regrets: BeatrizEsteves, GeorgKrog, GabrielaKurteva, MarlinKisia, FabianLinde
+
+Persistent ID for current minutes: https://w3id.org/dpv/meetings/meeting-2026-05-13
+Meeting minutes: https://w3id.org/dpv/meetings
+Previous minutes: https://w3id.org/dpv/meetings/meeting-2026-04-29
+
+Topic: Admin
+
+Harsh: no updates from w3c on the move of the repo to the new w3c-cg org -- it will happen when it will hapen
+
+Topic: CPDP
+
+\ who is going? -- Harsh, Iain, Ruhi, Beatriz, Gabriela, Marlin, Fabian
+
+Iain: Friday 22nd afternoon workshop about IEEE 7012 and MyTerms where we will present updates and we are looking for feedback
+
+Harsh: Thursday 21st morning panel on impact assessments and the ADAPT workshop is also on 21st morning
+
+Harsh: The full program is now published on CPDP website https://www.cpdpconferences.org/
+
+Topic: DPV 2.4
+
+\ proposed work program https://github.com/w3c/dpv/milestone/10
+
+Subtopic: EHDS and DE-GDNG
+\ https://github.com/w3c/dpv/issues/238
+\ https://github.com/w3c/dpv/issues/452
+
+Julian: no updates but we meeting 22nd of June in Berlin in a workshop format to discuss this and other national and project related things. There are also changes to the national implementation.
+
+Subtopic: India's DPDP
+\ https://github.com/w3c/dpv/issues/438
+
+
+Harsh: no updates
+
+Subtopic: AI Quality Assessments 
+\ https://github.com/w3c/dpv/issues/465 (updates from TCD group)
+
+
+Harsh: we will have some updates, still polishing the quality concepts
+
+Subtopic: AI Use Transparency
+\ https://github.com/w3c/dpv/issues/451 (identify concrete concepts for proposal, ask for reviewers -> Harsh?)
+
+Harsh: okay with two of the four concepts ...
+Fatima: will check and respond on github (audio issues)
+
+Subtopic: AI model openness
+\ https://github.com/w3c/dpv/issues/315 (provide concrete final concepts -> Art/Harsh?)
+
+Harsh: tried to implement these concepts and realised that we don't have the underlying concepts that we need to use to model specific things like is the training data available, weights are available, etc. and then you derive the openness class as I - III or none of these. So want to check with Art and Dick about adding these concepts alongside the openness status.
+
+Subtopic: AI Documentation
+\ (e.g. Datasheets and Model Cards) https://github.com/w3c/dpv/issues/94 (provide concrete concepts -> Harsh/Fabian?)
+Subtopic: AI Documentation proposal
+\ from Fabian: AI Act https://github.com/w3c/dpv/issues/463 (provide concrete concepts -> Fabian/Harsh?)
+
+Subtopic: errors
+\ wrong path for eu-rights:A35-Healthcare https://github.com/w3c/dpv/issues/471
+\ Typos re. "E U" https://github.com/w3c/dpv/issues/472
+
+Topic: Next meeting
+
+Harsh: we are at CPDP, should we have the meeting or skip the next one?
+Julian: I'll be on vacation until end of Month
+
+\ Next meeting will be in two weeks
