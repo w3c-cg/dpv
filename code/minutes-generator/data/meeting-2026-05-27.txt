@@ -1,0 +1,66 @@
+meeting: Meeting 27 MAY 2026
+date: 27 MAY 2026
+chair: beatriz
+scribe: *
+
+Present: BeatrizEsteves, Ruhi, Art, PaulRyan, FabianLinde, TyttiRintamaki, GabrielaKurteva, SalDAgostino, Beyza, Harsh, Georg, Delaram
+     
+Topic: Admin DPV 2.4
+
+\ proposed work program https://github.com/w3c/dpv/milestone/10
+\ Updates?
+
+Subtopic: AI (output) Usage concepts
+\ https://github.com/w3c/dpv/issues/451
+\ no updates
+
+Subtopic: EHDS
+\ https://github.com/w3c/dpv/issues/238@Beatriz
+\ Beatriz to review Gabriela+Marlin new concepts to add for 2.4
+
+Subtopic: DE-GDNG
+\ https://github.com/w3c/dpv/issues/452@Julian
+\ no updates
+
+Subtopic: India's DPDP
+\ https://github.com/w3c/dpv/issues/438@Ajay
+\ no updates
+
+Topic: Updates from ESWC
+BeatrizEsteves: European Commission (Publications Office and Directorate-General for Digital Services) reached out to know whether they can use DPV in a proof of concept they are developing related to a federated vocabulary hub that supports vocabularies beyond the ones published by SEMIC
+Art: are they mapping SEMIC vocabularies to other resources? what tools do they use for the mapping? (Example: https://github.com/mapping-commons/SSSOM and https://mapping-commons.github.io/sssom/dev/)
+
+Topic: Updates from CPDP
+\ reporting back things of interest
+\ possible use of DPV at CPDP
+Harsh: EDPS is using DPV to describe the use of AI and different deployments.
+
+Topic: developments on Digital Omnibus (GDPR)
+
+Harsh: they need machine-readable versions of requests and purposes, for topics related to privacy signals 
+
+Topic: Next meeting
+
+Harsh and Beatriz are away next week for HARNESS meetings. Do we have the meeting on JUN-03 or on JUN-10?
+
+Paul: JUN-10 is fine
+
+Topic: AOB
+Art: looking if DPV can be used to describe AI Bill of materials (https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/KI/SBOM-for-AI_minimum-elements.html), related to the mappings discussion
+Sal: has been looking at a similar use case, using DPV to represent information related to the cryptographic bill of materials -- currently work in progress --will share in the mailing list once there's more details
+Delaram: do we want to integrate the work on quality in DPV through an extension of DPV for DQV concepts, or to existing extensions, e.g., AI, ISO.
+
+Georg: Norwegian public bodies thinking of digital municipalities as a generic model
+
+\ chat log
+
+\ ArthitSuriyawongkul: https://github.com/mapping-commons/SSSOM 
+\ ArthitSuriyawongkul: https://mapping-commons.github.io/sssom/dev/ 
+\ ArthitSuriyawongkul: https://codemeta.github.io/ 
+\ ArthitSuriyawongkul: https://docs.google.com/spreadsheets/d/1RQDQTacIbcoOG8VU1Mwl6TGUcEHERY-3/edit?usp=sharing&ouid=108240001393775873001&rtpof=true&sd=true 
+\ ArthitSuriyawongkul: https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/KI/SBOM-for-AI_minimum-elements.html 
+\ ArthitSuriyawongkul: for the IOT and supply chain security stuff, IETF is about the conclude this RFC and formally adopt it as Internet Standards https://datatracker.ietf.org/doc/draft-ietf-scitt-architecture/ 
+\ ArthitSuriyawongkul: https://events.linuxfoundation.org/open-source-policy-ecosystem-forum/ 
+\ ArthitSuriyawongkul: 8 June
+https://events.linuxfoundation.org/open-source-policy-ecosystem-forum/ 
+\ https://openssf.org/event/european-open-source-security-forum-2026/
