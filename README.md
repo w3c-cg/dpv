@@ -4,13 +4,13 @@ Data Privacy Vocabularies and Controls Community Group (DPVCG) repository contai
 specifications for Data Privacy Vocabulary (DPV) and its extensions, primer, and guides,
 and group meeting minutes.
 
-links: [Community Group](https://www.w3.org/community/dpvcg/) | [GitHub wiki](https://github.com/w3c/dpv/wiki/)
+links: [Community Group](https://www.w3.org/community/dpvcg/) | [GitHub wiki](https://github.com/w3c-cg/dpv/wiki/)
 
 The mission of the W3C Data Privacy Vocabularies and Controls CG (DPVCG) is to develop a taxonomy of privacy and data protection related terms, which include in particular terms from the European General Data Protection Regulation (GDPR), such as a taxonomy of personal data as well as a classification of purposes (i.e., purposes for data collection), and events of disclosures, consent, and processing such personal data.
 
 License: All work produced by DPVCG and provided through this repo or elsewhere is provided by contributors under the [W3C Document License](https://www.w3.org/copyright/software-license-2023/) unless otherwise noted. A copy of the license is provided in the [LICENSE.md](./LICENSE.md) file.
 
-[Guidelines for suggesting new concepts, identifying bugs and issues, and sending patches or PRs](https://github.com/w3c/dpv/wiki/Contribution-Guide)
+[Guidelines for suggesting new concepts, identifying bugs and issues, and sending patches or PRs](https://github.com/w3c-cg/dpv/wiki/Contribution-Guide)
 
 ## Specifications
 
@@ -140,9 +140,9 @@ In addition to the above, we welcome participation in the following guides being
 
 ## Releases
 
-> [go to the latest release](https://github.com/w3c/dpv/releases/latest)
+> [go to the latest release](https://github.com/w3c-cg/dpv/releases/latest)
 
-Releases are provided through the GitHub feature at [https://github.com/w3c/dpv/releases](https://github.com/w3c/dpv/releases) and contain zipped collections of DPV specifications, modules, extensions, and accompanying documents.
+Releases are provided through the GitHub feature at [https://github.com/w3c-cg/dpv/releases](https://github.com/w3c-cg/dpv/releases) and contain zipped collections of DPV specifications, modules, extensions, and accompanying documents.
 
 ### Final Reports
 
@@ -210,7 +210,7 @@ A full list of reports (i.e. formally published by the W3C) produced by the CG i
 
 ## Participating and Getting assistance
 
-If you're unsure about something, or would like clarifications, or suggestions - please communicate with us or open an issue. We would be happy to help. You can view the [current open issues](https://github.com/w3c/dpv/issues) and the [public mailing list](https://lists.w3.org/Archives/Public/public-dpvcg/).
+If you're unsure about something, or would like clarifications, or suggestions - please communicate with us or open an issue. We would be happy to help. You can view the [current open issues](https://github.com/w3c-cg/dpv/issues) and the [public mailing list](https://lists.w3.org/Archives/Public/public-dpvcg/).
 
 Membership to the group is open to all interested individuals and organisations. To join the group, you need a valid W3C account – which is free to get and can be [requested here](https://www.w3.org/accounts/request). Usually, the group meets through online meeting calls - see [meetings calendar](https://www.w3.org/groups/cg/dpvcg/calendar) and [minutes](https://w3id.org/dpv/meetings).
 
