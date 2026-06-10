@@ -1,0 +1,58 @@
+meeting: Meeting 10 JUN 2026
+date: 10 JUN 2026
+chair: harsh
+scribe: *
+
+present: Harsh, Gabriela, Ruhi, Beyza, Georg, Julian, Julio
+
+regrets: Beatriz, Paul, Tytti
+
+Persistent ID for current minutes: https://w3id.org/dpv/meetings/meeting-2026-06-10
+Meeting minutes: https://w3id.org/dpv/meetings
+Previous minutes: https://w3id.org/dpv/meetings/meeting-2026-05-27
+
+Topic: Admin
+
+Subtopic: W3C TPAC
+
+harsh: happening October in Dublin, should DPVCG have a session? We have to inform W3C https://github.com/w3c/tpac2026-meetings/
+harsh: we have to inform w3c by JUN-17 if we want to have a session ; 
+Julian: error accessing the w3c TPAC page linked in the readme
+ACTION: Harsh will circulate an email and we will discuss next week
+
+Subtopic: repo
+harsh: repo has moved from w3c/gpc to w3c-cg/dpv https://github.com/w3c-cg/dpv the old links/repo automatically redirect to the new repo ;; w3c staff has made commits changing various links to the new repo (without asking) 
+\ If there are any problems, please let Harsh know to raise back to w3c
+
+Topic: DPV 2.4
+
+\ proposed work program https://github.com/w3c/dpv/milestone/10
+Subtopic: Updates
+\ AI (output) Usage concepts https://github.com/w3c/dpv/issues/451 confirm concepts
+\ AI model openness concepts https://github.com/w3c/dpv/issues/315 confirm concepts
+\ AI quality concepts https://github.com/w3c/dpv/issues/465
+\ EHDS https://github.com/w3c/dpv/issues/238 @Beatriz - updates?
+\ DE-GDNG https://github.com/w3c/dpv/issues/452 @Julian - updates?
+\ India's DPDP https://github.com/w3c/dpv/issues/438 @Ajay - updates?
+\ updates on possible use of DPV for GDPR Omnibus Article 88b
+\ (request) include mappings folder in releases https://github.com/w3c/dpv/issues/474
+
+Harsh: EHDS work still ongoing, not ready for 2.4 release as informed by Beatriz
+Julian: Same for GDNG, because the German govt. has modified the law to align it with EHDS, we have data access bodies being set up, the existing data co-ordination office will [probably] be closed [JF: not established]; The new law is not enacted/in-force yet, and it is also not published [/finalized]. It is still being discussed in the parliament. The old GDNG (which was analysed for DPV) will be obsolete. 
+Harsh: Will the GDNG extension be obsolete? Is a new extension?
+Julian: There will be an omnibus law with a different acronym [GeDIG], and the new GDNG will have different articles etc. So it is not worth publishing something that will be absolete soon
+Julian: IRIs will change e.g. the IRI for legal basis consent will change
+Harsh: same questions also arise for the omnibus e.g. GDPR and AI Act also have changes and its expected we update the concepts ; that is okay as these laws are in effect but up to GDNG group to decide how they want to do this
+Julian: better to wait and work on the new law ; we are meeting in 2 weeks ; the civil society is invited to comment on the new law so it is work in progress
+Subtopic: release schedule
+\ Do we go for 2.4 now with what minor concepts and documentation we have now?
+\ ans: yes, and we go for v2.5 next as per schedule
+
+Topic: AOB
+Harsh: uncertainty on 88b
+Georg: eIDAS regulation for wallets, which also need consent
+Harsh: high-risk guidelines on ai act, use of AI by public bodies;; age verification of different kinds with some using AI to infer age -- can DPV provide a taxonomy showing how these work
+Georg: also relevant is how consent works in these contexts, what should be the information
+
+Topic: Next meeting
+\ JUN-17

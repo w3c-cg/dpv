@@ -4,6 +4,10 @@ chair: beatriz
 scribe: *
 
 Present: BeatrizEsteves, Ruhi, Art, PaulRyan, FabianLinde, TyttiRintamaki, GabrielaKurteva, SalDAgostino, Beyza, Harsh, Georg, Delaram
+
+Persistent ID for current minutes: https://w3id.org/dpv/meetings/meeting-2026-05-27
+Meeting minutes: https://w3id.org/dpv/meetings
+Previous minutes: https://w3id.org/dpv/meetings/meeting-2026-05-13
      
 Topic: Admin DPV 2.4
 
