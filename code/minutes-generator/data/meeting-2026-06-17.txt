@@ -1,0 +1,64 @@
+meeting: Meeting 17 JUN 2026
+date: 17 JUN 2026
+chair: harsh
+scribe: *
+
+present: HarshPandit, GabrielaKurteva, RuhiAnandFinn, FabianLinde, JulianFlake, FatimaHameed, MuhsinHameed, PaulRyan, JulioHernandez
+regrets: TyttiRintamaki, BeatrizEsteves, MarlinKisia
+
+agenda: https://www.w3.org/events/meetings/df28da00-ef9e-4f18-951d-ab4f2705e050/20260617T133000/
+
+Persistent ID for current minutes: https://w3id.org/dpv/meetings/meeting-2026-06-17
+Meeting minutes: https://w3id.org/dpv/meetings
+Previous minutes: https://w3id.org/dpv/meetings/meeting-2026-06-10
+
+Topic: w3c TPAC
+
+\ not meeting at TPAC
+
+Topic: repo change
+
+\ repo changed from w3c/dpv to w3c-cg/dpv (github automatically redirects urls); no issues for existing urls in HTML or RDF but code which relies on desintation url (github) is now broken and reports errors e.g. which we use to check our documents are accessible and to build the vocabularies
+
+Topic: fix code urls for v2.4
+\ update w3id to avoid unnecessary redirects
+
+Topic: v2.4
+
+\ consolidation of changes made so far -- minor updates, misc. fixes; removal of sunset concepts
+
+Julian: no release candidate needed for this version, right?
+Harsh: Yes, this can be just draft and then final release; no need for RC with longer review period
+
+\ agree to release as 2.4
+
+\ AI Act changes finalised (no major changes for the extension so far, but good to add a note about updates to the law?)
+
+Harsh: notes also for ongoing laws e.g. Omnibus is changing GDPR and DGA; DE-GDNG will also be changed
+
+Julian: agree to add notes; also for GDNG and EHDS we don't have a final version but we still should highlight that there will be changes or deviations in future versions based on these
+Julian: we discussed this on Monday on whether to release GDNG as final and that it will change in future or to leave it as draft with a note on change. We agreed to keep it as draft and to add a note for why there will not be a final version.
+Julian: On the other hand, I was informed that the new law replacing GDNG will take up to 3 years. So for now the current vocabulary development is stalled.
+Julian: So suggestion is to mark the draft as no further development with justification of new law. We will discuss this with the GDNG team.
+
+Paul: +1
+Ruhi: +1
+
+Topic: AI Act Documentation
+\ Write-up (Fabian)
+
+Fabian: Prof. Lewis is writing a report on AI Act Art.10 report on data governance and wants to report back discussions happening in the DPVCG regarding analysis of information requirements that were done by Fabian to compare different documentation formats e.g. in data sheets and model cards.
+Harsh: The question is whether this can be hosted by DPVCG i.e. a page showing the analysis and discussion which is not part of the AI Act extension. Typically we only put the agreed concepts in the extension and not the analysis/comparisons that went into it.
+Harsh: E.g. we can use dpvcg.org which is meant for 'ongoing work' that is not part of our main repo which is a 'promise' that we maintain it over time. Whereas this work and domain can be used to simply share documents/reports that we utilise and then host for that specific work.
+Harsh: Fabian and I will prepare a proposal document that we want to host and we can decide next week based on it.
+
+Topic: next version v2.5?
+
+\ release when? (per schedule in Nov for draft and then release in Dec or Jan based on whether we do RC and review for major changes)
+
+\ agree to go for v2.5 as next version per the release schedule
+
+Topic: EHDS
+Julian: Any updates? From Beatriz and group.
+
+Topic: AOB
