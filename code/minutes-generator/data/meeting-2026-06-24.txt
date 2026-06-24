@@ -1,0 +1,88 @@
+meeting: Meeting 24 JUN 2026
+date: 24 JUN 2026
+chair: harsh
+scribe: *
+
+Persistent ID for current minutes: https://w3id.org/dpv/meetings/meeting-2026-06-24
+Meeting minutes: https://w3id.org/dpv/meetings
+Previous minutes: https://w3id.org/dpv/meetings/meeting-2026-06-17
+
+present: Harsh, Gabriela, Fabian, Marlin, Julian, Beatriz, Stratis, Muhsin, Paul, Delaram
+regrets: Tytti, Georg
+
+Topic: Admin
+Subtopic: w3c TPAC
+\ (FYI) not meeting at TPAC (not enough interest)
+harsh: paid event? lack of interest to attend
+beatriz: in the past they have given free or cheaper tickets to academic but also expensive to travel to ireland
+
+Subtopic: repo 
+\ w3c-cg/dpv -- new repo and redirects (HTML, w3id, browser extension) https://github.com/w3c-cg/dpv/issues/466
+ACTION: beatriz to update w3id for new github urls as part of 2.4 update
+
+Topic: DPV 2.4
+\ finalisation of release https://github.com/w3c/dpv/milestone/10 (minor changes and fixes only probably)
+\ working on draft for next week, release July end
+
+Topic: DPV-ODRL mapping
+beatriz: will 2.4 include the mapping?
+harsh: yes, its on the dev branch so will be merged into main and will be in 2.4
+beatriz: how do we automate the mapping generation for future versions? For left operands, nothing needs to be done. For right operands e.g. Asset, we need to produce a triple e.g. this DPV concept is also a ODRL Asset.
+harsh: doable with a SPARQL query, similar to what we do with the location/jurisdiction concepts e.g. IE is in EU.
+harsh: Does this have a github issue for tracking?
+beatriz: no, will create
+ACTION: beatriz to create issue for DPV-ODRL mapping automation
+
+Topic: GDNG note on ongoing lawmaking
+ACTION: harsh to create issue and liase with Julian to finalise note on GDNG
+ACTION: harsh to create issue for adding notes to GDPR, DGA, AI Act regarding changes being made via Omnibus
+
+Topic: ePrivacy Directive
+Gabriela: proposing extension for ePrivacy Directive based on ongoing PhD work; question on whether to add extension now given the ongoing Omnibus
+Julian: is this being change in the omnibux then to what extent?
+Harsh: ePD will stay but some stuff is moving to GDPR e.g. relaxation on rules for when to ask consent but core ePD concepts will continue 
+Harsh: option to add this extension as in scope now and do work for 2.5 or to decide later after summer
+Julian: agree this is scope so makes sense to have it 
+Gabriela: for now the scope is to identify actors, rights, obligations and use DPV concepts; My PhD will involve comparing these concepts across regulations e.g. starting with GDPR to see overlaps
+Beatriz: Then we can have it in 2.5 and use the dev link for the work?
+Julian: For GDNG, it is similar as it is a draft and we may want to reduce the draft (?). We should also state that we are working on it but this version of the law may not be useful as opposed to us not having time on it.
+harsh: draft just means we are working on it and it may have big changes as we're still figuring out
+julian: We should clarify which is "draft" and what is not e.g. in the figure for DPV extensions
+julian: we may also abandon some extension that is draft in the future, so important to clarify this
+ACTION: create github issue to add to list of extensions which are draft, which are not, including the DPV overview figure
+
+
+Topic: Space for Proposals
+objective: to enable members to show their proposals and ongoing discussions (as concepts may take time to be formally added to vocabularies)
+discuss: 1) do we want this? 2) where do we put this? 
+Harsh: [rationale]
+Delaram: what would happen to the url? Why not use the existing repo outside DPVCG?
+Harsh: the point is to provide a way to show the work is submitted which is early stage or still being discussed and not yet being put in the main branch
+\ proposed: AI Act Art.10 concepts from Fabian / Harsh https://dev.dpvcg.org/proposals/aiact-art10/
+\ proposed: AI quality vocabulary concepts from Delaram/Beyza/Fabian/Harsh
+Delaram: paper accepted to SEMANTiCs with 2 contributions: 
+https://anonymous.4open.science/w/
+dqv4ai/iso-25059/
+https://anonymous.4open.science/w/dqv4ai/eu-aiact/
+Delaram: we will de-anonymised and submit it to the proposals dev folder as discussed today
+Beatriz: There are concepts that use DPV and DQV for a concrete use case, i.e., AI quality. Does it make sense to have a generic DPV-DQV mapping, and have you worked on it?
+Delaram: No mapping, the 2 taxonomies were developed for concrete use cases, i.e., AI Act and ISO 25059
+
+
+Topic: DPV 2.5
+\ scheduled draft November, release early Jan
+\ work program -- priorities
+Beatriz: together with Gabriela and Marlin, we will continue the work on EHDS and DGA and make a concrete proposal
+\ no other priorities raised during the call.
+ACTION: Everyone to look at existing GitHub issues (or create new ones) to prioritise work items for 2.5 in the next few weeks.
+
+Topic: AOB
+\ nil
+
+Topic: Mailing List updates
+\ [2nd CfP - EXTENDED DEADLINE] 3rd NeXt-Generation Data Governance workshop @ SEMANTiCS 2026 – NXDG 2026 https://lists.w3.org/Archives/Public/public-dpvcg/2026Jun/0003.html
+
+
+Topic: Github updates
+\ discussion on having more modular structure for concepts https://github.com/w3c-cg/dpv/issues/221
+\ no comments
