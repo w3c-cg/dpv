@@ -1,0 +1,49 @@
+meeting: Meeting 08 JUL 2026
+date: 08 JUL 2026
+chair: beatriz
+scribe: *
+
+present: Beatriz, Ruhi, Paul, Stratis, Marlin, Julian, Beyza
+regrets: Harsh, Tytti
+
+Persistent ID for current minutes: https://w3id.org/dpv/meetings/meeting-2026-07-08
+Meeting minutes: https://w3id.org/dpv/meetings
+Previous minutes: https://w3id.org/dpv/meetings/meeting-2026-07-01
+
+Topic: Admin
+Subtopic: w3id redirect
+
+Beatriz: w3id's updated; if further issues please create a new issue in the DPVCG's GitHub repository
+
+Topic: DPV 2.4
+\ finalisation of release https://github.com/w3c/dpv/milestone/10 
+Subtopic: Update on DPV-ODRL
+
+Beatriz: mapping automation (https://github.com/w3c-cg/dpv/issues/476) still needs to be done, apart from that good to go.
+
+Subtopic: Update on GDNG
+
+Julian: PR (https://github.com/w3c-cg/dpv/pull/477) is created, please review to merge
+
+Subtopic: GDPR and NIS2 Mapping
+
+Ruhi: discussed with Harsh, both the regulations have now been mapped. They can also be considered to be released in 2.4
+Beatriz: I can help reviewing 
+
+Topic: Proposals
+\ add new structure for proposals
+\ proposed: AI Act Art.10 concepts from Fabian / Harsh https://dev.dpvcg.org/proposals/aiact-art10/
+Julian: for any other proposals, do we need to use the same template as the one in https://dev.dpvcg.org/proposals/aiact-art10/ ?
+Beatriz: not necessary, you can use other structure if you want, but you can also re-use it, it has a very nice structure especially for proposals that contain new concepts distributed across multiple DPV extensions
+
+Topic: AI quality vocabulary concepts 
+\ from Delaram/Beyza/Fabian/Harsh
+\ no updates
+
+Topic: DPV 2.5
+\ scheduled draft November, release early Jan
+\ work program -- priorities
+Beatriz: will work on updates to the health sector / EHDS extensions with Marlin and Gabriela
+
+Topic: AOB
+\ nil
