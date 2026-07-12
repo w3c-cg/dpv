@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Proposal] AI Act Documentation Requirements</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --ink: #1a1a1a;
+      --ink-muted: #6b6b6b;
+      --rule: #d8d6cf;
+      --accent: #2a52a0;
+      --accent-light: #e8edf7;
+      --tag-bg: #efefeb;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'IBM Plex Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--accent);
+      color: #fff;
+      padding: 56px 48px 48px;
+    }
+
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .header-eyebrow {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-size: clamp(24px, 4vw, 38px);
+      font-weight: 600;
+      line-height: 1.15;
+      max-width: none;
+      width: 100%;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    main {
+      padding: 48px 0 80px;
+    }
+
+    section {
+      margin-bottom: 48px;
+    }
+
+    .proposal-banner {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-top: 5px solid var(--accent);
+      border-radius: 0 0 4px 4px;
+      padding: 18px 22px;
+      margin-bottom: 32px;
+      box-shadow: 0 10px 30px rgba(26,26,26,0.05);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    .proposal-banner strong {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    /* ── Section headings ── */
+    .section-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    /* ── Research Questions ── */
+    .rq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .rq-item {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .rq-item strong {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* ── Two-column scope grid ── */
+    .scope-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .scope-card {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      padding: 20px;
+      border-radius: 4px;
+    }
+
+    .scope-card h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 12px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      background: var(--tag-bg);
+      color: var(--ink);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11.5px;
+      padding: 3px 9px;
+      border-radius: 3px;
+    }
+
+    .tag.article {
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    /* ── Contributions ── */
+    .contrib-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      counter-reset: contrib;
+    }
+
+    .contrib-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      padding: 16px 20px;
+      border-radius: 4px;
+      counter-increment: contrib;
+    }
+
+    .contrib-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--rule);
+      flex-shrink: 0;
+      width: 28px;
+      padding-top: 1px;
+    }
+
+    /* ── Methodology ── */
+    .method-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+    }
+
+    .method-step {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-top: 3px solid var(--accent);
+      padding: 16px;
+      border-radius: 0 0 4px 4px;
+    }
+
+    .method-step .step-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: var(--ink-muted);
+      margin-bottom: 6px;
+    }
+
+    .method-step p {
+      font-size: 13.5px;
+      line-height: 1.45;
+    }
+
+    /* ── Stats ── */
+    .total-badge {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 10px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 4px;
+      padding: 16px 24px;
+      margin-bottom: 24px;
+    }
+
+    .total-badge .total-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .total-badge .total-label {
+      font-size: 13px;
+      opacity: 0.85;
+      max-width: 160px;
+      line-height: 1.3;
+    }
+
+    .breakdown-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .breakdown-group {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .breakdown-group-header {
+      background: var(--tag-bg);
+      padding: 8px 14px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ink-muted);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .breakdown-rows {
+      padding: 10px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .breakdown-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 13.5px;
+    }
+
+    .breakdown-item .b-label {
+      color: var(--ink);
+      width: 100px;
+      flex-shrink: 0;
+    }
+
+    .breakdown-item .b-bar-wrap {
+      flex: 1;
+      height: 6px;
+      background: var(--tag-bg);
+      border-radius: 3px;
+      overflow: hidden;
+      min-width: 40px;
+    }
+
+    .breakdown-item .b-bar {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 3px;
+      opacity: 0.55;
+    }
+
+    .breakdown-item .b-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12.5px;
+      color: var(--ink-muted);
+      min-width: 28px;
+      text-align: right;
+    }
+
+    .breakdown-total-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 14px 10px;
+      font-size: 12px;
+      color: var(--ink-muted);
+      border-top: 1px dashed var(--rule);
+      margin-top: 2px;
+    }
+
+    .breakdown-total-row .b-total-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    @media (max-width: 520px) {
+      .breakdown-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── Coverage table ── */
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: #f0ede6;
+    }
+
+    th {
+      font-weight: 600;
+      text-align: left;
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--rule);
+      white-space: nowrap;
+      font-size: 12.5px;
+    }
+
+    td {
+      padding: 9px 14px;
+      border-bottom: 1px solid var(--rule);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12.5px;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr.highlight td {
+      font-weight: 600;
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    .score-bar-cell {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .score-bar {
+      height: 6px;
+      border-radius: 3px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* ── DPV summary ── */
+    .dpv-block {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+      display: block;
+      margin: 0 auto;
+      min-width: 260px;
+      max-width: 420px;
+    }
+
+    .dpv-total-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 18px 24px 14px;
+      border-bottom: 1px solid var(--rule);
+      text-align: center;
+    }
+
+    .dpv-total-row .dpv-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 44px;
+      font-weight: 600;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .dpv-total-row .dpv-label {
+      font-size: 13px;
+      color: var(--ink-muted);
+      line-height: 1.4;
+    }
+
+    .dpv-parts {
+      display: flex;
+    }
+
+    .dpv-part {
+      flex: 1;
+      padding: 12px 20px;
+      text-align: center;
+    }
+
+    .dpv-part:first-child {
+      border-right: 1px solid var(--rule);
+    }
+
+    .dpv-part .dpv-part-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--ink);
+      display: block;
+      line-height: 1;
+    }
+
+    .dpv-part .dpv-part-label {
+      font-size: 12px;
+      color: var(--ink-muted);
+      margin-top: 4px;
+    }
+
+    .dpv-equation {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      background: var(--accent-light);
+      border-top: 1px solid var(--rule);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      color: var(--accent);
+    }
+
+
+   /* ── DPV Concept listing ── */
+    .concept-namespaces {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
+    }
+ 
+    /* Namespace-level toggle */
+    details.ns-group {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+ 
+    details.ns-group > summary.ns-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      background: var(--tag-bg);
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+    }
+ 
+    details.ns-group > summary.ns-header::-webkit-details-marker { display: none; }
+ 
+    details.ns-group > summary.ns-header::after {
+      content: '▸';
+      margin-left: auto;
+      font-size: 11px;
+      color: var(--ink-muted);
+      transition: transform 0.15s;
+    }
+ 
+    details.ns-group[open] > summary.ns-header::after {
+      transform: rotate(90deg);
+    }
+ 
+    details.ns-group > summary.ns-header:hover {
+      background: #e8e6de;
+    }
+ 
+    .ns-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+ 
+    .ns-desc {
+      font-size: 12px;
+      color: var(--ink-muted);
+      flex: 1;
+    }
+ 
+    .ns-count {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--ink-muted);
+      margin-left: auto;
+    }
+ 
+    .concept-subsection {
+      padding: 10px 16px;
+      border-top: 1px solid var(--rule);
+    }
+ 
+    .concept-subsection-title {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ink-muted);
+      margin-bottom: 6px;
+    }
+ 
+    .concept-list {
+      display: flex;
+      flex-direction: column;
+    }
+ 
+    /* Concept-level toggle */
+    details.concept-item {
+      border-bottom: 1px solid var(--rule);
+    }
+ 
+    details.concept-item:last-child {
+      border-bottom: none;
+    }
+ 
+    details.concept-item > summary.concept-summary {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 4px;
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+    }
+ 
+    details.concept-item > summary.concept-summary::-webkit-details-marker { display: none; }
+ 
+    details.concept-item > summary.concept-summary::after {
+      content: '▸';
+      font-size: 10px;
+      color: var(--ink-muted);
+      margin-left: auto;
+      transition: transform 0.15s;
+      flex-shrink: 0;
+    }
+ 
+    details.concept-item[open] > summary.concept-summary::after {
+      transform: rotate(90deg);
+    }
+ 
+    details.concept-item > summary.concept-summary:hover .concept-name {
+      color: var(--accent);
+    }
+ 
+    .concept-name {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--ink);
+    }
+ 
+    .concept-source {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: var(--accent);
+      opacity: 0.75;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+ 
+    /* Concept detail panel */
+    .concept-detail {
+      padding: 6px 4px 12px 14px;
+      border-left: 2px solid var(--accent-light);
+      margin: 0 4px 6px 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+ 
+    .concept-row {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 6px;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+ 
+    .concept-row-label {
+      font-weight: 600;
+      color: var(--ink-muted);
+      font-size: 11px;
+      padding-top: 1px;
+    }
+ 
+    .concept-row-value {
+      color: var(--ink);
+    }
+ 
+    .concept-row-value code {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      background: var(--tag-bg);
+      padding: 1px 5px;
+      border-radius: 2px;
+    }
+ 
+    .instance-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 2px;
+    }
+ 
+    .instance-chip {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10.5px;
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 2px 7px;
+      border-radius: 3px;
+    }
+    .dpv-block {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+      display: block;
+      margin: 0 auto;
+      min-width: 260px;
+      max-width: 420px;
+    }
+ 
+    .dpv-total-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 24px 14px;
+      border-bottom: 1px solid var(--rule);
+    }
+ 
+    .dpv-total-row .dpv-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 44px;
+      font-weight: 600;
+      color: var(--accent);
+      line-height: 1;
+    }
+ 
+    .dpv-total-row .dpv-label {
+      font-size: 13px;
+      color: var(--ink-muted);
+      line-height: 1.4;
+    }
+ 
+    .dpv-parts {
+      display: flex;
+    }
+ 
+    .dpv-part {
+      flex: 1;
+      padding: 12px 20px;
+      text-align: center;
+    }
+ 
+    .dpv-part:first-child {
+      border-right: 1px solid var(--rule);
+    }
+ 
+    .dpv-part .dpv-part-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--ink);
+      display: block;
+      line-height: 1;
+    }
+ 
+    .dpv-part .dpv-part-label {
+      font-size: 12px;
+      color: var(--ink-muted);
+      margin-top: 4px;
+    }
+ 
+    .dpv-equation {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      background: var(--accent-light);
+      border-top: 1px solid var(--rule);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      color: var(--accent);
+    }
+
+
+    /* ── Previous work ── */
+    .prev-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .prev-tab {
+      flex: 1 1 auto;
+      min-width: 160px;
+      position: relative;
+    }
+
+    .prev-tab input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .prev-tab label {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 8px 14px;
+      font-size: 13.5px;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+    }
+
+    .prev-tab input:checked + label {
+      background: #f0edf9;
+      border-color: #9bb2dd;
+      color: var(--accent);
+    }
+
+    .prev-detail {
+      display: none;
+      margin-top: 16px;
+      padding: 18px 20px;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      line-height: 1.7;
+      box-shadow: 0 8px 24px rgba(26,26,26,0.06);
+    }
+
+    .prev-tab input:checked + label + .prev-detail {
+      display: block;
+    }
+
+    .ref-sup {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9px;
+      color: var(--accent);
+      font-weight: 600;
+      vertical-align: super;
+      line-height: 0;
+      text-decoration: none;
+      opacity: 0.75;
+    }
+
+    .ref-sup:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 36px 24px 32px; }
+      .container { padding: 0 20px; }
+      .scope-grid { grid-template-columns: 1fr; }
+    }
+    /* ── References ── */
+    .ref-list {
+      list-style: none;
+      counter-reset: ref;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .ref-item {
+      counter-increment: ref;
+      display: grid;
+      grid-template-columns: 24px 1fr auto;
+      gap: 0 12px;
+      align-items: baseline;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--rule);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .ref-item:last-child {
+      border-bottom: none;
+    }
+
+    .ref-item::before {
+      content: counter(ref) ".";
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--ink-muted);
+      padding-top: 1px;
+    }
+
+    .ref-item > * {
+      grid-column: 2;
+    }
+
+    .ref-item::before {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .ref-item .ref-link {
+      grid-column: 3;
+      grid-row: 1 / span 3;
+      align-self: center;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10.5px;
+      color: var(--accent);
+      text-decoration: none;
+      white-space: nowrap;
+      border: 1px solid var(--accent-light);
+      background: var(--accent-light);
+      padding: 2px 7px;
+      border-radius: 3px;
+    }
+
+    .ref-item .ref-link:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .ref-authors {
+      display: block;
+      font-weight: 500;
+    }
+
+    .ref-title {
+      display: block;
+    }
+
+    .ref-venue {
+      display: block;
+      color: var(--ink-muted);
+    }
+
+    /* ── Author / attribution ── */
+    .author-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 8px;
+      padding-top: 0;
+    }
+
+    .author-bar:first-of-type {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 18px;
+      margin-top: 20px;
+    }
+
+    .author-name {
+      font-size: 15px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .author-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .author-link {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 3px 9px;
+      border-radius: 3px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .author-link:hover {
+      color: #fff;
+      border-color: rgba(255,255,255,0.6);
+    }
+
+    .funding-note {
+      margin-top: 14px;
+      font-size: 11.5px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.5;
+      max-width: 1240px;
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-eyebrow">Research Write-up</div>
+    <h1>[Proposal] AI Act Documentation Requirements</h1>
+    <div class="author-bar">
+      <span class="author-name">Fabian Linde</span>
+      <div class="author-links">
+      <a class="author-link" href="https://orcid.org/0009-0004-0856-8036" target="_blank">ORCID</a>
+      <a class="author-link" href="https://linkedin.com/in/fabianlinde" target="_blank">LinkedIn</a>
+    </div>
+
+  </div>
+  <div class="author-bar">
+      <span class="author-name">Harshvardhan J. Pandit</span>
+      <div class="author-links">
+      <a class="author-link" href="https://orcid.org/0000-0002-5068-3714" target="_blank">ORCID</a>
+      <a class="author-link" href="https://harshp.com" target="_blank">Website</a>
+    </div>
+
+  </div>
+  <p class="funding-note">This research is funded by the European Union's Horizon 2020 programme under the Marie Skłodowska-Curie grant agreement No. 101169409 (<a href="https://harness-network.eu/index.html" target="_blank" style="color: inherit;">HARNESS</a>).</p>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="proposal-banner">
+      <strong>Note</strong>
+      This is a proposal to the Data Privacy Vocabularies and Controls Community Group (DPVCG).
+    </div>
+
+    <!-- Motivation -->
+    <section>
+      <div class="section-label">Background</div>
+      <h2>Motivation</h2>
+      <p>Translating legal mandates of the EU AI Act into technical workflows requires shifting from manual paperwork to digital governance. By mapping documentation requirements to formal semantic concepts, organizations benefit from a structured, machine-interpretable framework. This ensures machine-readability by transforming legal text into metadata artefacts. This enables automation (such as continuous compliance tracking, algorithmic auditing, and real-time policy enforcement across the AI lifecycle), as well as interoperability (by establishing a unified, vendor-agnostic vocabulary that allows diverse development pipelines, enterprise tools, and regulatory platforms to exchange data without losing context).</p>
+    </section>
+
+
+    <!-- Research Questions -->
+    <section>
+      <div class="section-label">Inquiry</div>
+      <h2>Research Questions</h2>
+      <div class="rq-list">
+        <div class="rq-item">
+          <strong>RQ1</strong>
+          What informational elements need providers of high-risk AI systems / GPAI models / GPAI models with systemic risk compile to be compliant with the EU AI Act?
+        </div>
+        <div class="rq-item">
+          <strong>RQ2</strong>
+          Which of these informational elements are already adequately covered by existing documentation formats?
+        </div>
+        <div class="rq-item">
+          <strong>RQ3</strong>
+          How are information elements not sufficiently covered best represented in a machine-readable manner?
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Contributions -->
+    <section>
+      <div class="section-label">Output</div>
+      <h2>Contributions</h2>
+      <div class="contrib-list">
+        <div class="contrib-item">
+          <span class="contrib-num">1</span>
+          <span>List of core documentation requirements for High-Risk AI system and GPAI model providers in the EU AI Act</span>
+        </div>
+        <div class="contrib-item">
+          <span class="contrib-num">2</span>
+          <span>Gap analysis of coverage of AI Act documentation requirements by six common existing documentation formats</span>
+        </div>
+        <div class="contrib-item">
+          <span class="contrib-num">3</span>
+          <span>Machine-readable concepts extending DPV for documentation gaps</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Previous Work -->
+    <section>
+      <div class="section-label">Background</div>
+      <h2>Previous Work</h2>
+      <div class="prev-tabs">
+        <div class="prev-tab">
+          <input type="checkbox" name="prev-work" id="prev-1">
+          <label class="prev-item" for="prev-1">JRC Paper<a class="ref-sup" href="#ref-1">[1]</a></label>
+          <div class="prev-detail">
+            The central previous work in this direction is a paper by researchers at the European Commission's Joint Research Center, conducting a similar coverage analysis. However, multiple limitations applied to this work: first, it was published in 2023, before the adoption of the final version of the AI Act, lacking i.a. provisions for GPAI systems. Second, it only considered clusters of documentation elements, without a detailed analysis of each atomic requirement. Third, it focused only on non-semantic documentation formats.
+          </div>
+        </div>
+        <div class="prev-tab">
+          <input type="checkbox" name="prev-work" id="prev-2">
+          <label class="prev-item" for="prev-2">Datasheets<a class="ref-sup" href="#ref-2">[2]</a></label>
+          <div class="prev-detail">
+            "Datasheets for Datasets" is a foundational research paper that proposes a standardized framework for documenting the motivation, composition, collection process, and intended use of machine learning datasets. Inspired by practices in the electronics industry, this approach aims to increase transparency and accountability in AI by helping practitioners uncover potential biases and determine a dataset's suitability for specific applications.          </div>
+        </div>
+        <div class="prev-tab">
+          <input type="checkbox" name="prev-work" id="prev-3">
+          <label class="prev-item" for="prev-3">Model Cards<a class="ref-sup" href="#ref-3">[3]</a></label>
+          <div class="prev-detail">
+            Model Cards are a foundational framework that proposes short, standardized documents to accompany trained machine learning models, detailing their performance, intended use cases, and operational limitations. This practice enhances AI transparency and accountability by encouraging developers to benchmark models across diverse demographics and explicitly disclose potential biases or ethical risks before deployment.          </div>
+        </div>
+        <div class="prev-tab">
+          <input type="checkbox" name="prev-work" id="prev-4">
+          <label class="prev-item" for="prev-4">ISO 42001<a class="ref-sup" href="#ref-4">[4]</a></label>
+          <div class="prev-detail">
+            ISO/IEC 42001 is the first international standard that specifies requirements for establishing, implementing, and continuously improving an Artificial Intelligence Management System (AIMS). It provides an auditable framework for organizations to govern their AI initiatives responsibly, specifically addressing challenges like algorithmic bias, system transparency, and continuous machine learning lifecycle management.            </div>
+        </div>
+        <div class="prev-tab">
+          <input type="checkbox" name="prev-work" id="prev-5">
+          <label class="prev-item" for="prev-5">Croissant<a class="ref-sup" href="#ref-5">[5]</a></label>
+          <div class="prev-detail">
+            Croissant is an open, standardized metadata format developed by MLCommons that provides a machine-readable vocabulary for describing machine learning datasets. By bridging dataset documentation with major ML frameworks (like PyTorch, TensorFlow, and JAX), it enables seamless data loading, improved search discoverability, and standardized tracking of Responsible AI (RAI) metadata such as data provenance and licensing.          </div>
+        </div>
+        <div class="prev-tab">
+          <input type="checkbox" name="prev-work" id="prev-6">
+          <label class="prev-item" for="prev-6">MLDCAT-AP<a class="ref-sup" href="#ref-6">[6]</a></label>
+          <div class="prev-detail">
+            MLDCAT-AP (Machine Learning Dataset Catalog Application Profile) is an extension of the European W3C DCAT-AP standard designed specifically for cataloging and sharing machine learning resources. It provides a standardized metadata schema to describe ML models, tasks, algorithms, and training datasets together, facilitating seamless discovery, automated harvesting, and cross-platform interoperability across AI repositories like OpenML and Hugging Face.          </div>
+        </div>
+        <div class="prev-tab">
+          <input type="checkbox" name="prev-work" id="prev-7">
+          <label class="prev-item" for="prev-7">DPV<a class="ref-sup" href="#ref-7">[7]</a></label>
+          <div class="prev-detail">
+            The Data Privacy Vocabulary (DPV) is a standardized, machine-readable ontology and taxonomy developed by a W3C Community Group to describe the processing of personal and non-personal data. It provides a structured data model to document metadata such as data categories, processing purposes, legal bases, safety measures, and technical risks, making it easier for systems to ensure and demonstrate compliance with regulations like the GDPR and the EU AI Act.          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scope -->
+    <section>
+      <div class="section-label">Coverage</div>
+      <h2>Scope</h2>
+      <div class="scope-grid">
+        <div class="scope-card">
+          <h3>AI Act</h3>
+          <div class="tag-list">
+            <span class="tag article">Art. 9</span>
+            <span class="tag article">Art. 10</span>
+            <span class="tag article">Art. 12</span>
+            <span class="tag article">Art. 13</span>
+            <span class="tag article">Art. 14</span>
+            <span class="tag article">Art. 15</span>
+            <span class="tag article">Art. 17</span>
+            <span class="tag article">Annex IV</span>
+            <span class="tag article">Annex V</span>
+            <span class="tag article">Annex XI</span>
+            <span class="tag article">Annex XII</span>
+          </div>
+        </div>
+        <div class="scope-card">
+          <h3>Documentation Formats</h3>
+          <div class="tag-list">
+            <span class="tag">Datasheets</span>
+            <span class="tag">Model Cards</span>
+            <span class="tag">ISO 42001</span>
+            <span class="tag">Croissant</span>
+            <span class="tag">MLDCAT-AP</span>
+            <span class="tag">DPV</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section>
+      <div class="section-label">Process</div>
+      <h2>Methodology</h2>
+      <div class="method-steps">
+        <div class="method-step">
+          <div class="step-num">Step 01</div>
+          <p><strong>Vocabulary Requirements Specification</strong><br>Requirements regarding documentation of high-risk AI systems are extracted from the AI Act.</p>
+        </div>
+        <div class="method-step">
+          <div class="step-num">Step 02</div>
+          <p><strong>Gap Analysis</strong><br>Extracted requirements are compared against existing machine-readable and non-machine-readable documentation resources.</p>
+        </div>
+        <div class="method-step">
+          <div class="step-num">Step 03</div>
+          <p><strong>Concept Creation</strong><br>Concepts created in an iterative process to allow broad coverage of gaps while ensuring an adequate fit into existing DPV structures.</p>
+        </div>
+        <div class="method-step">
+          <div class="step-num">Step 04</div>
+          <p><strong>Vocabulary Publication</strong><br>Concepts proposed for publication to the DPVCG.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Analysis: Information Elements -->
+    <section>
+      <div class="section-label">Result</div>
+      <h2>Documentation Requirements</h2>
+
+      <div class="dpv-block">
+        <div class="dpv-total-row">
+          <span class="dpv-num">285</span>
+          <span class="dpv-label">Documentation<br>requirements identified</span>
+        </div>
+      </div>
+
+      <p style="margin-top: 1rem; margin-bottom: 1rem;">Documentation requirements have been grouped regarding whether they are of a technical or organisational nature, as well as regarding their level based on the taxonomy of transparency in AI in <a href="https://www.iso.org/standard/84111.html" target="_blank" style="color: inherit;">ISO 12792</a>.</p>
+
+      <div class="breakdown-grid">
+        <!-- By type -->
+        <div class="breakdown-group">
+          <div class="breakdown-group-header">By type</div>
+          <div class="breakdown-rows">
+            <div class="breakdown-item">
+              <span class="b-label">Technical</span>
+              <div class="b-bar-wrap"><div class="b-bar" style="width:calc(190/286*100%)"></div></div>
+              <span class="b-num">190</span>
+            </div>
+            <div class="breakdown-item">
+              <span class="b-label">Organisational</span>
+              <div class="b-bar-wrap"><div class="b-bar" style="width:calc(83/286*100%)"></div></div>
+              <span class="b-num">83</span>
+            </div>
+            <div class="breakdown-item">
+              <span class="b-label">Both</span>
+              <div class="b-bar-wrap"><div class="b-bar" style="width:calc(12/286*100%)"></div></div>
+              <span class="b-num">12</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- By ISO 12792 level -->
+        <div class="breakdown-group">
+          <div class="breakdown-group-header">By level <span style="font-weight:400;text-transform:none;letter-spacing:0">(ISO 12792)</span></div>
+          <div class="breakdown-rows">
+            <div class="breakdown-item">
+              <span class="b-label">Context</span>
+              <div class="b-bar-wrap"><div class="b-bar" style="width:calc(16/286*100%)"></div></div>
+              <span class="b-num">16</span>
+            </div>
+            <div class="breakdown-item">
+              <span class="b-label">System</span>
+              <div class="b-bar-wrap"><div class="b-bar" style="width:calc(151/286*100%)"></div></div>
+              <span class="b-num">151</span>
+            </div>
+            <div class="breakdown-item">
+              <span class="b-label">Model</span>
+              <div class="b-bar-wrap"><div class="b-bar" style="width:calc(22/286*100%)"></div></div>
+              <span class="b-num">22</span>
+            </div>
+            <div class="breakdown-item">
+              <span class="b-label">Dataset</span>
+              <div class="b-bar-wrap"><div class="b-bar" style="width:calc(96/286*100%)"></div></div>
+              <span class="b-num">96</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coverage Table -->
+    <section>
+      <div class="section-label">Result</div>
+      <h2>Coverage by Documentation Format</h2>
+
+      <p style="margin-top: 1rem">Documentation requirements have been analysed regarding their coverage by different existing documentation formats.</p>
+      <p style="margin-bottom: 1rem;">For each documentation requirement and and each documentation format, the the coverage has been assessed qualitatively on a discrete scale from 0 to 2, where each score represents the following:</p>
+
+      <div style="display: flex; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 200px; padding: 1rem; background-color: #f5e6e6; border-left: 4px solid #d98080;">
+          <strong style="color: #a06060;">Score 0:</strong> Requirement not covered by the format
+        </div>
+        <div style="flex: 1; min-width: 200px; padding: 1rem; background-color: #f5f5e6; border-left: 4px solid #d4aa40;">
+          <strong style="color: #9d8f40;">Score 1:</strong> Requirement partially covered or implicitly addressable
+        </div>
+        <div style="flex: 1; min-width: 200px; padding: 1rem; background-color: #e6f5e6; border-left: 4px solid #60aa60;">
+          <strong style="color: #408040;">Score 2:</strong> Requirement fully or explicitly covered
+        </div>
+      </div>
+
+
+      <p style="margin-bottom: 1rem;">The following table shows how many documentation requirements received a score of 0, 1 and 2 for each documentation format: </p>
+
+
+    
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Format</th>
+              <th style="background-color: #f5e6e6;">Score 0</th>
+              <th style="background-color: #f5f5e6;">Score 1</th>
+              <th style="background-color: #e6f5e6;">Score 2</th>
+              <th>Avg. Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Datasheets</td>
+              <td>225</td>
+              <td>12</td>
+              <td>48</td>
+              <td>
+                <div class="score-bar-cell">
+                  <div class="score-bar" style="width:calc(0.37/1.06*80px)"></div>
+                  0.37
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Model Cards</td>
+              <td>162</td>
+              <td>100</td>
+              <td>23</td>
+              <td>
+                <div class="score-bar-cell">
+                  <div class="score-bar" style="width:calc(0.51/1.06*80px)"></div>
+                  0.51
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>ISO 42001</td>
+              <td>94</td>
+              <td>79</td>
+              <td>112</td>
+              <td>
+                <div class="score-bar-cell">
+                  <div class="score-bar" style="width:80px"></div>
+                  1.06
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Croissant</td>
+              <td>248</td>
+              <td>10</td>
+              <td>27</td>
+              <td>
+                <div class="score-bar-cell">
+                  <div class="score-bar" style="width:calc(0.22/1.06*80px)"></div>
+                  0.22
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>MLDCAT-AP</td>
+              <td>208</td>
+              <td>63</td>
+              <td>14</td>
+              <td>
+                <div class="score-bar-cell">
+                  <div class="score-bar" style="width:calc(0.31/1.06*80px)"></div>
+                  0.31
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>DPV</td>
+              <td>101</td>
+              <td>107</td>
+              <td>77</td>
+              <td>
+                <div class="score-bar-cell">
+                  <div class="score-bar" style="width:calc(0.91/1.06*80px)"></div>
+                  0.91
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin-top: 1rem;">This makes obvious that none of the existing documentation formats fully cover all the documentation required by the AI Act. ISO 42001 comes closest, but is not a machine-readable resource. Among semantic formats (MLDAT-AP, DPV, Croissant), DPV scores highest, and is therefore selected as the framework for the development of concepts to address this gap. </p>
+
+    </section>
+
+   <!-- New DPV Concepts -->
+    <section>
+      <div class="section-label">Result</div>
+      <h2>New Concepts Proposed to DPV</h2>
+      <div class="dpv-block">
+        <div class="dpv-total-row">
+          <span class="dpv-num">43</span>
+          <span class="dpv-label">Total concepts<br>proposed to DPV</span>
+        </div>
+        <div class="dpv-parts">
+          <div class="dpv-part">
+            <span class="dpv-part-num">33</span>
+            <div class="dpv-part-label">Classes</div>
+          </div>
+          <div class="dpv-part">
+            <span class="dpv-part-num">10</span>
+            <div class="dpv-part-label">Properties</div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="concept-namespaces">
+ 
+        <!-- dpv: -->
+        <details class="ns-group" open>
+          <summary class="ns-header">
+            <span class="ns-label">dpv:</span>
+            <span class="ns-desc">Data Privacy Vocabulary core</span>
+            <span class="ns-count">15 classes</span>
+          </summary>
+          <div class="concept-subsection">
+            <div class="concept-subsection-title">Classes</div>
+            <div class="concept-list">
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">dpv:DataQualityStatus</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">The outcome of a data quality assessment representing its suitability or acceptability for use or consideration in a process or for a specific context.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:Status</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Property</span><span class="concept-row-value"><code>hasDataQualityStatus</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Instances</span><span class="concept-row-value"><div class="instance-list"><span class="instance-chip">dpv:DataQualityAcceptable</span><span class="instance-chip">dpv:DataQualityUnacceptable</span></div></span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">dpv:DataAvailabilityAssessment</span><span class="concept-source">Art. 10(2)(e)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">Assessing the availability of data necessary for a given use case.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:DataQualityAssessment</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Object of</span><span class="concept-row-value"><code>dpv:hasAssessment</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 10(2)(e)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">dpv:DataAvailabilityStatus</span><span class="concept-source">Art. 10(2)(e)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">The outcome of a data availability assessment.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:DataQualityStatus</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Instances</span><span class="concept-row-value"><div class="instance-list"><span class="instance-chip">DataAvailabilityCompletelyAvailable</span><span class="instance-chip">DataAvailabilityPartiallyAvailable</span><span class="instance-chip">DataAvailabilityNotAvailable</span><span class="instance-chip">DataAvailabilityUnknown</span></div></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 10(2)(e)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">dpv:DataQuantityAssessment</span><span class="concept-source">Art. 10(2)(e)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">Assessing whether the quantity of data available is sufficient for a given use case.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:DataQualityAssessment</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Object of</span><span class="concept-row-value"><code>dpv:hasAssessment</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 10(2)(e)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">dpv:DataQuantityStatus</span><span class="concept-source">Art. 10(2)(e)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">The outcome of a data quantity assessment.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:DataQualityStatus</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Instances</span><span class="concept-row-value"><div class="instance-list"><span class="instance-chip">DataQuantitySufficient</span><span class="instance-chip">DataQuantityNotSufficient</span><span class="instance-chip">DataQuantityUnknown</span></div></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 10(2)(e)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">dpv:DataSuitabilityAssessment</span><span class="concept-source">Art. 10(2)(e)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">Assessing whether the data is suitable for a given use case, i.e. does the data hold the appropriate distribution for the foreseen application.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:DataQualityAssessment</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Object of</span><span class="concept-row-value"><code>dpv:hasAssessment</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 10(2)(e)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">dpv:DataSuitabilityStatus</span><span class="concept-source">Art. 10(2)(e)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">The outcome of a data suitability assessment.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:DataQualityStatus</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Instances</span><span class="concept-row-value"><div class="instance-list"><span class="instance-chip">DataSuitabilityCompletelySuitable</span><span class="instance-chip">DataSuitabilityPartiallySuitable</span><span class="instance-chip">DataSuitabilityNotSuitable</span><span class="instance-chip">DataSuitabilityUnknown</span></div></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 10(2)(e)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">dpv:DataRelevanceAssessment</span><span class="concept-source">Art. 10(3)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">Assessing whether the data is relevant for a given use case.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:DataQualityAssessment</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Object of</span><span class="concept-row-value"><code>dpv:hasAssessment</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 10(3)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">dpv:DataRelevanceStatus</span><span class="concept-source">Art. 10(3)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">The outcome of a data relevance assessment.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:DataQualityStatus</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Instances</span><span class="concept-row-value"><div class="instance-list"><span class="instance-chip">DataRelevantCompletely</span><span class="instance-chip">DataRelevantPartially</span><span class="instance-chip">DataNotRelevant</span><span class="instance-chip">DataRelevanceUnknown</span></div></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 10(3)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">dpv:DataContextualSuitabilityAssessment</span><span class="concept-source">Art. 10(4)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">Assessing whether the data is suitable for the geographical, contextual, behavioural or functional context of a given use case, i.e. does the data hold the appropriate distribution or representativeness for the foreseen application, for example as regards the persons or groups of persons in relation to whom the technology is intended to be used.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:DataQualityAssessment</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Object of</span><span class="concept-row-value"><code>dpv:hasAssessment</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 10(4)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">dpv:DataContextualSuitabilityStatus</span><span class="concept-source">Art. 10(4)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">The outcome of a data contextual suitability assessment.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:DataQualityStatus</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Instances</span><span class="concept-row-value"><div class="instance-list"><span class="instance-chip">DataContextuallySuitable</span><span class="instance-chip">DataContextuallyNotSuitable</span><span class="instance-chip">DataContextualSuitabilityUnknown</span></div></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 10(4)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">dpv:DataCorrectnessAssessment</span><span class="concept-source">Art. 10(3)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">Assessing whether the data is free of errors.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:DataQualityAssessment</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Object of</span><span class="concept-row-value"><code>dpv:hasAssessment</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 10(3)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">dpv:DataCorrectnessStatus</span><span class="concept-source">Art. 10(3)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">The outcome of a data correctness assessment.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:DataQualityStatus</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Instances</span><span class="concept-row-value"><div class="instance-list"><span class="instance-chip">DataCorrectCompletely</span><span class="instance-chip">DataCorrectPartially</span><span class="instance-chip">DataNotCorrect</span><span class="instance-chip">DataCorrectnessUnknown</span></div></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 10(3)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">dpv:DataCompletenessAssessment</span><span class="concept-source">Art. 10(3)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">Assessing whether the data is complete.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:DataQualityAssessment</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Object of</span><span class="concept-row-value"><code>dpv:hasAssessment</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 10(3)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">dpv:DataCompletenessStatus</span><span class="concept-source">Art. 10(3)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">The outcome of a data completeness assessment.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:DataQualityStatus</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Instances</span><span class="concept-row-value"><div class="instance-list"><span class="instance-chip">DataComplete</span><span class="instance-chip">DataNotComplete</span><span class="instance-chip">DataCompletenessUnknown</span></div></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 10(3)</span></div>
+                </div>
+              </details>
+ 
+
+ 
+            </div>
+          </div>
+        </details>
+ 
+        <!-- eu-aiact: -->
+        <details class="ns-group" open>
+          <summary class="ns-header">
+            <span class="ns-label">eu-aiact:</span>
+            <span class="ns-desc">EU AI Act extension</span>
+            <span class="ns-count">8 classes</span>
+          </summary>
+          <div class="concept-subsection">
+            <div class="concept-subsection-title">Classes</div>
+            <div class="concept-list">
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">eu-aiact:TrainingForDeployer</span><span class="concept-source">Art. 9(5)(c)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">Provision of training to deployers.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:OrganisationalMeasure</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Object of</span><span class="concept-row-value"><code>dpv:hasOrganisationalMeasure</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 9(5)(c)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">eu-aiact:EnsuringDeployerSuitability</span><span class="concept-source">Art. 9(5)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">Consideration of the technical knowledge, experience, education and training to be expected by the deployer.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:OrganisationalMeasure</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 9(5)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">eu-aiact:DataGapsPreventingCompliance</span><span class="concept-source">Art. 10(2)(h)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">Identification of relevant data gaps or shortcomings that prevent compliance with the AI Act.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>risk:LegalComplianceRisk</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 10(2)(h)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">eu-aiact:CommunicationWithAuthority</span><span class="concept-source">Art. 17(1)(j)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">Communication with relevant (including national competent) authorities.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:GovernanceProcedures</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 17(1)(j)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">eu-aiact:HumanOversightManagement</span><span class="concept-source">Art. 14(4)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">Provision of an AI system to the deployer such that persons assigned human oversight can understand, interpret, disregard, override or reverse outputs; duly monitor the system; be aware of (over-)reliance; and intervene in the operation of the AI system.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:OrganisationalMeasure</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 14(4)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">eu-aiact:A10-5</span><span class="concept-source">Art. 10(5)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">Legal basis permitting the exceptional processing of special categories of personal data for bias detection/correction, to the extent it is strictly necessary.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:LegalBasis</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 10(5)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">eu-aiact:SpecialCategoryBiasExemptionAssessment</span><span class="concept-source">Art. 10(5)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:Assessment</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 10(5)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">eu-aiact:SpecialCategoryBiasExemptionStatus</span><span class="concept-source">Art. 10(5)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Instances</span><span class="concept-row-value"><div class="instance-list"><span class="instance-chip">SpecialCategoryBiasExemptionPermitted</span><span class="instance-chip">SpecialCategoryBiasExemptionNotPermitted</span><span class="instance-chip">SpecialCategoryBiasExemptionUnknown</span></div></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 10(5)</span></div>
+                </div>
+              </details>
+ 
+            </div>
+          </div>
+        </details>
+ 
+        <!-- ai: -->
+        <details class="ns-group" open>
+          <summary class="ns-header">
+            <span class="ns-label">ai:</span>
+            <span class="ns-desc">AI extension</span>
+            <span class="ns-count">5 classes · 1 property</span>
+          </summary>
+          <div class="concept-subsection">
+            <div class="concept-subsection-title">Classes</div>
+            <div class="concept-list">
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">ai:ModelTesting</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">Method to evaluate AI models.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:TechnicalMeasure</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Object of</span><span class="concept-row-value"><code>dpv:hasTechnicalMeasure</code></span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">ai:AdversarialModelTesting</span><span class="concept-source">Annex XI §2(2)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">Method to evaluate (generative) AI models by intentionally providing malicious inputs to identify vulnerabilities.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>ai:ModelTesting</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Object of</span><span class="concept-row-value"><code>dpv:hasTechnicalMeasure</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Annex XI Section 2(2)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">ai:ParameterCount</span><span class="concept-source">Annex XI §1(1)(d); Annex XII(1)(f)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">The number of parameters in an AI model.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Object of</span><span class="concept-row-value"><code>ai:hasParameterCount</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Annex XI Section 1(1)(d); Annex XII(1)(f)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">ai:DataCuration</span><span class="concept-source">Annex XI §1(2)(c)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">Organisation and integration of data collected from various sources.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:DataGovernance</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Object of</span><span class="concept-row-value"><code>dpv:hasTechnicalOrganisationalMeasure</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Annex XI Section 1(2)(c)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">ai:DataSelection</span><span class="concept-source">Annex XI §1(2)(c)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">The selection of the dataset for a given purpose.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>ai:DataOperation</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Annex XI Section 1(2)(c)</span></div>
+                </div>
+              </details>
+ 
+            </div>
+          </div>
+          <div class="concept-subsection">
+            <div class="concept-subsection-title">Properties</div>
+            <div class="concept-list">
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">ai:hasParameterCount</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Domain</span><span class="concept-row-value"><code>ai:Model</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Range</span><span class="concept-row-value"><code>ai:ParameterCount</code></span></div>
+                </div>
+              </details>
+ 
+            </div>
+          </div>
+        </details>
+ 
+        <!-- tech: -->
+        <details class="ns-group" open>
+          <summary class="ns-header">
+            <span class="ns-label">tech:</span>
+            <span class="ns-desc">Technology extension</span>
+            <span class="ns-count">4 classes · 9 properties</span>
+          </summary>
+          <div class="concept-subsection">
+            <div class="concept-subsection-title">Classes</div>
+            <div class="concept-list">
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">tech:Firmware</span><span class="concept-source">Annex IV(1)(c)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">Specialised software integrated into hardware devices to control their basic functions and facilitate communication between hardware and higher-level software.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:Technology</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Object of</span><span class="concept-row-value"><code>tech:hasFirmware</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Annex IV(1)(c)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">tech:UpdateRequirements</span><span class="concept-source">Annex IV(1)(c)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">Requirements to be met to ensure successful updates to newer software versions.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>tech:Instructions</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Object of</span><span class="concept-row-value"><code>tech:hasUpdateRequirements</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Annex IV(1)(c)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">tech:UserInterface</span><span class="concept-source">Annex IV(1)(g)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">System that enables interaction between users and machines.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Object of</span><span class="concept-row-value"><code>tech:hasUserInterface</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Annex IV(1)(g)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">tech:EnergyConsumption</span><span class="concept-source">Annex XI §1(2)(e)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">The energy consumed by an AI system, potentially in a particular stage of its lifecycle.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>eu-aiact:ComputationalResource</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Annex XI Section 1(2)(e)</span></div>
+                </div>
+              </details>
+ 
+            </div>
+          </div>
+          <div class="concept-subsection">
+            <div class="concept-subsection-title">Properties</div>
+            <div class="concept-list">
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">tech:hasFirmware</span><span class="concept-source">Annex IV(1)(c)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Range</span><span class="concept-row-value"><code>tech:Firmware</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Annex IV(1)(c)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">tech:hasVersion</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Range</span><span class="concept-row-value"><code>Literal</code></span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">tech:hasUpdateRequirements</span><span class="concept-source">Annex IV(1)(c)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Range</span><span class="concept-row-value"><code>tech:UpdateRequirements</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Annex IV(1)(c)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">tech:hasUserInterface</span><span class="concept-source">Annex IV(1)(g)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Range</span><span class="concept-row-value"><code>tech:UserInterface</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Annex IV(1)(g)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">tech:hasKnownEnergyConsumption</span><span class="concept-source">Annex XI §1(2)(e)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">The energy known to be consumed by a system.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Range</span><span class="concept-row-value"><code>tech:EnergyConsumption</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Annex XI Section 1(2)(e)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">tech:hasEstimatedEnergyConsumption</span><span class="concept-source">Annex XI §1(2)(e)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">The energy estimated to be consumed by a system.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Range</span><span class="concept-row-value"><code>tech:EnergyConsumption</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Annex XI Section 1(2)(e)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">tech:hasModality</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Range</span><span class="concept-row-value"><code>tech:Content</code></span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">tech:hasOperatingInteraction</span><span class="concept-source">Annex IV(1)(b)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Range</span><span class="concept-row-value"><code>dpv:Technology</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Annex IV(1)(b)</span></div>
+                </div>
+              </details>
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">tech:hasExpectedLifetime</span><span class="concept-source">Art. 13(3)(e)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Domain</span><span class="concept-row-value"><code>dpv:Technology</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Range</span><span class="concept-row-value"><code>dpv:Duration</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 13(3)(e)</span></div>
+                </div>
+              </details>
+ 
+            </div>
+          </div>
+        </details>
+
+        <!-- justifications: -->
+        <details class="ns-group" open>
+          <summary class="ns-header">
+            <span class="ns-label">justifications:</span>
+            <span class="ns-desc">Justifications extension</span>
+            <span class="ns-count">1 class</span>
+          </summary>
+          <div class="concept-subsection">
+            <div class="concept-subsection-title">Classes</div>
+            <div class="concept-list">
+ 
+              <details class="concept-item">
+                <summary class="concept-summary"><span class="concept-name">justifications:Assumption</span><span class="concept-source">Art. 10(2)(d)</span></summary>
+                <div class="concept-detail">
+                  <div class="concept-row"><span class="concept-row-label">Definition</span><span class="concept-row-value">Assumptions that clarify or provide more information about the context.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Parent</span><span class="concept-row-value"><code>dpv:Justification</code></span></div>
+                  <div class="concept-row"><span class="concept-row-label">Usage note</span><span class="concept-row-value">When used regarding data, expresses information that data is supposed to measure and represent.</span></div>
+                  <div class="concept-row"><span class="concept-row-label">Source</span><span class="concept-row-value">EU AI Act, Art. 10(2)(d)</span></div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </details>
+ 
+      </div>
+    </section>
+
+    <!-- References -->
+    <section>
+      <div class="section-label">Bibliography</div>
+      <h2>References</h2>
+      <ol class="ref-list">
+        <li id="ref-1" class="ref-item">
+          <span class="ref-authors">Hupont, I., Micheli, M., Delipetrev, B., Gómez, E., Garrido, J.S.</span>
+          <span class="ref-title">Documenting High-Risk AI: A European Regulatory Perspective.</span>
+          <span class="ref-venue"><em>Computer</em>, 56(5):18–27. IEEE, 2023.</span>
+          <a class="ref-link" href="https://doi.org/10.1109/MC.2023.3235712" target="_blank">10.1109/MC.2023.3235712</a>
+        </li>
+        <li id="ref-2" class="ref-item">
+          <span class="ref-authors">Gebru, T., Morgenstern, J., Vecchione, B., Vaughan, J.W., Wallach, H., Daumé III, H., Crawford, K.</span>
+          <span class="ref-title">Datasheets for Datasets.</span>
+          <span class="ref-venue"><em>Communications of the ACM</em>, 64(12):86–92, 2021.</span>
+          <a class="ref-link" href="https://doi.org/10.1145/3458723" target="_blank">10.1145/3458723</a>
+        </li>
+        <li id="ref-3" class="ref-item">
+          <span class="ref-authors">Mitchell, M., Wu, S., Zaldivar, A., Barnes, P., Vasserman, L., Hutchinson, B., Spitzer, E., Raji, I.D., Gebru, T.</span>
+          <span class="ref-title">Model Cards for Model Reporting.</span>
+          <span class="ref-venue">In: <em>Proceedings of the Conference on Fairness, Accountability, and Transparency (FAT* '19)</em>. ACM, 2019.</span>
+          <a class="ref-link" href="https://doi.org/10.1145/3287560.3287596" target="_blank">10.1145/3287560.3287596</a>
+        </li>
+        <li id="ref-4" class="ref-item">
+          <span class="ref-authors">ISO/IEC.</span>
+          <span class="ref-title">ISO/IEC 42001:2023 — Information Technology: Artificial Intelligence Management System.</span>
+          <span class="ref-venue">International Organization for Standardization, Geneva, 2023.</span>
+          <a class="ref-link" href="https://www.iso.org/standard/42001" target="_blank">iso.org/standard/42001</a>
+        </li>
+        <li id="ref-5" class="ref-item">
+          <span class="ref-authors">Akhtar, M., Benjelloun, O., Conforti, C., et al.</span>
+          <span class="ref-title">Croissant: A Metadata Format for ML-Ready Datasets.</span>
+          <span class="ref-venue">In: <em>Advances in Neural Information Processing Systems 37 (NeurIPS 2024)</em>, Datasets and Benchmarks Track, 2024.</span>
+          <a class="ref-link" href="https://arxiv.org/abs/2403.19546" target="_blank">arXiv:2403.19546</a>
+        </li>
+        <li id="ref-6" class="ref-item">
+          <span class="ref-authors">SEMIC / Interoperable Europe.</span>
+          <span class="ref-title">MLDCAT-AP: Machine Learning DCAT Application Profile, v3.0.0.</span>
+          <span class="ref-venue">European Commission Semantic Interoperability Community (SEMIC), 2025.</span>
+          <a class="ref-link" href="https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/" target="_blank">semiceu.github.io/MLDCAT-AP</a>
+        </li>
+        <li id="ref-7" class="ref-item">
+          <span class="ref-authors">Pandit, H.J., Esteves, B., Krog, G.P., Ryan, P., Golpayegani, D., Flake, J.</span>
+          <span class="ref-title">Data Privacy Vocabulary (DPV) — Version 2.0.</span>
+          <span class="ref-venue">In: <em>The Semantic Web — ISWC 2024</em>. Lecture Notes in Computer Science, vol 15233. Springer, 2024.</span>
+          <a class="ref-link" href="https://doi.org/10.1007/978-3-031-77847-6_10" target="_blank">10.1007/978-3-031-77847-6_10</a>
+        </li>
+        <li id="ref-8" class="ref-item">
+          <span class="ref-authors">European Parliament and Council of the EU.</span>
+          <span class="ref-title">Regulation (EU) 2024/1689 of 13 June 2024 laying down harmonised rules on Artificial Intelligence (AI Act).</span>
+          <span class="ref-venue"><em>Official Journal of the European Union</em>, L 2024/1689, 2024.</span>
+          <a class="ref-link" href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689" target="_blank">EUR-Lex</a>
+        </li>
+      </ol>
+    </section>
+
+  </div>
+
+
+
+

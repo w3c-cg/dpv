@@ -1,0 +1,309 @@
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix eu-aiact: <https://w3id.org/dqv4ai/eu-aiact#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix profile: <http://www.w3.org/ns/dx/prof/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+eu-aiact:Accuracy a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "AI Act Article 15"@en ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Accuracy"@en ;
+    dqv:inCategory eu-aiact:SystemQuality .
+
+eu-aiact:ComputationalPerformance a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "AI Act Annex XIII (c)"@en ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Computational Performance"@en ;
+    dqv:inCategory eu-aiact:ModelQuality .
+
+eu-aiact:DataAvailability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "AI Act Article 10(1)(e)"@en ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Data Availability"@en ;
+    dqv:inCategory eu-aiact:DataQuality .
+
+eu-aiact:DataCompleteness a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "AI Act Article 10(3)"@en ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Completeness of Training, validation and testing data sets in respect to the intended purpose."@en ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Data Completeness"@en ;
+    dqv:inCategory eu-aiact:DataQuality .
+
+eu-aiact:DataQuality a rdfs:Class,
+        skos:Concept,
+        dqv:Category ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Category ;
+    skos:definition "Quality associated with data and data sets"@en ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Data Quality"@en .
+
+eu-aiact:DataQuantity a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "AI Act Article 10(1)(e)"@en ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Data Quantity"@en ;
+    dqv:inCategory eu-aiact:DataQuality .
+
+eu-aiact:DataRelevance a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "AI Act Article 10(3)"@en ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Relevance of Training, validation and testing data sets in respect to the intended purpose."@en ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Data Relevance"@en ;
+    dqv:inCategory eu-aiact:DataQuality .
+
+eu-aiact:DataRepresentativeness a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "AI Act Article 10(3)"@en ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Representativeness of Training, validation and testing data sets in respect to the intended purpose."@en ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Data Representativeness"@en ;
+    dqv:inCategory eu-aiact:DataQuality .
+
+eu-aiact:DataSuitability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "AI Act Article 10(1)(e)"@en ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Data Suitability"@en ;
+    dqv:inCategory eu-aiact:DataQuality .
+
+eu-aiact:ErrorFree a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "AI Act Article 10(3)"@en ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Error Free"@en ;
+    dqv:inCategory eu-aiact:DataQuality .
+
+eu-aiact:FaultTolerance a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "AI Act Article 15(4)"@en ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Fault Tolerance"@en ;
+    dqv:inCategory eu-aiact:SystemQuality .
+
+eu-aiact:FloatingPointOperations a rdfs:Class,
+        skos:Concept,
+        dqv:Metric ;
+    dct:source "AI Act Annex XIII (c)"@en ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Metric ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Floating Point Operations"@en ;
+    dqv:indimension eu-aiact:ComputationalPerformance .
+
+eu-aiact:Interpretability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "AI Act Article 13"@en ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Interpretabilty of system’s output"@en ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Interpretability"@en ;
+    dqv:inCategory eu-aiact:SystemQuality .
+
+eu-aiact:ModelQuality a rdfs:Class,
+        skos:Concept,
+        dqv:Category ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Category ;
+    skos:definition "Quality associated with AI Models"@en ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Model Quality"@en .
+
+eu-aiact:ModelTrainingCost a rdfs:Class,
+        skos:Concept,
+        dqv:Metric ;
+    dct:source "AI Act Annex XIII (c)"@en ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Metric ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Model Training Cost"@en ;
+    dqv:indimension eu-aiact:ComputationalPerformance .
+
+eu-aiact:ModelTrainingEnergyConsumption a rdfs:Class,
+        skos:Concept,
+        dqv:Metric ;
+    dct:source "AI Act Annex XIII (c)"@en ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Metric ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Model Training Energy Consumption"@en ;
+    dqv:indimension eu-aiact:ComputationalPerformance .
+
+eu-aiact:ModelTrainingTime a rdfs:Class,
+        skos:Concept,
+        dqv:Metric ;
+    dct:source "AI Act Annex XIII (c)"@en ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Metric ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Model Training Time"@en ;
+    dqv:indimension eu-aiact:ComputationalPerformance .
+
+eu-aiact:Resilience a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "AI Act Article 15(4)"@en ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Resilience"@en ;
+    dqv:inCategory eu-aiact:SystemQuality .
+
+eu-aiact:Robustness a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "AI Act Article 15"@en ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Robustness"@en ;
+    dqv:inCategory eu-aiact:SystemQuality .
+
+eu-aiact:SystemPerformance a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "AI Act Article 3(18)"@en ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "performance of an AI system means the ability of an AI system to achieve its intended purpose"@en ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "System Performance"@en ;
+    dqv:inCategory eu-aiact:SystemQuality .
+
+eu-aiact:SystemQuality a rdfs:Class,
+        skos:Concept,
+        dqv:Category ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Category ;
+    skos:definition "Quality associated with AI Systems"@en ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "System Quality"@en .
+
+eu-aiact:Transparency a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "AI Act Article 13"@en ;
+    rdfs:isDefinedBy eu-aiact: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Transparency of the operation of AI system"@en ;
+    skos:inScheme eu-aiact:core-classes ;
+    skos:prefLabel "Transparency"@en ;
+    dqv:inCategory eu-aiact:ModelQuality,
+        eu-aiact:SystemQuality .
+
+<https://w3id.org/dqv4ai/eu-aiact> a owl:Ontology,
+        profile:Profile ;
+    dct:conformsTo "http://www.w3.org/2000/01/rdf-schema",
+        "http://www.w3.org/2004/02/skos/core" ;
+    dct:created "2026-05-12"@en ;
+    dct:creator [ a dct:Agent,
+                foaf:Person ;
+            org:memberOf [ a foaf:Organization ;
+                    foaf:name "Anonymous" ] ;
+            foaf:name "Anonymous" ] ;
+    dct:description "AIQV"@en ;
+    dct:identifier "https://w3id.org/dqv4ai/eu-aiact" ;
+    dct:issued "2026-05-12"@en ;
+    dct:license <https://www.w3.org/copyright/document-license-2023/> ;
+    dct:modified "2026-05-12"@en ;
+    dct:publisher <https://www.w3.org/> ;
+    dct:source <https://www.w3.org/groups/cg/dpvcg/> ;
+    dct:title "AIQV"@en ;
+    bibo:doi "10.5281/zenodo.12505841" ;
+    bibo:status "http://purl.org/ontology/bibo/status/published" ;
+    vann:preferredNamespacePrefix "eu-aiact" ;
+    vann:preferredNamespaceUri "https://w3id.org/dqv4ai/eu-aiact#" ;
+    rdfs:Label "EU-AIACT"@en ;
+    owl:versionIRI <https://w3id.org/dqv4ai/eu-aiact> ;
+    owl:versionInfo "0.1" ;
+    profile:hasResource eu-aiact:serialisation-html,
+        eu-aiact:serialisation-ttl ;
+    profile:isProfileOf rdfs:,
+        skos: ;
+    foaf:logo <https://w3id.org/dpv/media/logo.png> ;
+    schema:version "0.1" .
+
+eu-aiact:serialisation-html a profile:ResourceDescriptor ;
+    dct:conformsTo <https://www.w3.org/TR/html/> ;
+    dct:format <https://www.iana.org/assignments/media-types/text/html> ;
+    dct:title "AIQV - HTML serialisation" ;
+    profile:hasArtifact <https://w3id.org/dqv4ai/eu-aiact/eu-aiact.html> ;
+    profile:hasRole role:specification .
+
+eu-aiact:serialisation-ttl a profile:ResourceDescriptor ;
+    dct:conformsTo <https://www.w3.org/TR/turtle/> ;
+    dct:format <https://www.iana.org/assignments/media-types/text/turtle> ;
+    dct:title "AIQV - Turtle serialisation" ;
+    profile:hasArtifact <https://w3id.org/dqv4ai/eu-aiact/eu-aiact.ttl> ;
+    profile:hasRole role:vocabulary .
+
+eu-aiact:core-classes a skos:ConceptScheme .
+

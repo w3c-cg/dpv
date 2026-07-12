@@ -1,0 +1,1322 @@
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix iso-25059: <https://w3id.org/dqv4ai/iso-25059#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix profile: <http://www.w3.org/ns/dx/prof/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+iso-25059:AIServiceQuality a rdfs:Class,
+        skos:Concept,
+        dqv:Category ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Category ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "AI Service Quality"@en .
+
+iso-25059:Acceptability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25019:2023,3.2.3"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Extent to which a human response is favourable when accepting or installing a product, system or service software tool designed to perform some frequently used function"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Acceptability"@en ;
+    dqv:inCategory iso-25059:QualityInUse .
+
+iso-25059:Accessibility a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25019:2023,3.2.1.2"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Beneficialness ;
+    skos:definition "Extent to which products, systems, services, environments and facilities can be used by people from a population with the widest range of user needs, characteristics and capabilities to achieve identified goals in identified contexts of use"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Service Accessibility"@en ;
+    dqv:inCategory iso-25059:QualityInUse .
+
+iso-25059:Accountability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.6.4"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Security ;
+    skos:definition "Capability of a product to enable actions of an entity to be traced uniquely to the entity"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Accountability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Adaptability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.8.1"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Flexibility ;
+    skos:definition "Capability of a product to be effectively and efficiently adapted for or transferred to different hardware, software or other operational or usage environments"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Adaptability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Analysability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.7.3"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Maintainability ;
+    skos:definition "Capability of a product to be effectively and efficiently assessed regarding the impact of an intended change to one or more of its parts, to diagnose it for deficiencies or causes of failures, or to identify parts to be modified"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Analysability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Appropriateness a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.1.3, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Suitability ;
+    skos:definition "Degree to which an IT service provides results that are appropriate for the user  needs"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Appropriateness"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:AppropriatenessRecognizability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.4.1"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:InteractionCapability ;
+    skos:definition "Capability of a product to be recognized by users as appropriate for their needs"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Appropriateness Recognizability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Authenticity a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.6.5"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Security ;
+    skos:definition "Capability of a product to prove that the identity of a subject or resource is the one claimed"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Authenticity"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Availability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.5.2"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Reliability ;
+    skos:definition "Capability of a product to be operational and accessible when required for use"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Availability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Beneficialness a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25019:2023,3.2.1"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Extent of benefit resulting from the use of a product, system or service"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Beneficialness"@en ;
+    dqv:inCategory iso-25059:QualityInUse .
+
+iso-25059:Capacity a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.2.3"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:PerformanceEfficiency ;
+    skos:definition "Capability of a product to meet requirements for the maximum limits of a product parameter"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Capacity"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Coexistence a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.3.1"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Compatibility ;
+    skos:definition "Capability of a product to perform its required functions efficiently while sharing a common environment and resources with other products, without detrimental impact on any other product"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Co-existence"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Compatibility a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.3"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Capability of a product to exchange information with other products, and/or to perform its required functions while sharing the same common environment and resources"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Compatibility"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Completeness a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.1.1, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Suitability ;
+    skos:definition "Degree to which an AI service supports all the specified goals, objectives and data specified by the user"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Completeness"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:Compliance a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25019:2023,3.2.3.3"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Acceptability ;
+    skos:definition "Extent to which a user or other stakeholder has confidence that a product, system, software, or service in use meets requirements, as required by rules or laws"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Compliance"@en ;
+    dqv:inCategory iso-25059:QualityInUse .
+
+iso-25059:Confidentiality a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.6.1"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Security ;
+    skos:definition "Capability of a product to ensure that data are accessible only to those authorized to have access"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Confidentiality"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Consistency a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.1.4, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Suitability ;
+    skos:definition "Degree to which repeated or similar related IT services provided consistent quality"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Consistency"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:Continuity a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.4.1, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:ServiceReliability ;
+    skos:definition "Degree to which the AI service is provided under all foreseeable circumstances, including mitigating the risks resulting from interruption to an acceptable level"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Continuity"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:Correctness a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.1.2, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Suitability ;
+    skos:definition "Degree to which an IT service uses the correct process and produces the correct results with accurate data"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Correctness"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:Courtesy a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.2.6, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:ServiceUsability ;
+    skos:definition "Degree to which the AI service is provided in a polite, respectful and friendly way"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Courtesy"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:Customizability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC DIS 25059:2025, 3.4.3"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:ServiceAdaptability ;
+    skos:definition "Degree to which the AI service can be customized at the request of users"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Customizability"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:EconomicRiskMitigation a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "Definition of freedom from economic risk, ISO/IEC 25019:2023,3.2.2.1"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:RiskMitigation ;
+    skos:definition "Extent to which a product or system mitigates the potential risk to financial status, efficient operation, commercial property, reputation, or other aspects in the intended contexts of use"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "EconomicRiskMitigation"@en ;
+    dqv:inCategory iso-25059:QualityInUse .
+
+iso-25059:EnvironmentalRiskMitigation a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC DIS 25059:2025. 3.3.1"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:RiskMitigation ;
+    skos:definition "Degree to which a product or system mitigates the potential risk to the environment in the intended contexts of use"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Environmental Risk Mitigation"@en ;
+    dqv:inCategory iso-25059:QualityInUse .
+
+iso-25059:EnvironmentalSustainability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC DIS 25059:2025, 3.2.6"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:PerformanceEfficiency ;
+    skos:definition "State in which the ecosystem and its functions are maintained for the present and future generations"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Environmental Sustainability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Experience a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25019:2023,3.2.3.1"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Acceptability ;
+    skos:definition "Extent to which users or stakeholders accumulate knowledge or skill acquired over time, especially that gained in a particular profession"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Experience"@en ;
+    dqv:inCategory iso-25059:QualityInUse .
+
+iso-25059:FailSafe a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.9.3"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Safety ;
+    skos:definition "Capability of a product to automatically place itself in a safe operating mode, or to revert to a safe condition in the event of a failure"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Fail Safe"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:FaultTolerance a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.5.3"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Reliability ;
+    skos:definition "Capability of a product to operate as intended despite the presence of hardware or software faults"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Fault Tolerance"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Faultlessness a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.5.1"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Reliability ;
+    skos:definition "Capability of a product to perform specified functions without fault under normal operation"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Faultlessness"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Flexibility a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.8"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Capability of a product to be adapted to changes in its requirements, contexts of use, or system environment"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Flexibility"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:FunctionalAdaptability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25059:2023, 3.2.2 & ISO/IEC DIS 25059:2025, 3.2.2"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:FunctionalSuitability ;
+    skos:definition """Degree to which an AI system can accurately acquire information from data, or the result of previous actions,
+and use that information in future predictions"""@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Functional Adaptability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:FunctionalAppropriateness a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.1.3"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:FunctionalSuitability ;
+    skos:definition "Capability of a product to provide functions that facilitate the accomplishment of specified tasks and objectives."@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Functional Appropriateness"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:FunctionalCompleteness a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.1.1"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:FunctionalSuitability ;
+    skos:definition "Capability of a product to provide a set of functions that covers all the specified tasks and intended users’ objectives."@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Functional Completeness"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:FunctionalCorrectness a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25059:2023, 3.2.3 & ISO/IEC DIS 25059:2025, 3.2.3"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:FunctionalSuitability ;
+    skos:definition "Degree to which a product or system provides the correct results with the needed degree of precision"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Functional Correctness"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:FunctionalSuitability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.1"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Capability of a product to provide functions that meet stated and implied needs of intended users when it is used under specified conditions."@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Functional Suitability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:HazardWarning a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.9.4"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Safety ;
+    skos:definition "Capability of a product to provide warnings of unacceptable risks to operations or internal controls so that they can react in sufficient time to sustain safe operations"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Hazard Warning"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:HealthRiskMitigation a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "Definition of freedom from health risk, ISO/IEC 25019:2023,3.2.2.3"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:RiskMitigation ;
+    skos:definition "Extent to which a product or system  mitigates the potential risk to people’s health in the intended contexts of use"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Health Risk Mitigation"@en ;
+    dqv:inCategory iso-25059:QualityInUse .
+
+iso-25059:HumanLifeRiskMitigation a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "Definition of freedom from human life risk, ISO/IEC 25019:2023,3.2.2.4"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:RiskMitigation ;
+    skos:definition "Extent to which a product  or system mitigates the potential risk to people’s lives in the intended contexts of use"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Human Life Risk Mitigation"@en ;
+    dqv:inCategory iso-25059:QualityInUse .
+
+iso-25059:Inclusivity a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.4.6"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:InteractionCapability ;
+    skos:definition "Capability of a product to be utilised by people of various backgrounds"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Inclusivity"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Initiative a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.7.2,  IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:ServiceAdaptability ;
+    skos:definition "Degree to which the AI service recognizes users’ goals and service suggests changes to meet users’ needs"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Initiative"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:Installability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.8.3"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Flexibility ;
+    skos:definition "Capability of a product to be effectively and efficiently installed successfully and/or uninstalled in a specified environment"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Installability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Integrity a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.6.2"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Security ;
+    skos:definition "Capability of a product to ensure that the state of its system and data are protected from unauthorized modification or deletion either by malicious action or computer error"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Integrity"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:InteractionCapability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25059:2025, 3.4"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Capability of a product to be interacted with by specified users to exchange information between a user and a system via the user interface to complete the intended task"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Interaction Capability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Interoperability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.3.2"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Compatibility ;
+    skos:definition "Capability of a product to exchange information with other products and mutually use the information that has been exchanged"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Interoperability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Intervenability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25059:2023, 3.2.4 & ISO/IEC DIS 25059:2025. 3.2.4"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Security ;
+    skos:definition "Degree to which an operator can intervene in an AI system’s functioning in a timely manner to prevent harm or hazard"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Intervenability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Learnability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.4.2"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:InteractionCapability ;
+    skos:definition "Capability of a product to have specified users learn to use specified product functions within a specified amount of time"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Learnability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Maintainability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.7"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Capability of a product to be modified by the intended maintainers with effectiveness and efficiency"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Maintainability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Modifiability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.7.4"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Maintainability ;
+    skos:definition "Capability of a product to be effectively and efficiently modified without introducing defects or degrading existing product quality"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Modifiability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Modularity a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.7.1"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Maintainability ;
+    skos:definition "Capability of a product to limit changes to one component from affecting other components"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Modularity"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Non-repudiation a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.6.3"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Security ;
+    skos:definition "Capability of a product to prove that actions or events have taken place, so that the events or actions cannot be repudiated later"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Non-repudiation"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Operability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.4.3"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:InteractionCapability ;
+    skos:definition "Capability of a product to have functions and attributes that make it easy to operate and control"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Operability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:OperationalConstraint a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.9.1"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Safety ;
+    skos:definition "Capability of a product to constrain its operation to within safe parameters or states when encountering operational hazard"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Operational Constraint"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:PerformanceEfficiency a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.2"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Capability of a product to perform its functions within specified time and throughput parameters and be efficient in the use of resources under specified conditions"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Performance Efficiency"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:ProductQuality a rdfs:Class,
+        skos:Concept,
+        dqv:Category ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Category ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Product Quality"@en .
+
+iso-25059:Professionalism a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.5.2, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Tangibility ;
+    skos:definition "Degree to which the content of the AI service is based on appropriate education, skill, expertise and qualification"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Professionalism"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:QualityInUse a rdfs:Class,
+        skos:Concept,
+        dqv:Category ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Category ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Quality In Use"@en .
+
+iso-25059:Reactiveness a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.6.2,  IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Responsiveness ;
+    skos:definition "Degree to which the AI service promptly responds to user  requests"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Reactiveness"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:Recoverability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.5.4"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Reliability ;
+    skos:definition "Capability of a product in the event of an interruption or a failure to recover the data directly affected and re-establish the desired state of the system"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Recoverability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Reliability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.5"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Capability of a product to perform specified functions under specified conditions for a specified period of time without interruptions and failures"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Reliability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Replaceability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.8.4"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Flexibility ;
+    skos:definition "Capability of a product to replace another specified product for the same purpose in the same environment"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Replaceability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Resistance a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.6.6"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Security ;
+    skos:definition "Capability of a product to sustain operations while under attack from a malicious actor"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Resistance"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:ResourceUtilization a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.2.2"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:PerformanceEfficiency ;
+    skos:definition "Capability of a product to use no more than the specified amount of resources to perform its function under specified conditions"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Resource Utilization"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Responsiveness a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.6,  IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Degree to which an AI service responds and provides outcomes in a prompt and timely way"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Responsiveness"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:Reusability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.7.2"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Maintainability ;
+    skos:definition "Capability of a product to be used as assets in more than one system, or in building other assets"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Reusability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:RiskIdentification a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.9.2"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Safety ;
+    skos:definition "Capability of a product to identify a course of events or operations that can expose life, property or environment to unacceptable risk"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Risk Identification"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:RiskMitigation a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "Definition of freedom from risk, ISO/IEC 25019:2023,3.2.2"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Extent to which a product  or system  mitigates the potential risk to economic status, human life, health, society, financial values, enterprise activities, or the environment"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Risk Mitigation"@en ;
+    dqv:inCategory iso-25059:QualityInUse .
+
+iso-25059:Robustness a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25059:2023, 3.2.5 & ISO/IEC DIS 25059:2025, 3.2.5"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Reliability ;
+    skos:definition "Degree to which an AI system can maintain its level of functional correctness under any circumstances"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Robustness"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:SafeIntegration a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.9.5"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Safety ;
+    skos:definition "Capability of a product to maintain safety during and after integration with one or more components"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Safe Integration"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Safety a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.9"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Capability of a product under defined conditions to avoid a state in which human life, health, property, or the environment is endangered"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Safety"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Scalability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.8.2"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Flexibility ;
+    skos:definition "Capability of a product to handle growing or shrinking workloads or to adapt its capacity to handle variability"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Scalability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Security a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.6"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Capability of a product to protect information and data so that persons or other products have the degree of data access appropriate to their types and levels of authorization, and to defend against attack patterns by malicious actors"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Security"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Selfdescriptiveness a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.4.8"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:InteractionCapability ;
+    skos:definition "Capability of a product to present appropriate information, where needed by the user, to make its capabilities and use immediately obvious to the user without excessive interactions with a product or other resources"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Self-descriptiveness"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:ServiceAccessibility a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.2.5, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:ServiceUsability ;
+    skos:definition "Degree to which an AI service can be used by people with the widest range of characteristics and capabilities to achieve a specified goal in a specified context of use"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "ServiceAccessibility"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:ServiceAdaptability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC DIS 25059:2025, 3.4.2"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition """Degree to which a service can be adapted based on factors such as functions, responsibility, skill of
+employees, communication style with users or instruments available"""@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Service Adaptability"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:ServiceAnalysability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.8.1,  IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:ServiceMaintainability ;
+    skos:definition "Degree of effectiveness and efficiency with which an AI service can be analysed for deficiencies, gaps and failures"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Service Analysability"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:ServiceAppropriatenessRecognizability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.2.1, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:ServiceUsability ;
+    skos:definition "Degree to which users  can recognize whether an AI service is appropriate for their needs"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Service Appropriateness Recognizability"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:ServiceAvailability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.4.3, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:ServiceReliability ;
+    skos:definition "Degree to which an AI service is available to users when needed"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Service Availability"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:ServiceConfidentiality a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.3.1, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:ServiceSecurity ;
+    skos:definition "Degree to which an AI service ensures that data are accessible only to those authorized to have access"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Service Confidentiality"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:ServiceIntegrity a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.3.2, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:ServiceSecurity ;
+    skos:definition "Degree to which an AI service prevents unauthorized access to or modification of data whether accidently or intentionally"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Service Integrity"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:ServiceInterfaceAppearance a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.5.3, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Tangibility ;
+    skos:definition "Degree to which the interface of the service has an appearance or other physical properties that are pleasing and satisfying for the user"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Service Interface Appearance"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:ServiceLearnability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.2.2, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:ServiceUsability ;
+    skos:definition "Degree to which an AI service can be learned by users to achieve a specified level of effectiveness, efficiency, freedom from risk and satisfaction within a specified amount of time and context of use"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Service Learnability"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:ServiceMaintainability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.8,  IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Degree of effectiveness and efficiency with which the AI service can be modified by the service provider"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Service Maintainability"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:ServiceModifiability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.8.2,  IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:ServiceMaintainability ;
+    skos:definition "Degree to which an AI service can be effectively and efficiently modified without introducing defects or degrading existing AI service quality"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Service Modifiability"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:ServiceOperability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.2.3, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:ServiceUsability ;
+    skos:definition "Degree to which an AI service has attributes that make it easy to operate and control"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Service Operability"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:ServiceRecoverability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.4.2, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:ServiceReliability ;
+    skos:definition "Degree to which, in the event of an interruption or a failure or disaster, the original AI service and its functions and data can be re-established and made accessible"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Service Recoverability"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:ServiceReliability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.4, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Degree to which an AI service provides consistent and stable AI service outcomes"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Service Reliability"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:ServiceSecurity a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.3, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Degree to which an AI service protects both user’s assets and access to their information so that users have the degree of information access appropriate to their levels of authorization"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Service Security"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:ServiceTestability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.8.3,  IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:ServiceMaintainability ;
+    skos:definition "Degree of effectiveness and efficiency with which test criteria can be established for an AI service and tests can be performed to determine whether those criteria have been met"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Service Testability"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:ServiceUsability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.2, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Degree to which an AI service can be used by specified users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Service Usability"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:ServiceUserErrorProtection a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.2.4, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:ServiceUsability ;
+    skos:definition "Degree to which an AI service protects users against making errors"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Service User Error Protection"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:SocietalAndEthicalRiskMitigation a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25059:2023, 3.3.1 (minor change to wording), ISO/IEC DIS 25059:2025. 3.3.2"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:RiskMitigation ;
+    skos:definition "Degree to which a product or system mitigates the potential societal or ethical risks"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Societal And Ethical Risk Mitigation"@en ;
+    dqv:inCategory iso-25059:QualityInUse .
+
+iso-25059:Suitability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25019:2023,3.2.1.3"@en,
+        "ISO/IEC TS 25011:2017, 3.2.1, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension,
+        iso-25059:Beneficialness ;
+    skos:definition "Degree to which an AI service meets stated and implied needs when used in a specified context of use"@en,
+        "Extent to which behaviours or outcomes, or both, of a product meet specified quality requirements when used"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Suitability"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality,
+        iso-25059:QualityInUse .
+
+iso-25059:Tangibility a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.5, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader dqv:Dimension ;
+    skos:definition "Degree to which the tangible aspects of the AI service effectively communicate and support the service"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Tangibility"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:Testability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.7.5"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Flexibility ;
+    skos:definition "Capability of a product to enable an objective and feasible test to be designed and performed to determine whether a requirement is met"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Testability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:TimeBehaviour a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.2.1"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:PerformanceEfficiency ;
+    skos:definition "Capability of a product to perform its specified function under specified conditions so that the response time and throughput rates meet the requirements"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Time Behaviour"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Timeliness a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.6.1,  IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Responsiveness ;
+    skos:definition "Degree to which an AI service delivers outcomes within time limits"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Timeliness"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:Traceability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC DIS 25059:2025, 3.4.1"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:ServiceSecurity ;
+    skos:definition "Degree to which the AI service outcomes can be traced to or from the user needs"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Traceability"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+iso-25059:Transparency a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25059:2023, 3.1.5 , ISO/IEC DIS 25059:2025, 3.1.5"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Acceptability,
+        iso-25059:InteractionCapability ;
+    skos:definition "Degree to which appropriate information about the AI system is communicated to relevant stakeholders"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Transparency"@en ;
+    dqv:inCategory iso-25059:ProductQuality,
+        iso-25059:QualityInUse .
+
+iso-25059:Trustworthiness a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25019:2023,3.2.3.2"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Acceptability ;
+    skos:definition "Extent to which users or stakeholders  have confidence that their expectations are met in a verifiable way"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Trustworthiness"@en ;
+    dqv:inCategory iso-25059:QualityInUse .
+
+iso-25059:Usability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25019:2023,3.2.1.1"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Beneficialness ;
+    skos:definition "Extent to which a system, product or service can be used by specified users  to achieve specified goals with effectiveness, efficiency, and satisfaction in a specified context of use"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Usability"@en ;
+    dqv:inCategory iso-25059:QualityInUse .
+
+iso-25059:UserAssistance a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.4.7"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:InteractionCapability ;
+    skos:definition "Capability of a product to be used by people with the widest range of characteristics and capabilities to achieve specified goals in a specified context of use"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "User Assistance"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:UserControllability a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25059:2023, 3.2.1 & ISO/IEC DIS 25059:2025, 3.2.1"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:InteractionCapability ;
+    skos:definition "Degree to which a user can appropriately intervene in an AI system’s functioning in a timely manner"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "User Controllability"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:UserEngagement a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.4.5"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:InteractionCapability ;
+    skos:definition "Capability of a product to present functions and information in an inviting and motivating manner encouraging continued interaction"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "User Engagement"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:UserErrorProtection a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC 25010:2023, 3.4.4"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:InteractionCapability ;
+    skos:definition "Capability of a product to prevent operation errors"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "User Error Protection"@en ;
+    dqv:inCategory iso-25059:ProductQuality .
+
+iso-25059:Visibility a rdfs:Class,
+        skos:Concept,
+        dqv:Dimension ;
+    dct:source "ISO/IEC TS 25011:2017, 3.2.5.1, IT service is replaced by AI service"@en ;
+    rdfs:isDefinedBy iso-25059: ;
+    sw:term_status "accepted"@en ;
+    skos:broader iso-25059:Tangibility ;
+    skos:definition "Degree to which users have insight into the capabilities of the AI service, how they will be delivered, and progress toward their completion during delivery"@en ;
+    skos:inScheme iso-25059:core-classes ;
+    skos:prefLabel "Visibility"@en ;
+    dqv:inCategory iso-25059:AIServiceQuality .
+
+<https://w3id.org/dqv4ai/iso-25059> a owl:Ontology,
+        profile:Profile ;
+    dct:conformsTo "http://www.w3.org/2000/01/rdf-schema",
+        "http://www.w3.org/2004/02/skos/core" ;
+    dct:created "2026-05-12"@en ;
+    dct:creator [ a dct:Agent,
+                foaf:Person ;
+            org:memberOf [ a foaf:Organization ;
+                    foaf:name "Anonymous" ] ;
+            foaf:name "Anonymous" ] ;
+    dct:description "AIQV"@en ;
+    dct:identifier "https://w3id.org/dqv4ai/iso-25059" ;
+    dct:issued "2026-05-12"@en ;
+    dct:license <https://www.w3.org/copyright/document-license-2023/> ;
+    dct:modified "2026-05-12"@en ;
+    dct:publisher <https://www.w3.org/> ;
+    dct:source <https://www.w3.org/groups/cg/dpvcg/> ;
+    dct:title "AIQV ISO-25059"@en ;
+    bibo:doi "10.5281/zenodo.12505841" ;
+    bibo:status "http://purl.org/ontology/bibo/status/published" ;
+    vann:preferredNamespacePrefix "iso-25059" ;
+    vann:preferredNamespaceUri "https://w3id.org/dqv4ai/iso-25059#" ;
+    rdfs:Label "ISO-25059"@en ;
+    owl:versionIRI <https://w3id.org/dqv4ai/iso-25059> ;
+    owl:versionInfo "0.1" ;
+    profile:hasResource iso-25059:serialisation-html,
+        iso-25059:serialisation-ttl ;
+    profile:isProfileOf rdfs:,
+        skos: ;
+    foaf:logo <https://w3id.org/dpv/media/logo.png> ;
+    schema:version "0.1" .
+
+iso-25059:serialisation-html a profile:ResourceDescriptor ;
+    dct:conformsTo <https://www.w3.org/TR/html/> ;
+    dct:format <https://www.iana.org/assignments/media-types/text/html> ;
+    dct:title "AIQV ISO-25059 - HTML serialisation" ;
+    profile:hasArtifact <https://w3id.org/dqv4ai/iso-25059/iso-25059.html> ;
+    profile:hasRole role:specification .
+
+iso-25059:serialisation-ttl a profile:ResourceDescriptor ;
+    dct:conformsTo <https://www.w3.org/TR/turtle/> ;
+    dct:format <https://www.iana.org/assignments/media-types/text/turtle> ;
+    dct:title "AIQV ISO-25059 - Turtle serialisation" ;
+    profile:hasArtifact <https://w3id.org/dqv4ai/iso-25059/iso-25059.ttl> ;
+    profile:hasRole role:vocabulary .
+
+iso-25059:core-classes a skos:ConceptScheme .
+
