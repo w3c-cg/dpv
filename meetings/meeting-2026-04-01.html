@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Meeting 01 APR 2026 &ndash; 01 APR 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>Meeting 01 APR 2026</h1>
+<h2>01 APR 2026</h2>
+
+<nav id=links>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AjayJadhav, ArthitSuriyawongkul, BeatrizEsteves, BeyzaYaman, ChristianDraeger, GabrielaKurteva, GeorgKrog, HarshPandit, JulianFlake, Kalyan &amp; Ankita (AYANWORKS), MarlinKisia, MuhsinHameed, PaulRyan, RuhiAnandFinn</dd>
+<dt>Regrets</dt><dd>DelaramGolpayegani, EstratiosKoulierakis, FabianLinde, SalDAgostino</dd>
+<dt>Chair</dt><dd>beatriz</dd>
+<dt>Scribe</dt><dd>*</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#t01">Admin</a>
+<ol>
+<li><a href="#t02">Agenda going to spam?</a></li>
+<li><a href="#t03">Repo Migration to w3c-cg</a></li>
+</ol>
+</li>
+<li><a href="#t04">DPV 2.4</a>
+<ol>
+<li><a href="#t05">India's DPDP</a></li>
+<li><a href="#t06">EHDS</a></li>
+<li><a href="#t07">DE-GDNG</a></li>
+<li><a href="#t08">AI Use Transparency</a></li>
+<li><a href="#t09">AI model openness</a></li>
+<li><a href="#t10">AI Documentation</a></li>
+<li><a href="#t11">AI Documentation proposal</a></li>
+<li><a href="#t12">(mailing list thread)</a></li>
+</ol>
+</li>
+<li><a href="#t13">AOB</a></li>
+<li class=app><a href="#ActionSummary">Summary of action items</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=x007 class=summary>Persistent ID for current minutes: <a href="https://w3id.org/dpv/meetings/meeting-2026-04-01">https://<wbr>w3id.org/<wbr>dpv/<wbr>meetings/<wbr>meeting-2026-04-01</a></p>
+<p id=x008 class=summary>Meeting minutes: <a href="https://w3id.org/dpv/meetings">https://<wbr>w3id.org/<wbr>dpv/<wbr>meetings</a></p>
+<p id=x009 class=summary>Previous minutes: <a href="https://w3id.org/dpv/meetings/meeting-2026-03-25">https://<wbr>w3id.org/<wbr>dpv/<wbr>meetings/<wbr>meeting-2026-03-25</a></p>
+<p id=x010 class=summary> congrats to Dr. Paul on completing the PhD</p>
+</section>
+
+<section>
+<h3 id=t01>Admin</h3>
+<h4 id=t02>Agenda going to spam?</h4>
+<p id=x013 class=summary> agenda went to Spam for Beatriz and Marlin (using uni. Microsoft account)</p>
+<h4 id=t03>Repo Migration to w3c-cg</h4>
+<p id=x015 class=summary> migration to repo to w3c-cg/dpv on github <a href="https://github.com/w3c/dpv/issues/466">w3c/<wbr>dpv#466</a></p>
+<p id=x016 class="phone s01"><cite>harshPandit:</cite> we have to inform w3c admin if we object otherwise on Friday they migrate the current github/w3c organisation to github/w3c-cg</p>
+<p id=x017 class="phone s02"><cite>beatrizEsteves:</cite> this is a new organisation, which means a new url etc. But everything gets redirected automatically like issues and any current urls we use or others may be using</p>
+<p id=x018 class=summary> no objections</p>
+<p id=a01 class=action><strong>ACTION:</strong> Check migration on April 03 and email public mailing list announcing the change</p>
+<p id=x020 class=summary> guide for DPV contributors on semantics - see <a href="https://github.com/w3c/dpv/issues/467">w3c/<wbr>dpv#467</a> ongoing discussion</p>
+<p id=x021 class="phone s01"><cite>HarshPandit:</cite> &lt;explanation&gt;</p>
+<p id=x023 class="phone s03"><cite>JulianFlake:</cite> to raise another question -- whether one is modelling a hierarhcy of classes or a taxonomy; is there a possibility for a mixed model where there are a hierarchy of classes but with a few instances? What we put in the spreadsheet is generated in RDF, but not rendered as expected in the HTML (need to recheck). This was fixed by using the taxonomy and then adding instances, but what we want is mostly classes and some instances</p>
+<p id=x024 class="phone s01"><cite>HarshPandit:</cite> its possible to do this via the code, yes</p>
+<p id=x025 class="phone s03"><cite>JulianFlake:</cite> thanks, will recheck</p>
+</section>
+
+<section>
+<h3 id=t04>DPV 2.4</h3>
+<p id=x027 class=summary> proposed work program <a href="https://github.com/w3c/dpv/milestone/10">https://<wbr>github.com/<wbr>w3c/<wbr>dpv/<wbr>milestone/<wbr>10</a></p>
+<h4 id=t05>India's DPDP</h4>
+<p id=x029 class=summary> <a href="https://github.com/w3c/dpv/issues/438">w3c/<wbr>dpv#438</a> (organise meeting)</p>
+<p id=x030 class="phone s04"><cite>beatriz:</cite> okay to continue after next week's DPVCG meeting? 15:30 CEST</p>
+<p id=x031 class="phone s05"><cite>AjayJadhav:</cite> +1</p>
+<p id=x032 class="phone s01"><cite>HarshPandit:</cite> +1</p>
+<p id=x033 class="phone s02"><cite>BeatrizEsteves:</cite> +1</p>
+<p id=x034 class="phone s06"><cite>GeorgKrog:</cite> +1</p>
+<p id=x035 class="phone s07"><cite>KalyanKulkarni:</cite> +1</p>
+<p id=x036 class="phone s05"><cite>AjayJadhav:</cite> In the meantime, to look at <a href="https://www.dpdpa.com/">https://<wbr>www.dpdpa.com/</a> which is a private website for the DPDPA</p>
+<p id=x037 class="phone s05"><cite>AjayJadhav:</cite> Also have colleagues on the call - Ankita and Kalyan who will also be joining next week</p>
+<h4 id=t06>EHDS</h4>
+<p id=x039 class=summary> <a href="https://github.com/w3c/dpv/issues/238">w3c/<wbr>dpv#238</a> (updates?)</p>
+<p id=x040 class="phone s02"><cite>BeatrizEsteves:</cite> With Gabriela and Marlin we are mapping new concepts to propose for addition to EHDS and SECTOR-HEALTH</p>
+<h4 id=t07>DE-GDNG</h4>
+<p id=x042 class=summary> <a href="https://github.com/w3c/dpv/issues/452">w3c/<wbr>dpv#452</a> (updates?)</p>
+<p id=x043 class="phone s03"><cite>JulianFlake:</cite> no updates</p>
+<h4 id=t08>AI Use Transparency</h4>
+<p id=x045 class=summary> <a href="https://github.com/w3c/dpv/issues/451">w3c/<wbr>dpv#451</a> (updates)</p>
+<p id=x046 class=summary> updated discussion on the issue regarding these concepts reflecting what has been done i.e. what happened as a log rather than as a measure for what should happen</p>
+<p id=x047 class="phone s06"><cite>GeorgKrog:</cite> what is the use case for this?</p>
+<p id=x048 class="phone s08"><cite>MuhsinHameed:</cite> academic writing, in previous meetings Art mentioned something about supply chain but we did not look into that. we are also looking at use case related to AI use transparency in documentation and compliance reports</p>
+<h4 id=t09>AI model openness</h4>
+<p id=x050 class=summary> <a href="https://github.com/w3c/dpv/issues/315">w3c/<wbr>dpv#315</a> (updates?)</p>
+<p id=x051 class=summary> no updates, Art is also not here</p>
+<h4 id=t10>AI Documentation</h4>
+<p id=x053 class=summary> (e.g. Datasheets and Model Cards) <a href="https://github.com/w3c/dpv/issues/94">w3c/<wbr>dpv#94</a> (confirm concepts for documentation formats?)</p>
+<p id=x054 class="phone s01"><cite>HarshPandit:</cite> the current issue item is to add concepts for <code>ai:Datasheet</code> and <code>ai:ModelCard</code> as documentation</p>
+<p id=x055 class="phone s09"><cite>Art:</cite> Croissant updated their schema recently in January <a href="https://docs.mlcommons.org/croissant/docs/croissant-spec-1.1.html">https://<wbr>docs.mlcommons.org/<wbr>croissant/<wbr>docs/<wbr>croissant-spec-1.1.html</a> , so good time to also look into that. HuggingFace tried to use and also models from OpenML and Kaggle.</p>
+<p id=x056 class="phone s01"><cite>HarshPandit:</cite> We did talk to them about DPV and modelling legal aspects, and there's an open issue about this </p>
+<p id=x057 class="phone s09"><cite>Art:</cite> <a href="https://github.com/mlcommons/croissant/issues/808">mlcommons/<wbr>croissant#808</a></p>
+<p id=x058 class="phone s04"><cite>Beatriz:</cite> So should they be using DPV or should we have a mapping from our schema to their work? Not sure.</p>
+<p id=x059 class="phone s10"><cite>Harsh:</cite> Preference to not do any mapping at the moment as I don't know what is their roadmap for law/policy</p>
+<p id=x060 class="phone s09"><cite>Art:</cite> Their focus is on dataset metadata, which is used in libraries/frameworks, and the goal is reproducibility. They are active in NeurIPS community, so dataset that is submitted to the conference has to be provided in this format for example.</p>
+<h4 id=t11>AI Documentation proposal</h4>
+<p id=x062 class=summary> from Fabian AI Act <a href="https://github.com/w3c/dpv/issues/463,">https://<wbr>github.com/<wbr>w3c/<wbr>dpv/<wbr>issues/<wbr>463,</a> AI Quality Assessments <a href="https://github.com/w3c/dpv/issues/465,">https://<wbr>github.com/<wbr>w3c/<wbr>dpv/<wbr>issues/<wbr>465,</a> and other concepts being discuss <a href="https://github.com/w3c/dpv/issues/464">w3c/<wbr>dpv#464</a> (updates)</p>
+<p id=x063 class="phone s10"><cite>Harsh:</cite> quality assessment concepts</p>
+<p id=x064 class="phone s10"><cite>Harsh:</cite> missing concepts in DQV, and also specialisations for data and AI</p>
+<p id=x065 class="phone s11"><cite>Beyza:</cite> DQV has Dimension concept which is then used to create e.g. Suitability</p>
+<p id=x066 class="phone s10"><cite>Harsh:</cite> but we want a specific IRI saying Suitability and DQV shows these as examples but they don't give an IRI for this <a href="https://www.w3.org/TR/vocab-dqv/#dqv:Dimension">https://<wbr>www.w3.org/<wbr>TR/<wbr>vocab-dqv/#dqv:Dimension</a></p>
+<p id=x067 class="phone s11"><cite>Beyza:</cite> Maybe something to ask Riccardo (editor of DQV)</p>
+<p id=x068 class="phone s04"><cite>Beatriz:</cite> I was going to suggest adding a mapping from DPV to DQV but if the concepts are not there then not sure what to do</p>
+<p id=x069 class="phone s11"><cite>Beyza:</cite> There are some mappings on the DQV page in Appendix C. Also Jeremy (Debatista) had IRIs for these concepts for his Luzzu work which could be useful here</p>
+<h4 id=t12>(mailing list thread)</h4>
+<p id=x071 class=summary> DPV TOM extension with more PETs <a href="https://lists.w3.org/Archives/Public/public-dpvcg/2026Mar/0009.html">https://<wbr>lists.w3.org/<wbr>Archives/<wbr>Public/<wbr>public-dpvcg/<wbr>2026Mar/<wbr>0009.html</a> </p>
+<p id=x072 class="phone s04"><cite>Beatriz:</cite> This was an email on the mailing list for adding measures to the TOMs taxonomy regarding PETs. I'm following up on that, and we will have a meeting on that next week. </p>
+</section>
+
+<section>
+<h3 id=t13>AOB</h3>
+<p id=x074 class="phone s12"><cite>Sal:</cite> Commercial usecase related to biometrics. Company in Turkey called OnesTechnology based in Ankara; who work with biometrics and have stuff like smart cards and smart badges etc. which have biometrics. We are creating notices for these using DPV and IEEE 7012. Was looking at DPV's coverage of biometrics for these. Will share that shortly.</p>
+<p id=x075 class="phone s11"><cite>Beyza:</cite> What's the name of the company?</p>
+<p id=x076 class="phone s12"><cite>Sal:</cite> Ones based in Ankara. Also looking at GDPR, AI Act implications, and transparency work. RealSense from Intel, and then IDMachines which is our company. This is &quot;frontware&quot; which is in front of people. </p>
+<p id=x077 class="phone s04"><cite>Beatriz:</cite> Thanks. Please share e.g. on mailing list. This will help track use/adoption of DPV.</p>
+<p id=x078 class=summary> chat contents</p>
+<p id=x079 class=summary> Ajay Jadhav: <a href="https://www.dpdpa.com/">https://<wbr>www.dpdpa.com/</a></p>
+<p id=x080 class=summary> Arthit Suriyawongkul: <a href="https://github.com/mlcommons/croissant/issues/808">mlcommons/<wbr>croissant#808</a> </p>
+<p id=x081 class=summary> Arthit Suriyawongkul: <a href="https://docs.mlcommons.org/croissant/docs/croissant-rai-spec.html">https://<wbr>docs.mlcommons.org/<wbr>croissant/<wbr>docs/<wbr>croissant-rai-spec.html</a> </p>
+<p id=x082 class=summary> <a href="https://docs.mlcommons.org/croissant/docs/croissant-spec-1.1.html">https://<wbr>docs.mlcommons.org/<wbr>croissant/<wbr>docs/<wbr>croissant-spec-1.1.html</a></p>
+<p id=x083 class=summary> Sal D'Agostino: to what extent does this track to or follow ISO 42001?</p>
+<p id=x084 class=summary> Ajay Jadhav: I just sent a meeting invite for next week's DPDP extension meeting.. </p>
+</section>
+</main>
+
+<div id=ActionSummary>
+<h2>Summary of action items</h2>
+<ol>
+<li><a href="#a01">Check migration on April 03 and email public mailing list announcing the change</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 217 (Fri Apr  7 17:23:01 2023 UTC).</address>
+
+</body>
+</html>

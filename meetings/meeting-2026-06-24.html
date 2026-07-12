@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Meeting 24 JUN 2026 &ndash; 24 JUN 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>Meeting 24 JUN 2026</h1>
+<h2>24 JUN 2026</h2>
+
+<nav id=links>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>Beatriz, Delaram, Fabian, Gabriela, Harsh, Julian, Marlin, Muhsin, Paul, Stratis</dd>
+<dt>Regrets</dt><dd>Georg, Tytti</dd>
+<dt>Chair</dt><dd>harsh</dd>
+<dt>Scribe</dt><dd>*</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#t01">Admin</a>
+<ol>
+<li><a href="#t02">w3c TPAC</a></li>
+<li><a href="#t03">repo</a></li>
+</ol>
+</li>
+<li><a href="#t04">DPV 2.4</a></li>
+<li><a href="#t05">DPV-ODRL mapping</a></li>
+<li><a href="#t06">GDNG note on ongoing lawmaking</a></li>
+<li><a href="#t07">ePrivacy Directive</a></li>
+<li><a href="#t08">Space for Proposals</a></li>
+<li><a href="#t09">DPV 2.5</a></li>
+<li><a href="#t10">AOB</a></li>
+<li><a href="#t11">Mailing List updates</a></li>
+<li><a href="#t12">Github updates</a></li>
+<li class=app><a href="#ActionSummary">Summary of action items</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=x005 class=summary>Persistent ID for current minutes: <a href="https://w3id.org/dpv/meetings/meeting-2026-06-24">https://<wbr>w3id.org/<wbr>dpv/<wbr>meetings/<wbr>meeting-2026-06-24</a></p>
+<p id=x006 class=summary>Meeting minutes: <a href="https://w3id.org/dpv/meetings">https://<wbr>w3id.org/<wbr>dpv/<wbr>meetings</a></p>
+<p id=x007 class=summary>Previous minutes: <a href="https://w3id.org/dpv/meetings/meeting-2026-06-17">https://<wbr>w3id.org/<wbr>dpv/<wbr>meetings/<wbr>meeting-2026-06-17</a></p>
+</section>
+
+<section>
+<h3 id=t01>Admin</h3>
+<h4 id=t02>w3c TPAC</h4>
+<p id=x012 class=summary> (FYI) not meeting at TPAC (not enough interest)</p>
+<p id=x013 class="phone s01"><cite>harsh:</cite> paid event? lack of interest to attend</p>
+<p id=x014 class="phone s02"><cite>beatriz:</cite> in the past they have given free or cheaper tickets to academic but also expensive to travel to ireland</p>
+<h4 id=t03>repo</h4>
+<p id=x016 class=summary> w3c-cg/dpv -- new repo and redirects (HTML, w3id, browser extension) <a href="https://github.com/w3c-cg/dpv/issues/466">w3c-cg/<wbr>dpv#466</a></p>
+<p id=a01 class=action><strong>ACTION:</strong> beatriz to update w3id for new github urls as part of 2.4 update</p>
+</section>
+
+<section>
+<h3 id=t04>DPV 2.4</h3>
+<p id=x019 class=summary> finalisation of release <a href="https://github.com/w3c/dpv/milestone/10">https://<wbr>github.com/<wbr>w3c/<wbr>dpv/<wbr>milestone/<wbr>10</a> (minor changes and fixes only probably)</p>
+<p id=x020 class=summary> working on draft for next week, release July end</p>
+</section>
+
+<section>
+<h3 id=t05>DPV-ODRL mapping</h3>
+<p id=x022 class="phone s02"><cite>beatriz:</cite> will 2.4 include the mapping?</p>
+<p id=x023 class="phone s01"><cite>harsh:</cite> yes, its on the dev branch so will be merged into main and will be in 2.4</p>
+<p id=x024 class="phone s02"><cite>beatriz:</cite> how do we automate the mapping generation for future versions? For left operands, nothing needs to be done. For right operands e.g. Asset, we need to produce a triple e.g. this DPV concept is also a ODRL Asset.</p>
+<p id=x025 class="phone s01"><cite>harsh:</cite> doable with a SPARQL query, similar to what we do with the location/jurisdiction concepts e.g. IE is in EU.</p>
+<p id=x026 class="phone s01"><cite>harsh:</cite> Does this have a github issue for tracking?</p>
+<p id=x027 class="phone s02"><cite>beatriz:</cite> no, will create</p>
+<p id=a02 class=action><strong>ACTION:</strong> beatriz to create issue for DPV-ODRL mapping automation</p>
+</section>
+
+<section>
+<h3 id=t06>GDNG note on ongoing lawmaking</h3>
+<p id=a03 class=action><strong>ACTION:</strong> harsh to create issue and liase with Julian to finalise note on GDNG</p>
+<p id=a04 class=action><strong>ACTION:</strong> harsh to create issue for adding notes to GDPR, DGA, AI Act regarding changes being made via Omnibus</p>
+</section>
+
+<section>
+<h3 id=t07>ePrivacy Directive</h3>
+<p id=x033 class="phone s03"><cite>Gabriela:</cite> proposing extension for ePrivacy Directive based on ongoing PhD work; question on whether to add extension now given the ongoing Omnibus</p>
+<p id=x034 class="phone s04"><cite>Julian:</cite> is this being change in the omnibux then to what extent?</p>
+<p id=x035 class="phone s01"><cite>Harsh:</cite> ePD will stay but some stuff is moving to GDPR e.g. relaxation on rules for when to ask consent but core ePD concepts will continue </p>
+<p id=x036 class="phone s01"><cite>Harsh:</cite> option to add this extension as in scope now and do work for 2.5 or to decide later after summer</p>
+<p id=x037 class="phone s04"><cite>Julian:</cite> agree this is scope so makes sense to have it </p>
+<p id=x038 class="phone s03"><cite>Gabriela:</cite> for now the scope is to identify actors, rights, obligations and use DPV concepts; My PhD will involve comparing these concepts across regulations e.g. starting with GDPR to see overlaps</p>
+<p id=x039 class="phone s02"><cite>Beatriz:</cite> Then we can have it in 2.5 and use the dev link for the work?</p>
+<p id=x040 class="phone s04"><cite>Julian:</cite> For GDNG, it is similar as it is a draft and we may want to reduce the draft (?). We should also state that we are working on it but this version of the law may not be useful as opposed to us not having time on it.</p>
+<p id=x041 class="phone s01"><cite>harsh:</cite> draft just means we are working on it and it may have big changes as we're still figuring out</p>
+<p id=x042 class="phone s04"><cite>julian:</cite> We should clarify which is &quot;draft&quot; and what is not e.g. in the figure for DPV extensions</p>
+<p id=x043 class="phone s04"><cite>julian:</cite> we may also abandon some extension that is draft in the future, so important to clarify this</p>
+<p id=a05 class=action><strong>ACTION:</strong> create github issue to add to list of extensions which are draft, which are not, including the DPV overview figure</p>
+</section>
+
+<section>
+<h3 id=t08>Space for Proposals</h3>
+<p id=x046 class="phone s05"><cite>objective:</cite> to enable members to show their proposals and ongoing discussions (as concepts may take time to be formally added to vocabularies)</p>
+<p id=x047 class="phone s06"><cite>discuss:</cite> 1) do we want this? 2) where do we put this? </p>
+<p id=x048 class="phone s01"><cite>Harsh:</cite> [rationale]</p>
+<p id=x049 class="phone s07"><cite>Delaram:</cite> what would happen to the url? Why not use the existing repo outside DPVCG?</p>
+<p id=x050 class="phone s01"><cite>Harsh:</cite> the point is to provide a way to show the work is submitted which is early stage or still being discussed and not yet being put in the main branch</p>
+<p id=x051 class=summary> proposed: AI Act Art.10 concepts from Fabian / Harsh <a href="https://dev.dpvcg.org/proposals/aiact-art10/">https://<wbr>dev.dpvcg.org/<wbr>proposals/<wbr>aiact-art10/</a></p>
+<p id=x052 class=summary> proposed: AI quality vocabulary concepts from Delaram/Beyza/Fabian/Harsh</p>
+<p id=x056 class="phone s07"><cite>Delaram:</cite> paper accepted to SEMANTiCs with 2 contributions: <br>
+<span id=x057>… <a href="https://anonymous.4open.science/w/">https://<wbr>anonymous.4open.science/<wbr>w/</a></span><br>
+<span id=x058>… dqv4ai/iso-25059/</span><br>
+<span id=x059>… <a href="https://anonymous.4open.science/w/dqv4ai/eu-aiact/">https://<wbr>anonymous.4open.science/<wbr>w/<wbr>dqv4ai/<wbr>eu-aiact/</a></span></p>
+<p id=x060 class="phone s07"><cite>Delaram:</cite> we will de-anonymised and submit it to the proposals dev folder as discussed today</p>
+<p id=x061 class="phone s02"><cite>Beatriz:</cite> There are concepts that use DPV and DQV for a concrete use case, i.e., AI quality. Does it make sense to have a generic DPV-DQV mapping, and have you worked on it?</p>
+<p id=x062 class="phone s07"><cite>Delaram:</cite> No mapping, the 2 taxonomies were developed for concrete use cases, i.e., AI Act and ISO 25059</p>
+</section>
+
+<section>
+<h3 id=t09>DPV 2.5</h3>
+<p id=x064 class=summary> scheduled draft November, release early Jan</p>
+<p id=x065 class=summary> work program -- priorities</p>
+<p id=x066 class="phone s02"><cite>Beatriz:</cite> together with Gabriela and Marlin, we will continue the work on EHDS and DGA and make a concrete proposal</p>
+<p id=x067 class=summary> no other priorities raised during the call.</p>
+<p id=a06 class=action><strong>ACTION:</strong> Everyone to look at existing GitHub issues (or create new ones) to prioritise work items for 2.5 in the next few weeks.</p>
+</section>
+
+<section>
+<h3 id=t10>AOB</h3>
+<p id=x070 class=summary> nil</p>
+</section>
+
+<section>
+<h3 id=t11>Mailing List updates</h3>
+<p id=x072 class=summary> [2nd CfP - EXTENDED DEADLINE] 3rd NeXt-Generation Data Governance workshop @ SEMANTiCS 2026 – NXDG 2026 <a href="https://lists.w3.org/Archives/Public/public-dpvcg/2026Jun/0003.html">https://<wbr>lists.w3.org/<wbr>Archives/<wbr>Public/<wbr>public-dpvcg/<wbr>2026Jun/<wbr>0003.html</a></p>
+</section>
+
+<section>
+<h3 id=t12>Github updates</h3>
+<p id=x074 class=summary> discussion on having more modular structure for concepts <a href="https://github.com/w3c-cg/dpv/issues/221">w3c-cg/<wbr>dpv#221</a></p>
+<p id=x075 class=summary> no comments</p>
+</section>
+</main>
+
+<div id=ActionSummary>
+<h2>Summary of action items</h2>
+<ol>
+<li><a href="#a01">beatriz to update w3id for new github urls as part of 2.4 update</a></li>
+<li><a href="#a02">beatriz to create issue for DPV-ODRL mapping automation</a></li>
+<li><a href="#a03">harsh to create issue and liase with Julian to finalise note on GDNG</a></li>
+<li><a href="#a04">harsh to create issue for adding notes to GDPR, DGA, AI Act regarding changes being made via Omnibus</a></li>
+<li><a href="#a05">create github issue to add to list of extensions which are draft, which are not, including the DPV overview figure</a></li>
+<li><a href="#a06">Everyone to look at existing GitHub issues (or create new ones) to prioritise work items for 2.5 in the next few weeks.</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 217 (Fri Apr  7 17:23:01 2023 UTC).</address>
+
+</body>
+</html>
