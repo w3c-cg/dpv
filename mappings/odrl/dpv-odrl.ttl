@@ -1,6 +1,8 @@
-@prefix odrl: <http://www.w3.org/ns/odrl/2/>
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dpv: <https://w3id.org/dpv#> .
 @prefix tech: <https://w3id.org/dpv/tech#> .
 @prefix loc: <https://w3id.org/dpv/loc#> .
@@ -168,7 +170,7 @@ dpv-odrl:LegalBasis a odrl:LeftOperand, owl:NamedIndividual, skos:Concept, dpv:L
   	rdfs:label "Legal Basis"@en ;
 	rdfs:comment "Constraint on the legal basis for which the processing of personal data is permitted or prohibited."@en ;
   	skos:definition "Constraint on the legal basis for which the processing of personal data is permitted or prohibited."@en ;
-  	skos:example "A legal basis can be consent, legitimate interest or contract perfomance or jurisdiction specific legal basis such as the ones provided in GDPR Article 6."@en ;
+  	skos:example "A legal basis can be consent, legitimate interest or contract performance or jurisdiction specific legal basis such as the ones provided in GDPR Article 6."@en ;
   	skos:note '''Only the odrl:isA, odrl:eq, odrl:neq, oac:isNotA, oac:subclass or oac:semantic SHOULD be used. Example: 
 		<https://example.com/legalBasisConstraint> a odrl:Constraint ;
 			odrl:leftOperand dpv-odrl:LegalBasis ;
@@ -316,7 +318,7 @@ dpv-odrl:Duration a odrl:LeftOperand, owl:NamedIndividual, skos:Concept, dpv:Dur
 		<https://example.com/durationConstraint> a odrl:Constraint ;
 			odrl:leftOperand dpv-odrl:Duration ;
 			odrl:operator odrl:eq ;
-			odrl:rightOperand "P60M"^^xsd:duration .
+			odrl:rightOperand "PT60M"^^xsd:duration .
 		indicates that processing is only possible during 60 minutes."""@en .
 
 dpv-odrl:Frequency a odrl:LeftOperand, owl:NamedIndividual, skos:Concept, dpv:Frequency ;
