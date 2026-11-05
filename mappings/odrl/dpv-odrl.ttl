@@ -206,10 +206,20 @@ dpv-odrl:DataSource a odrl:LeftOperand, skos:Concept ;
 <https://w3id.org/dpv/mappings/odrl#techAssetConcepts> a skos:Collection ;
     skos:prefLabel "DPV technology mapping terms"@en ;
     skos:scopeNote "Mapping from DPV to ODRL terms"@en ;
-    skos:member dpv-odrl:Technology .
+    skos:member dpv-odrl:Technology ;
+	skos:member dpv-odrl:AISystem ;
+	skos:member dpv-odrl:AIModel .
 
 dpv-odrl:Technology a odrl:Asset, skos:Concept, odrl:LeftOperand ;
 	skos:exactMatch dpv:Technology ;
+	skos:note "Only the odrl:isA, odrl:eq, odrl:neq, odrl:isAnyOf, and odrl:isNoneOf operators MUST be used."@en .
+
+dpv-odrl:AISystem a odrl:Asset, skos:Concept, odrl:LeftOperand ;
+	skos:exactMatch ai:AISystem ;
+	skos:note "Only the odrl:isA, odrl:eq, odrl:neq, odrl:isAnyOf, and odrl:isNoneOf operators MUST be used."@en .
+
+dpv-odrl:AIModel a odrl:Asset, skos:Concept, odrl:LeftOperand ;
+	skos:exactMatch ai:Model ;
 	skos:note "Only the odrl:isA, odrl:eq, odrl:neq, odrl:isAnyOf, and odrl:isNoneOf operators MUST be used."@en .
 
 ### All other technology concepts should be added 
