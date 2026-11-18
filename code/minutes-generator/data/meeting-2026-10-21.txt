@@ -1,0 +1,62 @@
+meeting: Meeting 21 OCT 2026
+date: 21 OCT 2026
+scribe: *
+
+Agenda:https://www.w3.org/events/meetings/65197685-0e2b-44a1-b715-280dc3af0582/20261021T133000/
+
+present: Beatriz, Julian, Marlin, Amira, Gabriela, Julian, Christian, Matthias, ahtisham, Julio, Stratis, Delaram
+regrets: Harsh
+chair: Beatriz
+
+Topic: Discussions
+
+Subtopic: EHDS extension updates
+
+Beatriz: Beatriz, Julian, Christian, Gabriela and Marlin met on Monday, October 19th. The discussion was focused on the entities’ taxonomy. Currently, data holder concepts are only available in the DGA, health, and EHDS extensions (same applies for data users). We are proposing the addition of dpv:DataHolder to anchor these terms and future ones, e.g., Data Act extension should also extend this concept with its own definition of data holder. We are also proposing properties to connect processes with these entities.
+
+Matthias: we can also add further entity concepts, e.g, Stakeholder forum (Art. 93) 
+
+Action: send an invite for the next meeting on Friday, October 30th 10am
+
+Subtopic: Data Act updates
+
+Beatriz: There is already a spreadsheet shared with the people that will work on it. It contains the concepts extracted from the ontology created by Sheyla, Meem, Fabian et al. (https://w3id.org/def/daont) as a starting point. Involved people will work on reviewing these concepts in the next few months towards having a first draft release of this extension for v2.4
+
+Subtopic: AI Act amendment changes
+
+\ changes proposed by Georg Krog (update concepts, numbering) - Georg
+\no updates
+
+Topic: New/Ongoing Github Issues
+
+Subtopic: URIs for legal extension terms
+\ https://github.com/w3c-cg/dpv/issues/491
+
+Beatriz: Some extensions already have this (at least partially) at Article level – we can improve it towards including sub-articles and so one. Some extensions only have strings, e.g., “EHDS Art.10”, so those need a full rework.
+
+Action: everyone to comment on the issue if they agree with the currently used solution to model this
+
+Subtopic: namespace documentation
+\ Improve documentation on how to use versioned namespaces: https://github.com/w3c-cg/dpv/issues/492
+
+\ Action point for next meetings: agree where to add a short description of how we do versioning - maybe in the primer?
+
+Subtopic: Modelling AI Quality
+\ https://github.com/w3c-cg/dpv/issues/465
+
+Delaram: Harsh is currently reviewing it as there are concepts already present in DPV
+
+Subtopic: LOC
+\ LOC §1.2 Inverse Jurisdictions: https://github.com/w3c-cg/dpv/issues/489
+
+\no updates
+
+Topic: FYI
+
+\ W3C white paper on ‘W3C and the State of the Web in the AI Era’: https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html
+
+Beatriz: they do mention consent, but fail to mention the DPVCG work as relevant; I will write to them about this issue
+
+Topic AOB
+
+\ OpenREL might be interesting for some people (see https://www.eosc-beyond.eu/event/webinar-why-openrel) – they mention the use of DPV, ODRL, DUO for licensing

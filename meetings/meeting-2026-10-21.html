@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Meeting 21 OCT 2026 &ndash; 21 OCT 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>Meeting 21 OCT 2026</h1>
+<h2>21 OCT 2026</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/events/meetings/65197685-0e2b-44a1-b715-280dc3af0582/20261021T133000/"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>ahtisham, Amira, Beatriz, Christian, Delaram, Gabriela, Julian, Julio, Marlin, Matthias, Stratis</dd>
+<dt>Regrets</dt><dd>Harsh</dd>
+<dt>Chair</dt><dd>Beatriz</dd>
+<dt>Scribe</dt><dd>*</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#t01">Discussions</a>
+<ol>
+<li><a href="#t02">EHDS extension updates</a></li>
+<li><a href="#t03">Data Act updates</a></li>
+<li><a href="#t04">AI Act amendment changes</a></li>
+</ol>
+</li>
+<li><a href="#t05">New/Ongoing Github Issues</a>
+<ol>
+<li><a href="#t06">URIs for legal extension terms</a></li>
+<li><a href="#t07">namespace documentation</a></li>
+<li><a href="#t08">Modelling AI Quality</a></li>
+<li><a href="#t09">LOC</a></li>
+</ol>
+</li>
+<li><a href="#t10">FYI</a></li>
+<li class=app><a href="#ActionSummary">Summary of action items</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=t01>Discussions</h3>
+<h4 id=t02>EHDS extension updates</h4>
+<p id=x010 class="phone s01"><cite>Beatriz:</cite> Beatriz, Julian, Christian, Gabriela and Marlin met on Monday, October 19th. The discussion was focused on the entities’ taxonomy. Currently, data holder concepts are only available in the DGA, health, and EHDS extensions (same applies for data users). We are proposing the addition of dpv:DataHolder to anchor these terms and future ones, e.g., Data Act extension should also extend this concept with its own definition of data holder. We are also proposing properties to connect processes with these entities.</p>
+<p id=x011 class="phone s02"><cite>Matthias:</cite> we can also add further entity concepts, e.g, Stakeholder forum (Art. 93) </p>
+<p id=a01 class=action><strong>ACTION:</strong> send an invite for the next meeting on Friday, October 30th 10am</p>
+<h4 id=t03>Data Act updates</h4>
+<p id=x014 class="phone s01"><cite>Beatriz:</cite> There is already a spreadsheet shared with the people that will work on it. It contains the concepts extracted from the ontology created by Sheyla, Meem, Fabian et al. (<a href="https://w3id.org/def/daont">https://<wbr>w3id.org/<wbr>def/<wbr>daont</a>) as a starting point. Involved people will work on reviewing these concepts in the next few months towards having a first draft release of this extension for v2.4</p>
+<h4 id=t04>AI Act amendment changes</h4>
+<p id=x016 class=summary> changes proposed by Georg Krog (update concepts, numbering) - Georg</p>
+<p id=x017 class=summary>no updates</p>
+</section>
+
+<section>
+<h3 id=t05>New/Ongoing Github Issues</h3>
+<h4 id=t06>URIs for legal extension terms</h4>
+<p id=x020 class=summary> <a href="https://github.com/w3c-cg/dpv/issues/491">w3c-cg/<wbr>dpv#491</a></p>
+<p id=x021 class="phone s01"><cite>Beatriz:</cite> Some extensions already have this (at least partially) at Article level – we can improve it towards including sub-articles and so one. Some extensions only have strings, e.g., “EHDS Art.10”, so those need a full rework.</p>
+<p id=a02 class=action><strong>ACTION:</strong> everyone to comment on the issue if they agree with the currently used solution to model this</p>
+<h4 id=t07>namespace documentation</h4>
+<p id=x024 class=summary> Improve documentation on how to use versioned namespaces: <a href="https://github.com/w3c-cg/dpv/issues/492">w3c-cg/<wbr>dpv#492</a></p>
+<p id=x025 class=summary> Action point for next meetings: agree where to add a short description of how we do versioning - maybe in the primer?</p>
+<h4 id=t08>Modelling AI Quality</h4>
+<p id=x027 class=summary> <a href="https://github.com/w3c-cg/dpv/issues/465">w3c-cg/<wbr>dpv#465</a></p>
+<p id=x028 class="phone s03"><cite>Delaram:</cite> Harsh is currently reviewing it as there are concepts already present in DPV</p>
+<h4 id=t09>LOC</h4>
+<p id=x030 class=summary> LOC §1.2 Inverse Jurisdictions: <a href="https://github.com/w3c-cg/dpv/issues/489">w3c-cg/<wbr>dpv#489</a></p>
+<p id=x031 class=summary>no updates</p>
+</section>
+
+<section>
+<h3 id=t10>FYI</h3>
+<p id=x033 class=summary> W3C white paper on ‘W3C and the State of the Web in the AI Era’: <a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html">https://<wbr>www.w3.org/<wbr>2026/<wbr>10/<wbr>w3c-and-state-of-web-in-ai-era.html</a></p>
+<p id=x035 class="phone s01"><cite>Beatriz:</cite> they do mention consent, but fail to mention the DPVCG work as relevant; I will write to them about this issue<br>
+<span id=x036>… Topic AOB</span></p>
+<p id=x037 class=summary> OpenREL might be interesting for some people (see <a href="https://www.eosc-beyond.eu/event/webinar-why-openrel)">https://<wbr>www.eosc-beyond.eu/<wbr>event/<wbr>webinar-why-openrel)</a> – they mention the use of DPV, ODRL, DUO for licensing</p>
+</section>
+</main>
+
+<div id=ActionSummary>
+<h2>Summary of action items</h2>
+<ol>
+<li><a href="#a01">send an invite for the next meeting on Friday, October 30th 10am</a></li>
+<li><a href="#a02">everyone to comment on the issue if they agree with the currently used solution to model this</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 217 (Fri Apr  7 17:23:01 2023 UTC).</address>
+
+</body>
+</html>

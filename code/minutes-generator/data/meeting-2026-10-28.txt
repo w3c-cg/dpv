@@ -1,0 +1,50 @@
+meeting: Meeting 28 OCT 2026
+date: 28 OCT 2026
+scribe: *
+
+Agenda:https://www.w3.org/events/meetings/65197685-0e2b-44a1-b715-280dc3af0582/20261028T133000/
+
+present: Beatriz, Fabian, Delaram, Julian, Gabriela, ahtisham, SebastianNeumaier, Ruhi, Georg
+regrets: Harsh, Amira, Marlin
+chair: Beatriz
+
+
+Topic: Discussions
+
+Subtopic: Any new topics for v2.4?
+
+\ none
+
+Subtopic: Health sector / EHDS / GDNG
+
+
+Julian: no updates; waiting for the revised version of the GDNG law
+
+Subtopic: Data Act
+
+
+Fabian: checking DAOnt concepts against DPV concepts to see overlaps; Sheyla will also join the DPVCG meeting next week to start discussing the work done so far
+
+
+Topic: New/Ongoing GitHub Issues
+
+Subtopic: URIs for legal extension terms
+\ URIs for legal extension terms: https://github.com/w3c-cg/dpv/issues/491
+\ no updates
+Subtopic: namespace documentation
+\ Improve documentation on how to use versioned namespaces: https://github.com/w3c-cg/dpv/issues/492
+
+Julian: updating the HTML outputs of DPV and extensions should be an easy fix. How to provide explanations on how to use versioned namespaces still needs discussion.
+    
+Beatriz: If people are forced to just use versioned namespaces then it might be a problem for some DPV deployers to have to change the namespace they use every 6 months (as we by default aim at releasing 2 versions of DPV per year)
+
+Julian: people can choose whether they use the versioned namespaces or not
+
+Julian: The examples might be an issue, as they are not tied to a specific version. They should have information about what version of DPV they use.
+
+Topic: Mailing List
+
+\ Solid Symposium call for sessions: https://lists.w3.org/Archives/Public/public-dpvcg/2026Oct/0007.html
+
+Topic: FYI
+\ News on the Commission workshop on Compliance Automation

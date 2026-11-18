@@ -1,0 +1,59 @@
+meeting: Meeting 08 OCT 2026
+date: 08 OCT 2026
+scribe: *
+
+Agenda:https://www.w3.org/events/meetings/65197685-0e2b-44a1-b715-280dc3af0582/20261008T133000/
+
+present: Beatriz, Julian, AmiraDeWinter, Fatima, Marlin, Tytti, Ahtisham, Matthias, Christian, Beyza, Julio, Stratis
+
+regrets: Harsh, Ruhi
+
+chair: Beatriz
+
+Topic: Discussions
+\ EHDS extension updates (REMINDER: we will have a meeting with the people interested in this work on October 12 at 10am, invite will be sent)
+\ AI Act amendment changes by Georg Krog (update concepts, numbering) - Georg
+
+\ no updates
+
+Topic: Data Act updates
+
+Beatriz: there was a meeting scheduled for today that was postponed, we will come back with a new date next week
+
+Topic: W3C TPAC
+\ W3C Mini-Workshop on Data Governance & Ownership at TPAC 2026 (deadline for submissions has been postponed to 9 October) -- see more https://github.com/w3c/strategy/issues/567
+\ TPAC Hybrid is in Dublin/Online 26 to 30 October
+\ https://www.w3.org/news-events/tpac/2026/schedule/
+    
+Beatriz: send DPV as a topic would be interesting for discussion. Beatriz would attend online.
+
+Beyza: maybe the Dublin people (Harsh, Beyza, Ruhi, Delaram) can represent us in person.
+
+\ ACTION: beatriz will send an email asking who is interested on joining this session.
+    
+Topic: New/Ongoing Github Issues
+\ Add Eticas risk taxonomy to wiki as it uses DPV: https://github.com/w3c-cg/dpv/issues/487 - Delaram
+\ Add PRISM - EU AI Act compliance record-keeping ontology to wiki as its uses DPV: https://github.com/w3c-cg/dpv/issues/488 - Delaram
+
+ACTION: these 2 resources still need to be added to the Adoption wiki: https://github.com/w3c-cg/dpv/wiki/Adoption-and-Uses-of-DPVCG
+
+Topic: Modelling AI Quality
+
+\ https://github.com/w3c-cg/dpv/issues/465
+
+\ no updates (Fabian and Delaram were not on the call)
+
+Topic: LOC Inverse Jurisdictions
+
+\ LOC §1.2 Inverse Jurisdictions: https://github.com/w3c-cg/dpv/issues/489
+
+Beatriz: problem 1 (skos:broader/skos:narrower are not transitive) is easily fixable – changes to the HTML text
+
+Beatriz: problem 2 (locations reachable from both J and non-J) needs to be discussed to find a way to address it – to discuss on next calls with Harsh
+
+Topic: Mailing List
+\ reply to https://lists.w3.org/Archives/Public/public-dpvcg/2026Sep/0002.html (Action) - Beatriz - no updates
+
+Topic: AOB
+Matthias: Anyone looking into DPV in relation to EOSC? There will be an event next week  https://eosc.eu/symposium-2026
+Julian: better documentation on how to use versioned namespaces / include the versioned namespaces in the HTML outputs per version

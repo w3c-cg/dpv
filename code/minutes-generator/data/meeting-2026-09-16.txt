@@ -1,0 +1,8 @@
+meeting: Meeting 16 SEP 2026
+date: 16 SEP 2026
+scribe: *
+
+Agenda:https://www.w3.org/events/meetings/65197685-0e2b-44a1-b715-280dc3af0582/20260916T133000/
+
+\ open session with no agenda
+\ participants did not keep minutes

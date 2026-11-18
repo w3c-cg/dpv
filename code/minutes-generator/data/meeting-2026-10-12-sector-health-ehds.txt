@@ -1,0 +1,9 @@
+meeting: Meeting 12 OCT 2026
+date: 12 OCT 2026
+chair: Beatriz
+scribe: *
+
+Agenda: https://www.w3.org/events/meetings/a869f416-fd93-42f6-ab58-128276e7cae6/
+
+\ This was a special interest group meeting to: Discuss Health Sector and EHDS extensions
+\ no minutes were shared

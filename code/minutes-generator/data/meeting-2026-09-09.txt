@@ -1,0 +1,50 @@
+meeting: Meeting 09 SEP 2026
+date: 09 SEP 2026
+chair: Beatriz
+scribe: *
+
+present: Beatriz, Stratis, Julian, Georg, MuhammadAslam, Julio, Harsh
+regrets: Tytti, Gabriela, Marlin
+
+Agenda:https://www.w3.org/events/meetings/65197685-0e2b-44a1-b715-280dc3af0582/20260909T133000/
+
+Topic: New issues
+
+\ LOC uses skos:sameAs, which is not a SKOS term (https://github.com/w3c-cg/dpv/issues/485)
+
+Harsh: No need to discuss. This should be skos:exactMatch. There is no skos:sameAs.
+Beatriz: Do also have this in the OWL version? I think this issue is in the OWL version.
+Harsh: Will check where this occurs, and if a separate fix is needed for OWL version.
+
+\ dpv:RightsFulfilment has skos:broader pointing at a legal basis, not a purpose (https://github.com/w3c-cg/dpv/issues/486)
+
+Stratis: Do we have an use case or example of what we mean by Rights Fulfilment here?
+
+Harsh: dpv:RightsFulfilment should have as parent dpv:FulfilmentOfObligation because rights may not be legal obligations
+
+Stratis: When the legal basis is legal obligation but not a right, 
+
+Harsh: We also have an example on this in the purpose HTML, we should revisit describing this there as well -- https://dev.dpvcg.org/2.4-dev/dpv/modules/purposes#desc-legal-obligation 
+
+Georg: (and Harsh) We have Rights and Obligations fulfilment, but this does not cover cases where there are no bearer of rights/obligations. To clarify, we are only referring to purposes where rights/obligaitons have a bearer and there is some action or condition that needs fulfilment, which we have considered as an obligation in the hierarchy where fulfilment of obligation is the parent and rights fulfilment is a specific type of such fulfilment
+
+ACTION: Change parent of dpv:RightsFulfilment to dpv:FulfilmentOfObligation
+ACTION: Update purpose module description and examples for RightsFulfilment
+
+Beatriz: (paraphrasing) we should think of expanding properties or another way to use purposes as legal basis or see what purposes can act as legal basis
+
+Harsh: We have an intentional separation between purposes and legal basis because they represent different concepts. Purpose is describing what you are doing with data or AI, and the legal basis is describing where this requirement or authority is based in law. If we mix them, then people will start doing things such as legal basis is identity verification (for KYC) instead of stating it as purpose and using legal basis to state which exact law they are referring to.
+
+Topic: AOB
+
+MuhammadAslam: introduction: working on Horizon project using DPV to model ODRL policies for AI Act, Data Act, GDPR. (Julian: maybe this one? https://www.accomplish-project.eu/)
+
+MuhammadAslam: Is it correct that DPV provides a vocabulary for ODRL?
+Beatriz: No, DPV can be used with ODRL but also on its own. See the paper https://beatrizesteves.org/assets/documents/2026/SDS/dpv-odrl.pdf and we also have a mapping with explanation how DPV can be used with ODRL which will be published in the next version https://dev.dpvcg.org/mappings/odrl/
+
+Julian: About EHDS, if we have a timeline for the discussions.
+
+Topic: Next Meeting
+
+\ open session with no specific agenda as Harsh and Beatriz will be at SEMANTiCS
+\ Next meeting with agenda will be WED-23

@@ -1,0 +1,27 @@
+meeting: Meeting 02 SEP 2026
+date: 02 SEP 2026
+chair: Harsh
+scribe: *
+
+present: Harsh, Gabriela, Marlin, Ruhi, Delaram, Beatriz, Julio
+regrets: Georg, Tytti
+
+Agenda:https://www.w3.org/events/meetings/65197685-0e2b-44a1-b715-280dc3af0582/20260902T133000/
+
+Topic: v2.4 delays
+
+Harsh: question on whether to release in December per next schedule
+
+\ agreed
+
+Topic: resumption of regular meetings 
+
+Harsh: check if okay to use same timeslot
+
+\ agreed to continue the same meeting slots
+
+Topic: agenda for next meetings
+
+\ discuss extensions EHDS, GDNG, Sector Health
+
+\ next meeting will be 09 SEP 2026 

@@ -1,0 +1,65 @@
+meeting: Meeting 23 SEP 2026
+date: 23 SEP 2026
+chair: Harsh
+scribe: *
+
+
+Agenda:https://www.w3.org/events/meetings/65197685-0e2b-44a1-b715-280dc3af0582/20260923T133000/
+present: Harsh, Julian, Christian, Delaram, Gabriela, Marlin, Ruhi, Sheyla, MatthiasLöbe, MuhammadAslam, Beatriz, Meem
+regrets: Georg, Tytti
+
+\ updates from last week's open session (if any)
+
+\ No discussion as there were no participants
+
+Topic: updates from SEMANTiCS
+
+Beatriz: We had a workshop at SEMANTiCS - https://nxdg-workshop.github.io/2026/ preprints and slides are on the website. There was interesting stuff. No specific papers extending DPV though some were mentioning DPV.
+
+Harsh: there was a poster on consent forms using DPV, but it did not use the consent spec because the person did not know about it. Not sure what else we can do about this other than advertising as we have a minimal home page with the spec on the main page.
+
+Beatriz: We had a demo where we use DPV for purposes. Also another demo from Femke and another demo where they use DPV for purposes. So quite a few even though these were hidden and not as visible regarding DPV.
+
+Topic: mailing list
+
+Beatriz: we already do have CSV/JSON versions. I will reply to the mailing list.
+
+Topic: AI Act updates
+
+Harsh: Georg sent a mail about the amendment to AI Act
+Delaram: Don't know
+Harsh: Will ask Georg.
+Delaram: Most of our concepts are from Art. 3 definitions where there are no changes. There are some additions e.g. a and b addendums which we can easily add.
+
+Topic: Data Act 
+
+Sheyla: We created an ontology from the Data Act
+\ paper: https://ojs.bonviewpress.com/index.php/JCLLT/article/view/10282/2178
+\ documentation: https://w3id.org/def/daont
+Sheyla: we modelled articles 4, 8, 19
+Beatriz: why these articles?
+Sheyla: they correspond to the B2B, B2C, and B2G articles and we had this as a (small) scope
+MuhammadAslam: Are there any updates as this work was also published earlier as a separate paper/preprint?
+Sheyla: No, that was just the preprint on the arXiv as we did not have the proceedings. So now we have the paper and the ontology, and they are mostly the same.
+MuhammadAslam: I had a conversation with Meem before. The paper mentions that the ontology is useful for policy modelling. But in the paper, I did not find the policy. Am I right that you use SPARQL on the ontology to get answers. So how does this help with the policy modelling?
+Sheyla: The ontology helps with modelling the information which can be used in policies.
+Julian: Thanks for the paper and describing the process of how you extracted the concepts. In the paper, the connection to DPV is just based on data/personal data concepts whereas there would be a much deeper relationship for e.g. the data subject concept in DAOnt is the exact match to same concept in GDPR and also in DPV.
+
+\ working team: Sheyla, Meem, Fabian (authors/proposers) + Beatriz, Gabriela, Marlin
+\ This group will meet on OCT-07 13:00-14:00 CEST before the DPVCG meeting to discuss how to work with the spreadsheet
+
+Topic: AOB
+
+MatthiasLöbe: About the EHDS extension
+Beatriz: We are working on it and we are writing a paper on this about with Gabriela and Marlin regarding updates to the EHDS extension. We can organise a meeting in the coming weeks as we noticed an inconsistency in the EHDS where we have all the concepts that extend the SECTOR-HEALTH extensions which has a sector, but the EHDS is basically a flat list and it does not have any structure. This is also relevant for the German health extension.
+MatthiasLöbe: Is there any involvement with the HealthDCAT-AP people? It was developed in Belgium as well.
+Beatriz: It was developed by the people at Sciensano and we aligned on stuff. But they only reached out when it was out of their hands, and now it is maintained by one of the EU institutions.
+Harsh: latest version of HealthDCAT-AP is https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-7/ which shows it is under DG SANTE which is health and food safety, different Commission part than the data / tech ones.
+Beatriz: Will reach out to ask what is going on.
+Harsh: They have used DPV so they are aware of this, but at that time we did not have the Health extensions
+MatthiasLöbe: There is no restriction on further creating extensions e.g. HealthDCAT-AP+ where we have a controlled vocabulary to use.
+\ This group will meet OCT-12 10:00 CEST
+
+Topic: Next meeting
+
+\ Next meeting is on SEP-30. Beatriz will chair as Harsh is away

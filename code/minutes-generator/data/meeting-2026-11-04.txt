@@ -1,0 +1,55 @@
+meeting: Meeting 04 NOV 2026
+date: 04 NOV 2026
+scribe: *
+
+Agenda:https://www.w3.org/events/meetings/65197685-0e2b-44a1-b715-280dc3af0582/20261104T133000/
+
+chair: Harsh
+
+present: Harsh, Delaram, Tytti, Julian, Beyza, Julio, Ruhi
+
+regrets: Beatriz, Marlin, Gabriela
+
+Topic: Discussions
+
+Subtopic: new topics for v2.4?
+
+Julian: there was a proposal or a discussion about business processes
+Harsh: Was this with Georg and Paul, and involved discussions on document status etc. in an organisation?
+Julian: Yes, there were just a few concepts. Interested to follow up on these for v2.4.
+
+Subtopic: Health sector / EHDS / GDNG extensions
+Harsh: Beatriz: (remote message) EHDS for the Health/EHDS/GDNG update, we will meet again next week Nov 11th at 15h30, I will send an invite
+Julian: we met two weeks ago and had a discussion on the EHDS and the health extension, and the relation to the GDNG extension. I am now analysing the new draft in detail and have issues regarding the important definitions in law.
+Julian: [missed conversation] E.g. Data Owner / Data Holder - if this should go in the GDNG, or EHDS,. or core DPV. There can be an extension in the main DPV / core, which is then extended in the specific laws. 
+Harsh: ...
+Julian: GDNG revision says use all these concepts from EHDS, and has some additional concepts
+Harsh: in that case, I think no need to redefine / copy the concepts, we do the same and specify concepts in EHDS also apply here
+Julian: will look more into the concepts and how GDND defines. We agreed to meet next week so will discuss this then.
+
+Subtopic: Data Act
+
+Harsh: Fabian emailed that as Sheyla is not at work this week the meeting for Data Act is postponed
+Harsh: Gabriela also mentioned she will be joining this meeting.
+
+Topic: New/Ongoing Github Issues
+
+Subtopic: URIs for legal extension terms
+\ URIs for legal extension terms: https://github.com/w3c-cg/dpv/issues/491
+\ Improve documentation on how to use versioned namespaces: https://github.com/w3c-cg/dpv/issues/492
+\ no updates
+
+Subtopic: namespace documentation
+Julian: Raised github issues regarding version and namespace of documents, another one was opened by Beatriz.  This was a different one from the discussions on email e.g. rdfs Class etc.
+
+
+Topic: Mailing List
+
+\ Solid Symposium call for sessions: https://lists.w3.org/Archives/Public/public-dpvcg/2026Oct/0007.html
+
+## AOB
+
+
+Harsh: (with Tytti) News on the Commission workshop on Compliance Automation
+
+Delaram: new preprint on integration of AIRO and VAIR into DPV https://arxiv.org/abs/2610.31380 I looked into papers using / citing AIRO/VAIR. Etica reuses these for AI Act / risk, along with DPV, so these were added to the wiki earlier.

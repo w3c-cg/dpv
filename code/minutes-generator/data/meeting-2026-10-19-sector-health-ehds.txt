@@ -1,0 +1,11 @@
+meeting: Meeting 19 OCT 2026
+date: 19 OCT 2026
+chair: Beatriz
+scribe: *
+
+Agenda: https://www.w3.org/events/meetings/e1b1b465-63f5-4c7a-ac78-22107efa1ded/
+
+\ This was a special interest group meeting to: Discuss Health Sector and EHDS extensions
+\ https://w3id.org/dpv/sector/health
+\ https://w3id.org/dpv/legal/eu/ehds
+\ no minutes were shared

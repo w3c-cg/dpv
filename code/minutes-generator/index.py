@@ -25,10 +25,13 @@ with open('../../meetings/index.html', 'w') as fd:
     <ol reversed>""")
     for f in files:
         f = f.lstrip('../')
-        date = f[17:27]
-        date = datetime.datetime.strptime(date, '%Y-%m-%d')
+        fdate = f[17:27]
+        date = datetime.datetime.strptime(fdate, '%Y-%m-%d')
         date = date.strftime('%d %B %Y %A')
-        fd.write(f'\n<li><a href="https://w3id.org/dpv/{f}">DPVCG Meeting {date}</a></li>')
+        suffix = f.replace('.html', '').replace(f'meetings/meeting-{fdate}', '')
+        if suffix:
+          suffix = ' - ' + suffix.replace('-', ' ').lstrip().title()
+        fd.write(f'\n<li><a href="{f}">DPVCG Meeting {date}{suffix}</a></li>')
     fd.write("\n</ol></body></html>")
 
 #END

@@ -1,0 +1,57 @@
+meeting: Meeting 14 OCT 2026
+date: 14 OCT 2026
+chair: Beatriz
+scribe: *
+
+Agenda:https://www.w3.org/events/meetings/65197685-0e2b-44a1-b715-280dc3af0582/20261014T133000/
+
+
+present: Beatriz, Marlin, Amira, Gabriela, Julian, Christian, Beyza, MuhammadAslam, Fabian, Julio, Ruhi
+regrets: Harsh, Stratis
+
+Topic: Discussions
+Subtopic: EHDS extension updates
+
+Beatriz: Beatriz, Julian, Matthias, Christian and Ruhi met on Monday, October 12th. We discussed adding multiple hierarchies in both the health sector and EHDS extensions (the DE GDNG will take the same approach). For example, sector-health:PersonalElectronicHealthData has as parent sector-health:ElectronicHealthData, but should also have dpv:PersonalData, or eu-ehds:PersonalElectronicHealthData only has sector-health:PersonalElectronicHealthData as a parent, and it should also have eu-ehds:ElectronicHealthData.
+
+Beatriz: we also discussed removing the term sector-health:PersonGeneratedHealthAppData as a parent of sector-health:PersonGeneratedWellnessAppData, as this implies that all wellness apps are health apps and that might not me true in all jurisdictions
+
+Action: send an invite for the next meeting on Monday, October 19th 10am
+
+Beatriz: should we use URIs (ELI) for the legal sources in all legal extensions?
+Beatriz: +1
+Julian: +1
+Christian: +1 (and willing to help out on this)
+Action: create a GH issue for this 
+
+Subtopic: AI Act
+\AI Act amendment changes by Georg Krog (update concepts, numbering) - Georg
+
+\no updates
+
+Subtopic: Data Act updates
+\no updates
+\ set date for meeting via email
+
+Topic: New/Ongoing Github Issues
+
+Subtopic: Eticas
+\ Add Eticas risk taxonomy to wiki as it uses DPV: https://github.com/w3c-cg/dpv/issues/487 - Delaram
+\ Add PRISM - EU AI Act compliance record-keeping ontology to wiki as its uses DPV: https://github.com/w3c-cg/dpv/issues/488 - Delaram
+
+Julian: updated wiki with more articles mentioning DPV.
+
+Beatriz: these 2 issues opened by Delaram can also be added in the Adoption wiki, but on the industrial/Commercial setting
+
+Subtopic: Modelling AI Quality
+\ https://github.com/w3c-cg/dpv/issues/465
+\no updates
+Fabian: I will send an email to Delaram asking about the status
+
+Subtopic: LOC
+\ LOC §1.2 Inverse Jurisdictions: https://github.com/w3c-cg/dpv/issues/489
+
+\no updates
+
+Topic: Mailing List
+\ reply to https://lists.w3.org/Archives/Public/public-dpvcg/2026Sep/0002.html(Action) - Beatriz - no updates

@@ -1,0 +1,55 @@
+meeting: Meeting 30 SEP 2026
+date: 30 SEP 2026
+chair: Beatriz
+scribe: *
+
+Agenda:https://www.w3.org/events/meetings/65197685-0e2b-44a1-b715-280dc3af0582/20260930T133000/
+
+present: Beatriz, MuhammadAslam, Tytti, Ruhi, Marlin, Julian, Stratis, Beyza, Muhsin, Julio
+regrets: Harsh
+
+Topic: Discussions
+Subtopic: EHDS extension
+
+Beatriz: we will have a meeting with the people interested in this work on October 12 at 10am
+
+\ email from https://ontoshire.com/ to submit DPVCG (Harsh has replied that we use w3c infra already) - FYI
+
+Topic: AI Act
+
+\ AI Act amendment changes by Georg Krog (update concepts, numbering) - Georg
+
+\no updates
+
+Topic: ODRL Workshop
+
+\ DPV position paper at ODRL workshop by Beatriz; link to agenda, report, and paper https://www.w3.org/2026/ODRLWS/PP/Overview.html - Beatriz
+
+Beatriz: the draft charter is open to feedback at https://w3c.github.io/odrl/w3c-wg-draft-charter-2026/dpwg-draft-charter.html. you can email feedback via the public mailing list (https://lists.w3.org/Archives/Public/public-odrl/) or open an issue in the CG repo (https://github.com/w3c/odrl)
+
+Julian: can people participate if their institution is not W3C Member?
+
+Beatriz: They can, as invited experts. See https://w3c.github.io/odrl/w3c-wg-draft-charter-2026/dpwg-draft-charter.html#participation
+
+Topic: New Github Issues
+\ Add Eticas risk taxonomy to wiki as it uses DPV https://github.com/w3c-cg/dpv/issues/487 - Delaram
+\ Add PRISM - EU AI Act compliance record-keeping ontology to wiki as its uses DPV https://github.com/w3c-cg/dpv/issues/488 - Delaram
+
+Beatriz: People can edit the wiki with these DPV uses at https://github.com/w3c-cg/dpv/wiki/Adoption-and-Uses-of-DPVCG
+
+Beatriz: Should we have guidelines on how to contribute to the wiki? The wiki itself as guidelines on how to contribute to the vocabularies, but not to the wiki.
+
+Topic: Mailing List
+\ reply to https://lists.w3.org/Archives/Public/public-dpvcg/2026Sep/0002.html (Action) - Beatriz
+\ Call for CPDP Panels on Privacy Compliance Engineering https://lists.w3.org/Archives/Public/public-dpvcg/2026Sep/0005.html
+
+Topic: AOB
+
+\ Commission workshop on Compliance Automation in October. No agenda shared yet. (Harsh and Tytti are invited and DPVCG will be mentioned)
+
+Topic: Mapping regulations to DPV
+
+MuhammadAslam: is there work on mapping concrete articles from regulations to concepts in DPV?
+
+Beatriz: This exercise has been done for parts of the GDPR (see https://w3id.org/dpv/legal/eu/gdpr) and the AI Act (see https://w3id.org/dpv/legal/eu/aiact). Other legal extensions are doing similar exercises.
+
