@@ -3,6 +3,7 @@
 
 import datetime
 import glob
+from pathlib import Path
 # assuming this is run from meetings/generator folder
 files = sorted(glob.glob('../../meetings/meeting*.html'), reverse=True)
 
@@ -17,6 +18,11 @@ with open('../../meetings/index.html', 'w') as fd:
         ol { list-style: decimal-leading-zero; list-style-position: outside; }
         ol li::before { content: "📅"; display: inline-block; margin-right: 0.2rem; }
     </style>
+    <script>
+        if (!window.location.pathname.endsWith('/')) {
+            window.location.pathname += '/';
+        }
+    </script>
   </head>
   <body>
     <h1>DPVCG Meeting Minutes</h1>
@@ -24,11 +30,12 @@ with open('../../meetings/index.html', 'w') as fd:
     <p>See <a href="https://www.w3.org/groups/cg/dpvcg/calendar">W3C DPVCG Calendar</a> for upcoming meetings, agenda, and joining instructions.</p>
     <ol reversed>""")
     for f in files:
-        f = f.lstrip('../')
-        fdate = f[17:27]
+        f = Path(f)
+        f = f.stem
+        fdate = f[8:18]
         date = datetime.datetime.strptime(fdate, '%Y-%m-%d')
         date = date.strftime('%d %B %Y %A')
-        suffix = f.replace('.html', '').replace(f'meetings/meeting-{fdate}', '')
+        suffix = f[18:]
         if suffix:
           suffix = ' - ' + suffix.replace('-', ' ').lstrip().title()
         fd.write(f'\n<li><a href="{f}">DPVCG Meeting {date}{suffix}</a></li>')

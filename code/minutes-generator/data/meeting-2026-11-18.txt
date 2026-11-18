@@ -1,0 +1,119 @@
+meeting: Meeting 18 NOV 2026
+date: 18 NOV 2026
+scribe: *
+
+Agenda: https://www.w3.org/events/meetings/65197685-0e2b-44a1-b715-280dc3af0582/20261118T133000/
+
+Chair: Harsh
+
+Present: Harsh, Ruhi, Amira, Fabian, Julian, Tytti
+
+Regrets: Beatriz
+
+\ intro / new members
+
+Amira: Working with Beatriz on education sector concepts. We have a project where we are looking at three use-cases where we will need more concepts. Project will start from December.
+
+Topic: Discussions
+
+Subtopic: plan for v2.4
+
+Harsh: We are quite a bit behind schedule / plan. But we can still go ahead with the December finalisation based on whatever we have. Then in January we release beta version, and at end of January we release the final version. Feasible?
+Ruhi: Makes sense. This would include the mapping from e.g. GDPR to DPV. So this would be good timing for RECITALS.
+
+\ Harsh will check with Beatriz and discuss this again next week.
+
+Subtopic: maintenance and updates management
+
+Harsh: Making a list of changes for v2.4, will make commits based on that.
+
+Harsh: 
+We have many new issues reporting errors in IRI, relationships (e.g. parents), typos, etc. See https://github.com/w3c-cg/dpv/issues.
+
+Harsh: We have a number of issues on github relating to typos, IRI errors, proposed changes to parents, etc. Going through them. Some will need discussions, so will add them to the next week's agenda. Will add comments proposing my resolutions to the github issue directly. Please take a look.
+    
+Harsh: Any volunters? 
+
+Subtopic: minutes (past)
+
+Harsh: Past minutes were missing. Added them today.
+
+Topic: Updates
+
+Subtopic: Health sector / EHDS / GDNG extensions
+
+Harsh: (remote from Beatriz) meeting next week after the DPVCG call
+Julian: yes, we are meeting next week
+Harsh: Do you think we will have something in December? (for v2.4)
+Julian: Don't think so. We still don't have the new law (follow up from GDNG). We would like to make sure the articles from the law are stable in our references, as otherwise we would have to constantly change them.
+Harsh: One option is to put placeholders and then do one final change with the formal version. Don't know how it works with German law but this works on EU law for example.
+Julian: Could work, but some issues in tracking changes e.g. I have to do constant diffs.
+Julian: How did this [placeholders] work?
+Harsh: For GDPR, we initially had just legal basis consent, and then we added the clause numbering. For AI Act, Delaram did numbers based on draft, and then updated them for the final. We can do the same, add a note to HTML or elsewhere clarifying the sources. 
+Julian: We'll have to see how this works for GDNG. E.g. whether to drop the old version completely or have a complete replacement. The current GDNG is good (but obsolete) and I'm working on a separate spreadsheet for the new version.
+
+Subtopic: Data Act
+
+Fabian: Went through the spreadsheet. Have some working notes/comments in there.
+
+Harsh: From my view, the first thing we should do is also map the articles that are currently in scope. And then we can put these as the proposed concepts in v2.4 draft for Data Act and continue working on it.
+
+Fabian: Sheyla has her own spreadsheet with more stuff, she will move that to the common spreadsheet, and then we can discuss it.
+
+Topic: Triage Github issues
+
+Harsh: We have many many issues under 2.4 which are not feasible. I will keep those that we have addressed, and then move the rest to next version. We will move some from this to v2.5 next year.
+
+Harsh: We also have some open PRs. One is from Julian, one is from Fabian. Two are from Art
+Julian: mine is just cosmetics.
+Harsh: That can be easily added.
+Fabian: Mine is for the proposal correcting two numbers in the proposal.
+Harsh: Also can be easily merged.
+Harsh: For the two from Art: one if for clearing unused CSVs, which I will look at later in December. For the other one about terms without examples, I will look at after clearing out the backlog of issues and commits.
+
+Topic: Mailing List
+
+No new updates.
+
+Topic: Open proposals
+
+Harsh: We have 001 about AI Act data governance. We agreed to add some in previous meetings (the minutes have them). I will add them via a commit with reference. What else do we need to do?
+Fabian: There were other concepts which we did not add, so those need to be discussed.
+Harsh: Should I put on the agenda for next week and we can check what is good for v2.4 and what needs to be discussed for later.
+Fabian: +1
+
+Harsh: Same for the other open proposal 002 about AI quality vocabulary. Let's also discuss this next week.
+
+Harsh: Tytti do you also have a proposal?
+Tytti: Yes, but not everything is in shape at the moment.
+Harsh: What we can do is add the easy concepts like DPIA and FRIA processes to v2.4, and make the rest as a proposal so we can continue discussing those. E.g. the purposes from DPA lists are tricky sometimes and will need a discussion.
+Tytti: okay, will add a github comment or issue.
+Harsh: We will discuss it next week.
+
+Topic: AOB
+
+Subtopic: note taking for minutes
+
+Harsh: This was raised by Julian previously. Alternatives were w3c etherpad.
+Julian: The issue is that this room is open permissions with no ability to control who can start and stop the meeting. Notes are lost as soon as meeting is stopped (by someone). At the moment, the option for admins to be the only ones to end meetings is active again. W3C Etherpad is the same software running in the shared notes section. 
+Julian: There are also issues with cache etc. which prevents sometimes from notes being loaded or being able to view/edit them.
+Harsh: Other options are Nextcloud office and notes (which I have) - can create a shared document and leave it so that it will persist no matter if I am there or not.
+Harsh: Let's decide next week as Beatriz will also be there. 
+
+Topic: Namespace documentation
+
+\ https://github.com/w3c-cg/dpv/issues/492
+
+Harsh: Do we have a decision on this?
+Julian: In principal, but nothing was noted explicitly. This is for HTML, but also for RDF, JSON.
+Harsh: By RDF, do you mean we put this as a comment e.g. in ontology metadata or that these namespaces also apply for RDF/JSON/etc.
+Julian: For example, see the namespace in https://w3c-cg.github.io/dpv/2.3/dpv/dpv.ttl which is unversioned, which currently results in v2.3, but next year it will result in v2.4. This means the version will change without change of namespace.
+Harsh: What I was doing was using `owl:versionIRI` which shows the specific versioned namespace. This is intentional ...
+Julian: But this is also a problem e.g. a concept is deprecated in a future version and then the IRI does not resolve.
+Harsh: Agree this can be a problem. What do we do - what is the best practice? Maybe Fabian can check with UPM?
+Julian: E.g. RDF and OWL IRIs?
+Harsh: Let's check what exists while we also ask the experts.
+
+Topic: Next meeting
+
+\ Next meeting in 1week on NOV 25. Topics are v2.4, commits, discussion on IRI and parent changes, and other items discussed today
