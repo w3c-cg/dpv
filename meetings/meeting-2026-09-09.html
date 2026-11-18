@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Meeting 09 SEP 2026 &ndash; 09 SEP 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>Meeting 09 SEP 2026</h1>
+<h2>09 SEP 2026</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/events/meetings/65197685-0e2b-44a1-b715-280dc3af0582/20260909T133000/"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>Beatriz, Georg, Harsh, Julian, Julio, MuhammadAslam, Stratis</dd>
+<dt>Regrets</dt><dd>Gabriela, Marlin, Tytti</dd>
+<dt>Chair</dt><dd>Beatriz</dd>
+<dt>Scribe</dt><dd>*</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#t01">New issues</a></li>
+<li><a href="#t02">AOB</a></li>
+<li><a href="#t03">Next Meeting</a></li>
+<li class=app><a href="#ActionSummary">Summary of action items</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=t01>New issues</h3>
+<p id=x009 class=summary> LOC uses skos:sameAs, which is not a SKOS term (<a href="https://github.com/w3c-cg/dpv/issues/485">w3c-cg/<wbr>dpv#485</a>)</p>
+<p id=x010 class="phone s01"><cite>Harsh:</cite> No need to discuss. This should be skos:exactMatch. There is no skos:sameAs.</p>
+<p id=x011 class="phone s02"><cite>Beatriz:</cite> Do also have this in the OWL version? I think this issue is in the OWL version.</p>
+<p id=x012 class="phone s01"><cite>Harsh:</cite> Will check where this occurs, and if a separate fix is needed for OWL version.</p>
+<p id=x013 class=summary> dpv:RightsFulfilment has skos:broader pointing at a legal basis, not a purpose (<a href="https://github.com/w3c-cg/dpv/issues/486">w3c-cg/<wbr>dpv#486</a>)</p>
+<p id=x014 class="phone s03"><cite>Stratis:</cite> Do we have an use case or example of what we mean by Rights Fulfilment here?</p>
+<p id=x015 class="phone s01"><cite>Harsh:</cite> dpv:RightsFulfilment should have as parent dpv:FulfilmentOfObligation because rights may not be legal obligations</p>
+<p id=x016 class="phone s03"><cite>Stratis:</cite> When the legal basis is legal obligation but not a right, </p>
+<p id=x017 class="phone s01"><cite>Harsh:</cite> We also have an example on this in the purpose HTML, we should revisit describing this there as well -- <a href="https://dev.dpvcg.org/2.4-dev/dpv/modules/purposes#desc-legal-obligation">https://<wbr>dev.dpvcg.org/<wbr>2.4-dev/<wbr>dpv/<wbr>modules/<wbr>purposes#desc-legal-obligation</a> </p>
+<p id=x018 class="phone s04"><cite>Georg:</cite> (and Harsh) We have Rights and Obligations fulfilment, but this does not cover cases where there are no bearer of rights/obligations. To clarify, we are only referring to purposes where rights/obligaitons have a bearer and there is some action or condition that needs fulfilment, which we have considered as an obligation in the hierarchy where fulfilment of obligation is the parent and rights fulfilment is a specific type of such fulfilment</p>
+<p id=a01 class=action><strong>ACTION:</strong> Change parent of dpv:RightsFulfilment to dpv:FulfilmentOfObligation</p>
+<p id=a02 class=action><strong>ACTION:</strong> Update purpose module description and examples for RightsFulfilment</p>
+<p id=x021 class="phone s02"><cite>Beatriz:</cite> (paraphrasing) we should think of expanding properties or another way to use purposes as legal basis or see what purposes can act as legal basis</p>
+<p id=x022 class="phone s01"><cite>Harsh:</cite> We have an intentional separation between purposes and legal basis because they represent different concepts. Purpose is describing what you are doing with data or AI, and the legal basis is describing where this requirement or authority is based in law. If we mix them, then people will start doing things such as legal basis is identity verification (for KYC) instead of stating it as purpose and using legal basis to state which exact law they are referring to.</p>
+</section>
+
+<section>
+<h3 id=t02>AOB</h3>
+<p id=x024 class="phone s05"><cite>MuhammadAslam:</cite> introduction: working on Horizon project using DPV to model ODRL policies for AI Act, Data Act, GDPR. (Julian: maybe this one? <a href="https://www.accomplish-project.eu/)">https://<wbr>www.accomplish-project.eu/)</a></p>
+<p id=x025 class="phone s05"><cite>MuhammadAslam:</cite> Is it correct that DPV provides a vocabulary for ODRL?</p>
+<p id=x026 class="phone s02"><cite>Beatriz:</cite> No, DPV can be used with ODRL but also on its own. See the paper <a href="https://beatrizesteves.org/assets/documents/2026/SDS/dpv-odrl.pdf">https://<wbr>beatrizesteves.org/<wbr>assets/<wbr>documents/<wbr>2026/<wbr>SDS/<wbr>dpv-odrl.pdf</a> and we also have a mapping with explanation how DPV can be used with ODRL which will be published in the next version <a href="https://dev.dpvcg.org/mappings/odrl/">https://<wbr>dev.dpvcg.org/<wbr>mappings/<wbr>odrl/</a></p>
+<p id=x027 class="phone s06"><cite>Julian:</cite> About EHDS, if we have a timeline for the discussions.</p>
+</section>
+
+<section>
+<h3 id=t03>Next Meeting</h3>
+<p id=x029 class=summary> open session with no specific agenda as Harsh and Beatriz will be at SEMANTiCS</p>
+<p id=x030 class=summary> Next meeting with agenda will be WED-23</p>
+</section>
+</main>
+
+<div id=ActionSummary>
+<h2>Summary of action items</h2>
+<ol>
+<li><a href="#a01">Change parent of dpv:RightsFulfilment to dpv:FulfilmentOfObligation</a></li>
+<li><a href="#a02">Update purpose module description and examples for RightsFulfilment</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 217 (Fri Apr  7 17:23:01 2023 UTC).</address>
+
+</body>
+</html>
